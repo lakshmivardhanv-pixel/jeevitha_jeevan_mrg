@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Primary Meta Tags -->
+    <title>Vishnu & Bhavana | Wedding Invitation</title>
+    <meta name="title" content="Vishnu & Bhavana | Wedding Invitation">
+    <meta name="description" content="Your invitation is inside ✨ Tap to open the card and discover the celebrations, venue, schedule, map and more.">
+    <meta name="theme-color" content="#4C0D18">
+    <link rel="image_src" href="https://vishnubhavana.netlify.app/assets/images/preview.jpg">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vishnubhavana.netlify.app/">
+    <meta property="og:site_name" content="Vishnu & Bhavana Wedding">
+    <meta property="og:title" content="Vishnu & Bhavana | Wedding Invitation">
+    <meta property="og:description" content="Your invitation is inside ✨ Tap to open the card and discover the celebrations, venue, schedule, map and more.">
+    <meta property="og:image" content="https://vishnubhavana.netlify.app/assets/images/preview.jpg">
+    <meta property="og:image:secure_url" content="https://vishnubhavana.netlify.app/assets/images/preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="683">
+    <meta property="og:image:alt" content="Vishnu & Bhavana Wedding Invitation">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vishnu & Bhavana | Wedding Invitation">
+    <meta name="twitter:description" content="Your invitation is inside ✨ Tap to open the card and discover the celebrations, venue, schedule, map and more.">
+    <meta name="twitter:image" content="https://vishnubhavana.netlify.app/assets/images/preview.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Marcellus&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Custom Font Definitions */
+        .font-body { font-family: 'Cormorant Garamond', Georgia, serif; }
+        .font-heading { font-family: 'Marcellus', 'Cinzel', serif; }
+        .font-royal { font-family: 'Cinzel', serif; }
+        .font-script { font-family: 'Great Vibes', cursive; }
+
+        /* Metallic Gold Shimmer & Gradients */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FBF2D5 0%, #D4AF37 35%, #AA7C11 70%, #F3E5AB 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #E6CA65 0%, #D4AF37 35%, #996515 70%, #F5D061 100%);
+        }
+
+        .royal-card-shadow {
+            box-shadow: 0 20px 60px rgba(20, 2, 5, 0.85), 0 0 0 1px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Scrollbar Hiding */
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Staggered Element Fade-ins */
+        .fade-element {
+            opacity: 0;
+            transform: translateY(22px) scale(0.98);
+            filter: blur(3px);
+            transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 700ms cubic-bezier(0.16, 1, 0.3, 1), 
+                        filter 700ms cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, opacity, filter;
+        }
+        .page-active .fade-element {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            filter: blur(0);
+        }
+
+        /* Door Animation Classes */
+        .door-open-left {
+            transform: translateX(-102%) rotateY(-20deg);
+            box-shadow: none !important;
+        }
+        .door-open-right {
+            transform: translateX(102%) rotateY(20deg);
+            box-shadow: none !important;
+        }
+        .seal-open { 
+            opacity: 0; 
+            transform: translate(-50%, -50%) scale(1.3) rotate(15deg); 
+            filter: blur(10px); 
+            pointer-events: none; 
+        }
+
+        /* Sacred Rotating Mandala Animation */
+        @keyframes spinSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-mandala {
+            animation: spinSlow 120s linear infinite;
+        }
+        .animate-spin-mandala-reverse {
+            animation: spinSlow 90s linear infinite reverse;
+        }
+
+        /* Diya Flame Flicker */
+        @keyframes flameFlicker {
+            0%, 100% { transform: scale(1) rotate(-1deg); opacity: 0.95; filter: drop-shadow(0 0 6px #F59E0B); }
+            25% { transform: scale(1.08, 0.95) rotate(1deg); opacity: 1; filter: drop-shadow(0 0 10px #EF4444); }
+            50% { transform: scale(0.94, 1.05) rotate(-2deg); opacity: 0.9; filter: drop-shadow(0 0 8px #F59E0B); }
+            75% { transform: scale(1.04, 1.02) rotate(2deg); opacity: 1; filter: drop-shadow(0 0 12px #FBBF24); }
+        }
+        .animate-flame {
+            transform-origin: bottom center;
+            animation: flameFlicker 2s ease-in-out infinite;
+        }
+
+        /* Subtle floating pulse */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        .animate-float {
+            animation: floatSlow 4s ease-in-out infinite;
+        }
+
+        /* Glowing Om Animation */
+        @keyframes omGlow {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(212,175,55,0.6)); }
+            50% { transform: scale(1.06); filter: drop-shadow(0 0 16px rgba(212,175,55,0.9)); }
+        }
+        .animate-om-glow {
+            animation: omGlow 3s ease-in-out infinite;
+        }
+
+        /* LIVE WALLPAPER BACKGROUND KEYFRAMES */
+        @keyframes lanternSwingLeft {
+            0%, 100% { transform: rotate(-4deg); }
+            50% { transform: rotate(4deg); }
+        }
+        @keyframes lanternSwingRight {
+            0%, 100% { transform: rotate(4deg); }
+            50% { transform: rotate(-4deg); }
+        }
+        .animate-lantern-left {
+            transform-origin: top center;
+            animation: lanternSwingLeft 5s ease-in-out infinite;
+        }
+        .animate-lantern-right {
+            transform-origin: top center;
+            animation: lanternSwingRight 4.5s ease-in-out infinite;
+        }
+
+        @keyframes bokehFloat {
+            0% { transform: translateY(0) scale(0.8); opacity: 0; }
+            50% { opacity: 0.55; }
+            100% { transform: translateY(-130px) scale(1.2); opacity: 0; }
+        }
+        .animate-bokeh-1 { animation: bokehFloat 8s ease-in-out infinite; }
+        .animate-bokeh-2 { animation: bokehFloat 10s ease-in-out infinite 2.5s; }
+        .animate-bokeh-3 { animation: bokehFloat 7s ease-in-out infinite 4.5s; }
+        .animate-bokeh-4 { animation: bokehFloat 9s ease-in-out infinite 1.2s; }
+
+        @keyframes emberRise {
+            0% { transform: translateY(0) translateX(0) scale(0.6); opacity: 0; }
+            20% { opacity: 0.85; }
+            80% { opacity: 0.85; }
+            100% { transform: translateY(-180px) translateX(25px) scale(1.1); opacity: 0; }
+        }
+        .animate-ember-1 { animation: emberRise 6s ease-out infinite; }
+        .animate-ember-2 { animation: emberRise 7.5s ease-out infinite 1.8s; }
+        .animate-ember-3 { animation: emberRise 5.5s ease-out infinite 3.2s; }
+        .animate-ember-4 { animation: emberRise 8s ease-out infinite 4.8s; }
+
+        @keyframes skyLanternFloat {
+            0% { transform: translateY(140px) translateX(0) scale(0.7); opacity: 0; }
+            15% { opacity: 0.85; }
+            85% { opacity: 0.85; }
+            100% { transform: translateY(-520px) translateX(35px) scale(1.1); opacity: 0; }
+        }
+        .animate-sky-lantern-1 { animation: skyLanternFloat 14s linear infinite; }
+        .animate-sky-lantern-2 { animation: skyLanternFloat 18s linear infinite 3.5s; }
+        .animate-sky-lantern-3 { animation: skyLanternFloat 16s linear infinite 7s; }
+        .animate-sky-lantern-4 { animation: skyLanternFloat 20s linear infinite 10.5s; }
+
+        @keyframes lotusBreathe {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.22; }
+            50% { transform: scale(1.08) rotate(4deg); opacity: 0.45; }
+        }
+        .animate-lotus { animation: lotusBreathe 8s ease-in-out infinite; }
+
+        @keyframes sunbeamPulse {
+            0%, 100% { opacity: 0.12; transform: rotate(0deg); }
+            50% { opacity: 0.28; transform: rotate(180deg); }
+        }
+        .animate-sunbeams { animation: sunbeamPulse 70s linear infinite; }
+
+        /* Custom Ripple Effect */
+        .touch-pulse {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.8) 0%, rgba(212, 175, 55, 0) 70%);
+            transform: translate(-50%, -50%) scale(0);
+            animation: rippleAnimation 0.8s ease-out forwards;
+            z-index: 999;
+        }
+        @keyframes rippleAnimation {
+            to {
+                transform: translate(-50%, -50%) scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#1e0307] overflow-hidden m-0 p-0 h-[100dvh] w-full select-none touch-none">
+
+    <!-- Ambient Silk Texture Background for Viewport -->
+    <div class="fixed inset-0 bg-[#26050b] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#450912] via-[#200307] to-[#0d0103] pointer-events-none z-0"></div>
+
+    <!-- MAIN APP CONTAINER -->
+    <main class="fixed inset-0 flex items-center justify-center p-0 sm:p-4 md:p-6 z-10">
+        
+        <!-- WEDDING CARD BOUNDARY (Mobile App / Desktop Book Aspect) -->
+        <div id="invitation-card" class="relative w-full h-[100dvh] sm:h-[94dvh] sm:max-h-[880px] sm:max-w-[480px] sm:rounded-2xl overflow-hidden royal-card-shadow bg-[#FFFDF9]">
+          
+            <!-- LIVE CANVAS ANIMATION (Slow Falling Petals & Golden Sparkles) -->
+            <canvas id="wedding-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-30"></canvas>
+
+            <!-- ================================================================= -->
+            <!-- CLASSIC ROYAL ORNAMENTAL FRAME & BORDER from 1_border.svg (All Pages) -->
+            <!-- ================================================================= -->
+            <div class="absolute inset-0 pointer-events-none z-20 overflow-hidden">
+
+                <!-- Top-Left Corner (1_border.svg) -->
+                <div class="absolute top-2 left-2 sm:top-3 sm:left-3 w-12 h-12 sm:w-14 sm:h-14 text-[#D4AF37] drop-shadow-[0_2px_4px_rgba(139,30,50,0.25)] pointer-events-none">
+                    <svg viewBox="0 0 64 64" class="w-full h-full transform scale-y-[-1]" fill="currentColor">
+                        <path d="m18 56h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m26 56h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m26 48h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m29 48h-5v-10h5c2.76 0 5 2.24 5 5s-2.24 5-5 5zm-3-2h3c1.65 0 3-1.35 3-3s-1.35-3-3-3h-3z"/>
+                        <path d="m13 64c-2.76 0-5-2.24-5-5v-5h10v5c0 2.76-2.24 5-5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3v-3z"/>
+                        <path d="m26 40h-10v-5c0-2.76 2.24-5 5-5s5 2.24 5 5zm-8-2h6v-3c0-1.65-1.35-3-3-3s-3 1.35-3 3z"/>
+                        <path d="m10 56h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5h5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-6z"/>
+                        <path d="m18 48h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m29 64c-2.76 0-5-2.24-5-5v-5h5c2.76 0 5 2.24 5 5s-2.24 5-5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3-1.35-3-3-3z"/>
+                        <path d="m10 40h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-3c0-1.65-1.35-3-3-3z"/>
+                        <path d="m8 1h2v34h-2z"/>
+                        <path d="m29 54h34v2h-34z"/>
+                        <path d="m13 1h2v28h-2z"/>
+                        <path d="m35 49h28v2h-28z"/>
+                    </svg>
+                </div>
+                
+                <!-- Top-Right Corner (1_border.svg) -->
+                <div class="absolute top-2 right-2 sm:top-3 sm:right-3 w-12 h-12 sm:w-14 sm:h-14 text-[#D4AF37] drop-shadow-[0_2px_4px_rgba(139,30,50,0.25)] pointer-events-none">
+                    <svg viewBox="0 0 64 64" class="w-full h-full transform scale-[-1]" fill="currentColor">
+                        <path d="m18 56h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m26 56h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m26 48h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m29 48h-5v-10h5c2.76 0 5 2.24 5 5s-2.24 5-5 5zm-3-2h3c1.65 0 3-1.35 3-3s-1.35-3-3-3h-3z"/>
+                        <path d="m13 64c-2.76 0-5-2.24-5-5v-5h10v5c0 2.76-2.24 5-5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3v-3z"/>
+                        <path d="m26 40h-10v-5c0-2.76 2.24-5 5-5s5 2.24 5 5zm-8-2h6v-3c0-1.65-1.35-3-3-3s-3 1.35-3 3z"/>
+                        <path d="m10 56h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5h5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-6z"/>
+                        <path d="m18 48h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m29 64c-2.76 0-5-2.24-5-5v-5h5c2.76 0 5 2.24 5 5s-2.24 5-5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3-1.35-3-3-3z"/>
+                        <path d="m10 40h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-3c0-1.65-1.35-3-3-3z"/>
+                        <path d="m8 1h2v34h-2z"/>
+                        <path d="m29 54h34v2h-34z"/>
+                        <path d="m13 1h2v28h-2z"/>
+                        <path d="m35 49h28v2h-28z"/>
+                    </svg>
+                </div>
+
+                <!-- Bottom-Left Corner (1_border.svg) -->
+                <div class="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 w-12 h-12 sm:w-14 sm:h-14 text-[#D4AF37] drop-shadow-[0_2px_4px_rgba(139,30,50,0.25)] pointer-events-none">
+                    <svg viewBox="0 0 64 64" class="w-full h-full" fill="currentColor">
+                        <path d="m18 56h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m26 56h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m26 48h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m29 48h-5v-10h5c2.76 0 5 2.24 5 5s-2.24 5-5 5zm-3-2h3c1.65 0 3-1.35 3-3s-1.35-3-3-3h-3z"/>
+                        <path d="m13 64c-2.76 0-5-2.24-5-5v-5h10v5c0 2.76-2.24 5-5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3v-3z"/>
+                        <path d="m26 40h-10v-5c0-2.76 2.24-5 5-5s5 2.24 5 5zm-8-2h6v-3c0-1.65-1.35-3-3-3s-3 1.35-3 3z"/>
+                        <path d="m10 56h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5h5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-6z"/>
+                        <path d="m18 48h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m29 64c-2.76 0-5-2.24-5-5v-5h5c2.76 0 5 2.24 5 5s-2.24 5-5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3-1.35-3-3-3z"/>
+                        <path d="m10 40h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-3c0-1.65-1.35-3-3-3z"/>
+                        <path d="m8 1h2v34h-2z"/>
+                        <path d="m29 54h34v2h-34z"/>
+                        <path d="m13 1h2v28h-2z"/>
+                        <path d="m35 49h28v2h-28z"/>
+                    </svg>
+                </div>
+
+                <!-- Bottom-Right Corner (1_border.svg) -->
+                <div class="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 w-12 h-12 sm:w-14 sm:h-14 text-[#D4AF37] drop-shadow-[0_2px_4px_rgba(139,30,50,0.25)] pointer-events-none">
+                    <svg viewBox="0 0 64 64" class="w-full h-full transform scale-x-[-1]" fill="currentColor">
+                        <path d="m18 56h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m26 56h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m26 48h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m29 48h-5v-10h5c2.76 0 5 2.24 5 5s-2.24 5-5 5zm-3-2h3c1.65 0 3-1.35 3-3s-1.35-3-3-3h-3z"/>
+                        <path d="m13 64c-2.76 0-5-2.24-5-5v-5h10v5c0 2.76-2.24 5-5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3v-3z"/>
+                        <path d="m26 40h-10v-5c0-2.76 2.24-5 5-5s5 2.24 5 5zm-8-2h6v-3c0-1.65-1.35-3-3-3s-3 1.35-3 3z"/>
+                        <path d="m10 56h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5h5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-6z"/>
+                        <path d="m18 48h-10v-10h10zm-8-2h6v-6h-6z"/>
+                        <path d="m29 64c-2.76 0-5-2.24-5-5v-5h5c2.76 0 5 2.24 5 5s-2.24 5-5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3-1.35-3-3-3z"/>
+                        <path d="m10 40h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-3c0-1.65-1.35-3-3-3z"/>
+                        <path d="m8 1h2v34h-2z"/>
+                        <path d="m29 54h34v2h-34z"/>
+                        <path d="m13 1h2v28h-2z"/>
+                        <path d="m35 49h28v2h-28z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- ================================================================= -->
+            <!-- FLOATING HEADER CONTROLS (Proper Safe Clearance Below Toran) -->
+            <!-- ================================================================= -->
+            
+            <!-- 1. Top Reading Progress Bar -->
+            <div class="absolute top-0 inset-x-0 h-1 bg-[#4C0D18]/10 z-40">
+                <div id="progress-bar" class="h-full gold-gradient-bg w-1/6 transition-all duration-500 ease-out shadow-[0_0_8px_#D4AF37]"></div>
+            </div>
+
+            <!-- 2. Clean Top Floating Bar (Positioned safely with ample margin) -->
+            <div id="top-floating-bar" class="absolute top-8 sm:top-9 inset-x-8 sm:inset-x-10 flex justify-between items-center z-40 transition-opacity duration-700 opacity-0 pointer-events-none">
+                <!-- Page Label Pill -->
+                <div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#4C0D18]/95 border border-[#D4AF37]/70 backdrop-blur-md shadow-md">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-ping"></span>
+                    <span id="page-counter-badge" class="font-heading text-[8.5px] sm:text-[9.5px] tracking-[0.2em] text-[#FDFBF7] uppercase font-bold">
+                        1 / 6 • WELCOME
+                    </span>
+                </div>
+
+                <!-- Ambient Audio / Shehnai Toggle Button -->
+                <button id="audio-toggle-btn" onclick="toggleWeddingMusic()" title="Play Auspicious Wedding Melody" class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#4C0D18]/95 border border-[#D4AF37]/70 text-[#D4AF37] hover:text-[#FFFDF9] hover:bg-[#8B1E32] backdrop-blur-md shadow-md transition-all pointer-events-auto">
+                    <svg id="audio-icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3 h-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 9.75L19.5 12m0 0l2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.268-1.604.722-2.246.234-.847 1.058-1.354 1.938-1.354h2.24z" />
+                    </svg>
+                    <svg id="audio-icon-playing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3 h-3 hidden text-amber-300">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.268-1.604.722-2.246.234-.847 1.058-1.354 1.938-1.354h2.24z" />
+                    </svg>
+                    <span id="audio-btn-label" class="font-heading text-[8px] sm:text-[9px] tracking-widest uppercase font-bold">Music</span>
+                </button>
+            </div>
+
+            <!-- 3. Side Quick-Nav Dots (Safely Inside Inner Frame) -->
+            <div id="side-nav-dots" class="absolute right-5 sm:right-6 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2 py-2 px-1 rounded-full bg-[#4C0D18]/85 border border-[#D4AF37]/50 backdrop-blur-md shadow-md z-40 transition-opacity duration-700 opacity-0 pointer-events-none">
+                <button onclick="goToPage(0)" class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto" data-index="0" title="Invitation">
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">1. Welcome</span>
+                </button>
+                <button onclick="goToPage(1)" class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto" data-index="1" title="Our Story">
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">2. Our Story</span>
+                </button>
+                <button onclick="goToPage(2)" class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto" data-index="2" title="Reception">
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">3. Reception</span>
+                </button>
+                <button onclick="goToPage(3)" class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto" data-index="3" title="Muhurtham">
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">4. Muhurtham</span>
+                </button>
+                <button onclick="goToPage(4)" class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto" data-index="4" title="Venue">
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">5. Venue</span>
+                </button>
+                <button onclick="goToPage(5)" class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto" data-index="5" title="Countdown">
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">6. Countdown</span>
+                </button>
+                <button onclick="goToPage(6)" class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto" data-index="6" title="Save the Date Film">
+                    <span class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">7. Save the Date Film</span>
+                </button>
+            </div>
+
+            <!-- 4. Floating Small Button in Bottom-Right Corner (Non-intrusive) -->
+            <div id="bottom-nav-cue" class="absolute bottom-4 right-4 sm:bottom-5 sm:right-5 z-40 transition-opacity duration-700 opacity-0 pointer-events-none">
+                <button id="next-page-btn" onclick="goToNextPage()" title="Next Page" class="group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#4C0D18]/95 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#8B1E32] hover:text-[#FFFDF9] shadow-[0_4px_16px_rgba(76,13,24,0.5)] backdrop-blur-md transition-all duration-300 pointer-events-auto animate-bounce hover:animate-none hover:scale-110">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4 transform group-hover:translate-y-0.5 transition-transform">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- ================================================================= -->
+            <!-- THE ROYAL TEMPLE DOORS (Opening Experience) -->
+            <!-- ================================================================= -->
+            <div id="door-container" class="absolute inset-0 z-50 flex transition-opacity duration-1000">
+             
+                <!-- Left Door Panel -->
+                <div id="door-left" class="relative w-1/2 h-full bg-[#4C0D18] flex justify-end items-center overflow-hidden transition-transform duration-[1400ms] ease-[cubic-bezier(0.4,0,0.2,1)] shadow-[8px_0_25px_rgba(0,0,0,0.7)] border-r border-[#D4AF37]/50">
+                    <!-- Royal Jaali Pattern Overlay -->
+                    <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                    
+                    <!-- Decorative Golden Framing on Door -->
+                    <div class="absolute inset-y-6 left-6 right-3 border-2 border-[#D4AF37]/40 pointer-events-none z-10 flex flex-col justify-between p-3">
+                        <div class="text-[#D4AF37]/60 text-xs">✦</div>
+                        <!-- Miniature Carved Om SVG on Door from om_2.svg -->
+                        <div class="w-full flex justify-center opacity-30 text-[#D4AF37]">
+                            <svg viewBox="0 0 512 512" class="w-8 h-8 fill-current">
+                                <path d="M463.132,238.832c20.235,33.353,25.151,70.367,22.505,108.658c-1.528,22.117-5.544,43.767-14.315,64.264c-11.03,25.756-27.125,47.508-54.762,56.359c-49.002,15.684-93.875-2.635-106.947-62.85c-3.365-15.49-4.893-31.162-1.54-46.892l0.023-0.114c0.73-3.422,5.521-3.821,6.741-0.548c3.091,8.304,7.802,15.513,13.414,22.265c16.391,19.699,41.269,25.117,68.199,15.034c35.771-13.391,58.743-45.763,60.192-85.058c0.605-16.551-1.129-32.873-6.684-48.557c-9.159-25.858-40.174-35.018-61.139-16.882c-10.003,8.658-17.475,20.395-25.402,31.242c-8.623,11.794-16.22,24.33-24.684,36.25c-8.578,12.114-19.653,19.243-33.535,20.885c-2.065,0.24-14.475,0.228-25.904,0.194c-7.095-0.023-11.92,7.209-9.148,13.733c0.684,1.62,1.335,3.239,1.916,4.882c14.692,40.983,14.885,80.963-11.258,117.76c-13.391,18.832-30.547,34.436-54.032,39.261c-51.877,10.654-95.712-4.814-130.935-43.949c-30.353-33.752-44.634-74.484-48.854-119.072c-1.038-10.962-1.118-22.026-1.278-33.056c0-0.034,0-0.068,0-0.103c-0.046-4.414,6.228-5.544,7.779-1.414c0.023,0.057,0.046,0.114,0.068,0.171c7.665,21.832,14.349,44.052,23.11,65.428c7.346,17.92,16.87,35.189,33.889,46.173c25.984,16.79,54.899,22.117,85.286,19.266c9.49-0.901,19.197-3.205,28.026-6.787c32.372-13.152,43.983-52.002,24.889-81.34c-9-13.847-22.927-18.285-38.292-19.163c-7.825-0.445-16.368,3.764-23.589,0.65c-27.49-11.886-32.166-38.292-36.067-62.667c-0.798-4.95,3.262-9.319,8.258-8.897c5.053,0.422,9.958,0.833,14.84,1.3c15.422,1.471,30.592,0.73,45.272-4.756c11.509-4.3,19.939-12.091,25.984-22.687c3.011-5.27,2.852-11.806-0.228-17.03c-10.403-17.634-25.665-24.501-46.561-20.748c-24.022,4.323-45.626,14.965-67.196,25.71l-0.091,0.046c-5.007,2.487-11.087,0.707-13.962-4.095c-7.87-13.186-15.684-26.258-23.623-39.546c-2.236-3.741-1.426-8.578,1.962-11.315c10.003-8.076,20.543-15.125,32.2-20.509c25.71-11.851,52.618-18.901,81.054-17.383c35.6,1.893,59.587,22.288,69.237,56.804c7.334,26.223-0.913,49.219-13.688,71.439c-7.289,12.673-16.14,23.885-29.486,30.797c-1.335,0.696-2.452,1.848-4.779,3.627c10.699,4.141,20.292,8.726,30.375,11.532c12.399,3.468,24.262,0.354,32.645-9.445c7.985-9.331,14.749-19.79,21.319-30.204c8.863-14.064,16.46-28.961,25.63-42.808c14.657-22.151,36.193-31.334,62.416-33.216C420.7,188.711,444.962,208.867,463.132,238.832z"/>
+                                <path d="M374.937,38.351c2.897,2.897,2.897,7.597,0,10.494l-36.17,36.181c-2.897,2.897-7.597,2.897-10.494,0l-36.181-36.181c-2.897-2.897-2.897-7.597,0-10.494l36.181-36.17c2.897-2.909,7.597-2.909,10.494,0L374.937,38.351z"/>
+                                <path d="M448.657,105.992c6.707,9.878,6.045,12.444-3.034,19.802c-26.383,21.364-56.325,33.991-90.282,37.493c-27.763,2.863-53.428-1.494-75.864-19.026c-25.881-20.224-41.497-46.402-45.147-79.275c-0.639-5.737,4.38-9.216,6.753-5.384c7.3,11.783,16.619,21.866,27.284,30.877c30.239,25.562,63.602,29.394,98.78,12.764c14.087-6.65,26.782-16.414,39.649-25.425c12.319-8.646,12.125-9.08,21.399,2.224C435.175,88.563,442.486,96.9,448.657,105.992z"/>
+                            </svg>
+                        </div>
+                        <div class="text-[#D4AF37]/60 text-xs">✦</div>
+                    </div>
+                    
+                    <div class="absolute inset-y-8 left-8 right-5 border border-[#D4AF37]/20 pointer-events-none z-10"></div>
+                    <div class="border-r-2 border-[#D4AF37] h-[92%] w-1 mr-[2px] bg-[#D4AF37]/40 z-10"></div>
+                </div>
+                
+                <!-- Right Door Panel -->
+                <div id="door-right" class="relative w-1/2 h-full bg-[#4C0D18] flex justify-start items-center overflow-hidden transition-transform duration-[1400ms] ease-[cubic-bezier(0.4,0,0.2,1)] shadow-[-8px_0_25px_rgba(0,0,0,0.7)] border-l border-[#D4AF37]/50">
+                    <!-- Royal Jaali Pattern Overlay -->
+                    <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                    
+                    <!-- Decorative Golden Framing on Door -->
+                    <div class="absolute inset-y-6 left-3 right-6 border-2 border-[#D4AF37]/40 pointer-events-none z-10 flex flex-col justify-between p-3 items-end">
+                        <div class="text-[#D4AF37]/60 text-xs">✦</div>
+                        <!-- Miniature Carved Om SVG on Door from om_2.svg -->
+                        <div class="w-full flex justify-center opacity-30 text-[#D4AF37]">
+                            <svg viewBox="0 0 512 512" class="w-8 h-8 fill-current">
+                                <path d="M463.132,238.832c20.235,33.353,25.151,70.367,22.505,108.658c-1.528,22.117-5.544,43.767-14.315,64.264c-11.03,25.756-27.125,47.508-54.762,56.359c-49.002,15.684-93.875-2.635-106.947-62.85c-3.365-15.49-4.893-31.162-1.54-46.892l0.023-0.114c0.73-3.422,5.521-3.821,6.741-0.548c3.091,8.304,7.802,15.513,13.414,22.265c16.391,19.699,41.269,25.117,68.199,15.034c35.771-13.391,58.743-45.763,60.192-85.058c0.605-16.551-1.129-32.873-6.684-48.557c-9.159-25.858-40.174-35.018-61.139-16.882c-10.003,8.658-17.475,20.395-25.402,31.242c-8.623,11.794-16.22,24.33-24.684,36.25c-8.578,12.114-19.653,19.243-33.535,20.885c-2.065,0.24-14.475,0.228-25.904,0.194c-7.095-0.023-11.92,7.209-9.148,13.733c0.684,1.62,1.335,3.239,1.916,4.882c14.692,40.983,14.885,80.963-11.258,117.76c-13.391,18.832-30.547,34.436-54.032,39.261c-51.877,10.654-95.712-4.814-130.935-43.949c-30.353-33.752-44.634-74.484-48.854-119.072c-1.038-10.962-1.118-22.026-1.278-33.056c0-0.034,0-0.068,0-0.103c-0.046-4.414,6.228-5.544,7.779-1.414c0.023,0.057,0.046,0.114,0.068,0.171c7.665,21.832,14.349,44.052,23.11,65.428c7.346,17.92,16.87,35.189,33.889,46.173c25.984,16.79,54.899,22.117,85.286,19.266c9.49-0.901,19.197-3.205,28.026-6.787c32.372-13.152,43.983-52.002,24.889-81.34c-9-13.847-22.927-18.285-38.292-19.163c-7.825-0.445-16.368,3.764-23.589,0.65c-27.49-11.886-32.166-38.292-36.067-62.667c-0.798-4.95,3.262-9.319,8.258-8.897c5.053,0.422,9.958,0.833,14.84,1.3c15.422,1.471,30.592,0.73,45.272-4.756c11.509-4.3,19.939-12.091,25.984-22.687c3.011-5.27,2.852-11.806-0.228-17.03c-10.403-17.634-25.665-24.501-46.561-20.748c-24.022,4.323-45.626,14.965-67.196,25.71l-0.091,0.046c-5.007,2.487-11.087,0.707-13.962-4.095c-7.87-13.186-15.684-26.258-23.623-39.546c-2.236-3.741-1.426-8.578,1.962-11.315c10.003-8.076,20.543-15.125,32.2-20.509c25.71-11.851,52.618-18.901,81.054-17.383c35.6,1.893,59.587,22.288,69.237,56.804c7.334,26.223-0.913,49.219-13.688,71.439c-7.289,12.673-16.14,23.885-29.486,30.797c-1.335,0.696-2.452,1.848-4.779,3.627c10.699,4.141,20.292,8.726,30.375,11.532c12.399,3.468,24.262,0.354,32.645-9.445c7.985-9.331,14.749-19.79,21.319-30.204c8.863-14.064,16.46-28.961,25.63-42.808c14.657-22.151,36.193-31.334,62.416-33.216C420.7,188.711,444.962,208.867,463.132,238.832z"/>
+                                <path d="M374.937,38.351c2.897,2.897,2.897,7.597,0,10.494l-36.17,36.181c-2.897,2.897-7.597,2.897-10.494,0l-36.181-36.181c-2.897-2.897-2.897-7.597,0-10.494l36.181-36.17c2.897-2.909,7.597-2.909,10.494,0L374.937,38.351z"/>
+                                <path d="M448.657,105.992c6.707,9.878,6.045,12.444-3.034,19.802c-26.383,21.364-56.325,33.991-90.282,37.493c-27.763,2.863-53.428-1.494-75.864-19.026c-25.881-20.224-41.497-46.402-45.147-79.275c-0.639-5.737,4.38-9.216,6.753-5.384c7.3,11.783,16.619,21.866,27.284,30.877c30.239,25.562,63.602,29.394,98.78,12.764c14.087-6.65,26.782-16.414,39.649-25.425c12.319-8.646,12.125-9.08,21.399,2.224C435.175,88.563,442.486,96.9,448.657,105.992z"/>
+                            </svg>
+                        </div>
+                        <div class="text-[#D4AF37]/60 text-xs">✦</div>
+                    </div>
+                    
+                    <div class="absolute inset-y-8 left-5 right-8 border border-[#D4AF37]/20 pointer-events-none z-10"></div>
+                    <div class="border-l-2 border-[#D4AF37] h-[92%] w-1 ml-[2px] bg-[#D4AF37]/40 z-10"></div>
+                </div>
+                
+                <!-- Center Auspicious Royal Seal (Landing Screen) -->
+                <div id="door-seal" onclick="openInvitation()" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-[1000ms] ease-in-out cursor-pointer flex flex-col items-center justify-center bg-[#3D050E] border-2 border-[#D4AF37] rounded-full w-[230px] h-[230px] sm:w-[270px] sm:h-[270px] z-20 hover:scale-105 shadow-[0_0_50px_rgba(212,175,55,0.6)]">
+                    <div class="absolute inset-2 sm:inset-3 border border-[#D4AF37]/60 rounded-full pointer-events-none"></div>
+                    <div class="absolute inset-3 sm:inset-4 border border-dashed border-[#D4AF37]/40 rounded-full pointer-events-none animate-spin-mandala"></div>
+                    
+                    <!-- Auspicious Sacred Embedded Inline Om SVG from om_2.svg -->
+                    <div class="relative w-10 h-10 sm:w-11 sm:h-11 mb-5 -translate-y-6 z-10 flex items-center justify-center animate-om-glow">
+                        <svg viewBox="0 0 512 512" class="w-full h-full drop-shadow-[0_0_15px_#F59E0B]">
+                            <defs>
+                                <linearGradient id="doorOmGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#FFF6D6"/>
+                                    <stop offset="35%" stop-color="#FFC408"/>
+                                    <stop offset="70%" stop-color="#ED7C0A"/>
+                                    <stop offset="100%" stop-color="#B45309"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Main Sacred Omkara Paths from om_2.svg -->
+                            <g fill="url(#doorOmGrad1)">
+                                <path d="M463.132,238.832c20.235,33.353,25.151,70.367,22.505,108.658c-1.528,22.117-5.544,43.767-14.315,64.264c-11.03,25.756-27.125,47.508-54.762,56.359c-49.002,15.684-93.875-2.635-106.947-62.85c-3.365-15.49-4.893-31.162-1.54-46.892l0.023-0.114c0.73-3.422,5.521-3.821,6.741-0.548c3.091,8.304,7.802,15.513,13.414,22.265c16.391,19.699,41.269,25.117,68.199,15.034c35.771-13.391,58.743-45.763,60.192-85.058c0.605-16.551-1.129-32.873-6.684-48.557c-9.159-25.858-40.174-35.018-61.139-16.882c-10.003,8.658-17.475,20.395-25.402,31.242c-8.623,11.794-16.22,24.33-24.684,36.25c-8.578,12.114-19.653,19.243-33.535,20.885c-2.065,0.24-14.475,0.228-25.904,0.194c-7.095-0.023-11.92,7.209-9.148,13.733c0.684,1.62,1.335,3.239,1.916,4.882c14.692,40.983,14.885,80.963-11.258,117.76c-13.391,18.832-30.547,34.436-54.032,39.261c-51.877,10.654-95.712-4.814-130.935-43.949c-30.353-33.752-44.634-74.484-48.854-119.072c-1.038-10.962-1.118-22.026-1.278-33.056c0-0.034,0-0.068,0-0.103c-0.046-4.414,6.228-5.544,7.779-1.414c0.023,0.057,0.046,0.114,0.068,0.171c7.665,21.832,14.349,44.052,23.11,65.428c7.346,17.92,16.87,35.189,33.889,46.173c25.984,16.79,54.899,22.117,85.286,19.266c9.49-0.901,19.197-3.205,28.026-6.787c32.372-13.152,43.983-52.002,24.889-81.34c-9-13.847-22.927-18.285-38.292-19.163c-7.825-0.445-16.368,3.764-23.589,0.65c-27.49-11.886-32.166-38.292-36.067-62.667c-0.798-4.95,3.262-9.319,8.258-8.897c5.053,0.422,9.958,0.833,14.84,1.3c15.422,1.471,30.592,0.73,45.272-4.756c11.509-4.3,19.939-12.091,25.984-22.687c3.011-5.27,2.852-11.806-0.228-17.03c-10.403-17.634-25.665-24.501-46.561-20.748c-24.022,4.323-45.626,14.965-67.196,25.71l-0.091,0.046c-5.007,2.487-11.087,0.707-13.962-4.095c-7.87-13.186-15.684-26.258-23.623-39.546c-2.236-3.741-1.426-8.578,1.962-11.315c10.003-8.076,20.543-15.125,32.2-20.509c25.71-11.851,52.618-18.901,81.054-17.383c35.6,1.893,59.587,22.288,69.237,56.804c7.334,26.223-0.913,49.219-13.688,71.439c-7.289,12.673-16.14,23.885-29.486,30.797c-1.335,0.696-2.452,1.848-4.779,3.627c10.699,4.141,20.292,8.726,30.375,11.532c12.399,3.468,24.262,0.354,32.645-9.445c7.985-9.331,14.749-19.79,21.319-30.204c8.863-14.064,16.46-28.961,25.63-42.808c14.657-22.151,36.193-31.334,62.416-33.216C420.7,188.711,444.962,208.867,463.132,238.832z"/>
+                                <path d="M374.937,38.351c2.897,2.897,2.897,7.597,0,10.494l-36.17,36.181c-2.897,2.897-7.597,2.897-10.494,0l-36.181-36.181c-2.897-2.897-2.897-7.597,0-10.494l36.181-36.17c2.897-2.909,7.597-2.909,10.494,0L374.937,38.351z"/>
+                                <path d="M448.657,105.992c6.707,9.878,6.045,12.444-3.034,19.802c-26.383,21.364-56.325,33.991-90.282,37.493c-27.763,2.863-53.428-1.494-75.864-19.026c-25.881-20.224-41.497-46.402-45.147-79.275c-0.639-5.737,4.38-9.216,6.753-5.384c7.3,11.783,16.619,21.866,27.284,30.877c30.239,25.562,63.602,29.394,98.78,12.764c14.087-6.65,26.782-16.414,39.649-25.425c12.319-8.646,12.125-9.08,21.399,2.224C435.175,88.563,442.486,96.9,448.657,105.992z"/>
+                            </g>
+                        </svg>
+                    </div>
+                    
+                    <span class="font-script text-3.5xl sm:text-4xl text-[#FFFDF9] drop-shadow-md z-10 leading-tight">Vishnu</span>
+                    <span class="font-body text-[#D4AF37] italic -my-0.5 z-10 text-base font-bold">&</span>
+                    <span class="font-script text-3.5xl sm:text-4xl text-[#FFFDF9] drop-shadow-md z-10 leading-tight">Bhavana</span>
+                    
+                    <div class="mt-3 z-10 flex items-center justify-center w-full">
+                        <span class="font-heading text-[8.5px] sm:text-[9.5px] tracking-[0.3em] text-[#FFE898] uppercase font-bold border-2 border-[#D4AF37] px-4 py-1.5 rounded-full bg-[#4C0D18]/90 shadow-[0_0_12px_rgba(212,175,55,0.6)] animate-pulse">
+                            Tap to Open
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================================================================= -->
+            <!-- THE BOOKLET PAGES (Smooth Snap Scrolling Container) -->
+            <!-- ================================================================= -->
+            <div id="scroll-container" class="h-full w-full overflow-y-auto overflow-x-hidden snap-y snap-mandatory scrollbar-hide smooth-scroll relative z-10">
+                
+                <!-- ============================== PAGE 1: INVITATION & COUPLE ============================== -->
+                <section class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#FFFDF9]" data-page-title="Welcome">
+                    
+                    <!-- LIVE WALLPAPER 1: Subtle Floating Temple Sparks (Clean Background) -->
+                    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0 flex items-center justify-center">
+                        <!-- Ascending Golden Temple Sparks -->
+                        <div class="absolute bottom-10 left-10 w-2.5 h-2.5 rounded-full bg-[#D4AF37] animate-ember-1 filter blur-[1px]"></div>
+                        <div class="absolute bottom-16 right-12 w-2.5 h-2.5 rounded-full bg-[#F59E0B] animate-ember-2 filter blur-[1px]"></div>
+                        <div class="absolute bottom-8 left-1/3 w-1.5 h-1.5 rounded-full bg-[#FFE898] animate-ember-3"></div>
+                        <div class="absolute bottom-14 right-1/3 w-2 h-2 rounded-full bg-[#D4AF37] animate-ember-4"></div>
+                    </div>
+
+                    <!-- Content Container (Safe margins for top and bottom) -->
+                    <div class="relative z-10 flex flex-col justify-center items-center w-full h-full max-w-[340px] sm:max-w-[360px] mx-auto text-center px-6 pt-16 pb-12">
+                        
+                        <!-- Sacred Glowing Ornate Omkara Vector SVG from om_2.svg (Pure transparent background) -->
+                        <div class="fade-element flex flex-col items-center mb-2.5 w-full" style="transition-delay: 100ms">
+                            <div class="relative w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center animate-float">
+                                <svg viewBox="0 0 512 512" class="w-full h-full drop-shadow-[0_0_12px_rgba(245,158,11,0.6)] animate-om-glow">
+                                    <defs>
+                                        <linearGradient id="p1OmGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#FFF6D6"/>
+                                            <stop offset="35%" stop-color="#FFC408"/>
+                                            <stop offset="70%" stop-color="#ED7C0A"/>
+                                            <stop offset="100%" stop-color="#B45309"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- Main Sacred Omkara Paths from om_2.svg -->
+                                    <g fill="url(#p1OmGrad1)">
+                                        <path d="M463.132,238.832c20.235,33.353,25.151,70.367,22.505,108.658c-1.528,22.117-5.544,43.767-14.315,64.264c-11.03,25.756-27.125,47.508-54.762,56.359c-49.002,15.684-93.875-2.635-106.947-62.85c-3.365-15.49-4.893-31.162-1.54-46.892l0.023-0.114c0.73-3.422,5.521-3.821,6.741-0.548c3.091,8.304,7.802,15.513,13.414,22.265c16.391,19.699,41.269,25.117,68.199,15.034c35.771-13.391,58.743-45.763,60.192-85.058c0.605-16.551-1.129-32.873-6.684-48.557c-9.159-25.858-40.174-35.018-61.139-16.882c-10.003,8.658-17.475,20.395-25.402,31.242c-8.623,11.794-16.22,24.33-24.684,36.25c-8.578,12.114-19.653,19.243-33.535,20.885c-2.065,0.24-14.475,0.228-25.904,0.194c-7.095-0.023-11.92,7.209-9.148,13.733c0.684,1.62,1.335,3.239,1.916,4.882c14.692,40.983,14.885,80.963-11.258,117.76c-13.391,18.832-30.547,34.436-54.032,39.261c-51.877,10.654-95.712-4.814-130.935-43.949c-30.353-33.752-44.634-74.484-48.854-119.072c-1.038-10.962-1.118-22.026-1.278-33.056c0-0.034,0-0.068,0-0.103c-0.046-4.414,6.228-5.544,7.779-1.414c0.023,0.057,0.046,0.114,0.068,0.171c7.665,21.832,14.349,44.052,23.11,65.428c7.346,17.92,16.87,35.189,33.889,46.173c25.984,16.79,54.899,22.117,85.286,19.266c9.49-0.901,19.197-3.205,28.026-6.787c32.372-13.152,43.983-52.002,24.889-81.34c-9-13.847-22.927-18.285-38.292-19.163c-7.825-0.445-16.368,3.764-23.589,0.65c-27.49-11.886-32.166-38.292-36.067-62.667c-0.798-4.95,3.262-9.319,8.258-8.897c5.053,0.422,9.958,0.833,14.84,1.3c15.422,1.471,30.592,0.73,45.272-4.756c11.509-4.3,19.939-12.091,25.984-22.687c3.011-5.27,2.852-11.806-0.228-17.03c-10.403-17.634-25.665-24.501-46.561-20.748c-24.022,4.323-45.626,14.965-67.196,25.71l-0.091,0.046c-5.007,2.487-11.087,0.707-13.962-4.095c-7.87-13.186-15.684-26.258-23.623-39.546c-2.236-3.741-1.426-8.578,1.962-11.315c10.003-8.076,20.543-15.125,32.2-20.509c25.71-11.851,52.618-18.901,81.054-17.383c35.6,1.893,59.587,22.288,69.237,56.804c7.334,26.223-0.913,49.219-13.688,71.439c-7.289,12.673-16.14,23.885-29.486,30.797c-1.335,0.696-2.452,1.848-4.779,3.627c10.699,4.141,20.292,8.726,30.375,11.532c12.399,3.468,24.262,0.354,32.645-9.445c7.985-9.331,14.749-19.79,21.319-30.204c8.863-14.064,16.46-28.961,25.63-42.808c14.657-22.151,36.193-31.334,62.416-33.216C420.7,188.711,444.962,208.867,463.132,238.832z"/>
+                                        <path d="M374.937,38.351c2.897,2.897,2.897,7.597,0,10.494l-36.17,36.181c-2.897,2.897-7.597,2.897-10.494,0l-36.181-36.181c-2.897-2.897-2.897-7.597,0-10.494l36.181-36.17c2.897-2.909,7.597-2.909,10.494,0L374.937,38.351z"/>
+                                        <path d="M448.657,105.992c6.707,9.878,6.045,12.444-3.034,19.802c-26.383,21.364-56.325,33.991-90.282,37.493c-27.763,2.863-53.428-1.494-75.864-19.026c-25.881-20.224-41.497-46.402-45.147-79.275c-0.639-5.737,4.38-9.216,6.753-5.384c7.3,11.783,16.619,21.866,27.284,30.877c30.239,25.562,63.602,29.394,98.78,12.764c14.087-6.65,26.782-16.414,39.649-25.425c12.319-8.646,12.125-9.08,21.399,2.224C435.175,88.563,442.486,96.9,448.657,105.992z"/>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        
+                        <!-- Invitation Wording -->
+                        <div class="fade-element flex flex-col items-center mb-4 sm:mb-5 w-full" style="transition-delay: 250ms">
+                            <p class="font-heading text-[#8B1E32] text-[8.5px] sm:text-[9.5px] tracking-[0.28em] uppercase leading-relaxed mb-1 font-bold">
+                                With the divine blessings of our families
+                            </p>
+                            <p class="font-heading text-[#4C0D18] text-[8.5px] sm:text-[9.5px] tracking-[0.18em] uppercase font-semibold">
+                                We cordially invite you to celebrate the wedding of
+                            </p>
+                        </div>
+
+                        <!-- Bride & Groom Names -->
+                        <div class="fade-element flex flex-col items-center mb-2.5 w-full" style="transition-delay: 450ms">
+                            <h1 class="font-script text-[3.6rem] sm:text-[4.2rem] text-[#8B1E32] leading-none mb-0 drop-shadow-[0_2px_4px_rgba(139,30,50,0.15)]">
+                                Vishnu
+                            </h1>
+                            <div class="flex items-center gap-3 my-0.5">
+                                <span class="h-[1px] w-8 bg-gradient-to-r from-transparent to-[#D4AF37]"></span>
+                                <span class="font-body italic text-[#D4AF37] text-lg sm:text-xl font-bold">&</span>
+                                <span class="h-[1px] w-8 bg-gradient-to-l from-transparent to-[#D4AF37]"></span>
+                            </div>
+                            <h1 class="font-script text-[3.6rem] sm:text-[4.2rem] text-[#8B1E32] leading-none mt-0 drop-shadow-[0_2px_4px_rgba(139,30,50,0.15)]">
+                                Bhavana
+                            </h1>
+                        </div>
+
+                        <!-- Auspicious Celestial Gold Divider -->
+                        <div class="fade-element flex flex-col items-center w-full mb-3" style="transition-delay: 650ms">
+                            <div class="relative w-4/5 mx-auto h-3 text-[#D4AF37]">
+                                <svg viewBox="0 0 300 24" class="w-full h-full fill-current">
+                                    <line x1="10" y1="12" x2="115" y2="12" stroke="#D4AF37" stroke-width="1.2" />
+                                    <line x1="185" y1="12" x2="290" y2="12" stroke="#D4AF37" stroke-width="1.2" />
+                                    <circle cx="150" cy="12" r="4" fill="#8B1E32" stroke="#D4AF37" stroke-width="1" />
+                                    <path d="M150 4 Q 155 12 162 12 Q 155 12 150 20 Q 145 12 138 12 Q 145 12 150 4 Z" fill="#D4AF37" />
+                                    <circle cx="125" cy="12" r="2" fill="#D4AF37" />
+                                    <circle cx="175" cy="12" r="2" fill="#D4AF37" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Auspicious Event Dates Summary Box -->
+                        <div class="fade-element flex flex-col items-center w-full mb-3" style="transition-delay: 850ms">
+                            <div class="p-2.5 sm:p-3 rounded-xl bg-[#FDFBF7]/90 border border-[#D4AF37]/50 shadow-[0_4px_16px_rgba(212,175,55,0.12)] w-full">
+                                <div class="grid grid-cols-2 gap-2 text-[#4C0D18] font-heading">
+                                    <!-- Reception Column -->
+                                    <div class="border-r border-[#D4AF37]/40 pr-2 flex flex-col items-center">
+                                        <span class="text-[8px] sm:text-[9px] text-[#8B1E32] tracking-[0.2em] uppercase font-bold">Reception</span>
+                                        <span class="text-xs sm:text-sm font-bold text-[#4C0D18] my-0.5">SAT, SEP 05</span>
+                                        <span class="text-[9px] text-[#D4AF37] font-semibold tracking-wider">7:00 PM Onwards</span>
+                                    </div>
+                                    <!-- Muhurtham Column -->
+                                    <div class="pl-2 flex flex-col items-center">
+                                        <span class="text-[8px] sm:text-[9px] text-[#8B1E32] tracking-[0.2em] uppercase font-bold">Muhurtham</span>
+                                        <span class="text-xs sm:text-sm font-bold text-[#4C0D18] my-0.5">SUN, SEP 06</span>
+                                        <span class="text-[9px] text-[#D4AF37] font-semibold tracking-wider">9:30 AM – 10:00 AM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Venue Summary -->
+                        <div class="fade-element flex flex-col items-center w-full" style="transition-delay: 1050ms">
+                            <p class="font-heading text-[#8B1E32] text-[8px] sm:text-[9px] tracking-[0.25em] uppercase mb-0.5 font-bold">Venue</p>
+                            <p class="font-heading text-[#4C0D18] text-[11px] sm:text-xs font-bold tracking-wider leading-snug">
+                                N GRAND CONVENTION HALL
+                            </p>
+                            <p class="font-body text-[#8B1E32] text-[11px] sm:text-xs italic font-semibold mt-0.5">
+                                Penukonda, Andhra Pradesh 515110
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ============================== PAGE 2: OUR STORY / CELEBRATION ============================== -->
+                <section class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#FFFDF9]" data-page-title="Our Story">
+                    
+                    <!-- LIVE WALLPAPER 2: Subtle Floating Temple Sparks (Clean Background) -->
+                    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+                        <!-- Ascending Sacred Embers -->
+                        <div class="absolute bottom-12 left-1/4 w-2 h-2 rounded-full bg-[#D4AF37] animate-ember-1 filter blur-[1px]"></div>
+                        <div class="absolute bottom-16 right-1/4 w-2.5 h-2.5 rounded-full bg-[#F59E0B] animate-ember-3 filter blur-[1px]"></div>
+                        <div class="absolute bottom-10 right-1/3 w-1.5 h-1.5 rounded-full bg-[#FFE898] animate-ember-2"></div>
+                    </div>
+
+                    <div class="relative z-10 flex flex-col justify-center items-center w-full h-full max-w-[340px] sm:max-w-[360px] mx-auto text-center px-6 pt-16 pb-12">
+                        
+                        <!-- Auspicious Sacred Interlinked Hearts Vector SVG from 2_love.svg (Pure transparent background) -->
+                        <div class="fade-element flex flex-col items-center mb-2.5 w-full" style="transition-delay: 100ms">
+                            <div class="relative w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center animate-float">
+                                <svg viewBox="0 0 328.863 328.863" class="w-full h-full drop-shadow-[0_0_12px_rgba(245,158,11,0.6)] animate-om-glow">
+                                    <defs>
+                                        <linearGradient id="p2LoveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#FFF6D6"/>
+                                            <stop offset="35%" stop-color="#FFC408"/>
+                                            <stop offset="70%" stop-color="#ED7C0A"/>
+                                            <stop offset="100%" stop-color="#B45309"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <g fill="url(#p2LoveGrad)">
+                                        <path d="M69.795,77.272c0-7.344-1.836-18.36-10.404-20.196C45.315,54.628,35.523,67.48,33.688,80.944 c-4.284-3.672-9.792-6.12-15.912-6.732c-8.568-0.612-18.36,3.06-17.748,12.852c1.836,22.032,31.824,35.496,50.796,31.212 c0.612,0,1.224-0.612,1.224-0.612c0.612-0.612,1.224-0.612,1.224-1.224C61.84,105.424,69.185,91.35,69.795,77.272z M18.389,99.305c-1.836-1.836-4.284-4.284-5.508-6.732c-1.224-1.224-1.224-3.06-0.612-4.896c-1.224-3.672,0-4.896,3.672-3.672 c7.344-1.224,15.3,6.12,18.972,11.628c2.448,4.284,9.792,1.224,7.956-3.672c-1.836-5.508-1.836-10.404,0.612-15.912 c2.448-5.508,11.628-15.3,16.524-5.508c3.06,6.12-1.836,17.748-4.284,23.256c-3.06,6.12-6.732,11.628-10.404,17.748 C35.523,110.32,26.344,106.648,18.389,99.305z"/>
+                                        <path d="M206.271,75.437c-32.437-17.748-55.692,20.196-60.588,50.184c-7.344-12.24-17.748-22.032-31.824-24.48 c-19.584-3.06-36.108,12.24-39.168,30.6c-7.956,47.124,56.916,82.62,96.695,74.664c0.612,0,1.225-0.612,1.836-1.225 c2.448,2.448,6.731,2.448,9.181-0.611C200.151,177.641,255.231,102.365,206.271,75.437z M211.779,120.112 c-3.061,28.764-25.093,54.468-39.168,78.947C172,199.673,172,200.284,172,200.896h-0.612 c-28.151-3.062-64.871-17.748-78.947-43.452c-7.344-12.852-7.956-42.228,12.852-44.676c22.644-2.448,29.988,19.584,40.392,34.884 c3.06,4.284,9.792,1.836,7.956-3.672c0-1.224-0.612-2.448-1.224-3.672c1.224-14.688,4.896-28.152,13.464-40.392 c4.896-6.732,16.523-17.136,25.704-16.524C209.332,85.229,213.004,106.648,211.779,120.112z"/>
+                                        <path d="M306.027,27.088c-4.896-7.956-14.076-9.792-22.645-6.732c-6.731,2.448-11.017,7.956-13.464,14.076 c-1.836-3.672-4.284-6.12-7.956-7.956c-7.344-3.672-14.688,0.612-18.359,7.344c-9.181,18.36,14.688,36.72,29.376,42.228 c3.061,1.224,4.896-3.672,1.836-4.896c-8.567-4.284-15.912-10.404-20.809-18.36c-1.225-1.836-2.448-4.284-3.061-6.732 c-1.225-2.448-0.611-5.508,0.611-7.956c2.448-0.612,4.896-0.612,7.345-1.224c3.061,1.224,4.283,9.18,5.509,11.628 c1.836,4.284,9.18,4.284,8.566-1.224c0,0,0,0,0-0.612c0,0,0,0,0-0.612c2.448-6.732,6.732-15.3,14.076-16.524 c9.181-1.836,12.853,6.732,9.792,14.688c-4.284,11.016-18.972,14.688-22.031,25.092c-0.611,2.448,1.836,5.508,4.896,4.896 c4.896-1.224,8.567-5.508,12.852-9.18c4.284-3.672,8.568-7.344,11.018-12.24C309.088,44.226,310.924,34.434,306.027,27.088z"/>
+                                        <path d="M95.5,240.677c-1.224-11.628-4.284-23.868-15.3-29.376c-10.404-4.896-22.032,0-28.152,9.181 c-4.896,7.956-4.896,16.523-2.448,24.479c-6.12-4.283-13.464-7.344-21.42-5.508c-12.24,2.448-18.36,13.464-17.136,25.092 c3.06,33.049,47.736,45.9,74.664,37.944l0,0c1.224,0.611,3.06,0,3.672-1.225C97.949,284.129,97.335,259.648,95.5,240.677z M35.523,284.74c-7.344-4.896-15.3-14.688-14.076-23.868c3.06-26.315,27.54-6.12,35.496,1.836c0,0,0.612,0.612,1.224,0.612l0,0 c1.836,2.447,5.508,1.224,4.896-1.836c0-0.612,0-0.612-0.612-1.225c0-0.611,0-1.225-0.612-1.225l0,0 c-3.672-9.792-9.18-23.868-1.836-33.048c19.584-3.672,28.152,1.225,26.928,15.3c0,3.672,0,7.956,0,11.628 c-0.612,14.688-3.672,29.988-2.448,44.677C67.349,293.309,50.211,295.145,35.523,284.74z"/>
+                                        <path d="M206.884,277.396c-0.611-7.956-1.225-18.973-7.956-24.48c-4.896-4.283-12.239-3.672-17.136,0 c-4.284,3.672-6.12,7.956-6.12,12.853c-10.403-7.344-28.151-1.836-29.375,13.465c-0.612,10.403,7.344,17.748,15.3,22.644 c9.18,6.732,20.808,11.018,31.211,5.509c2.448-1.225,0.612-4.896-1.836-3.673c-11.628,3.673-27.539-6.73-33.659-15.911 c-3.672-5.509-3.672-12.853,2.448-17.137c6.12-4.283,13.463-1.224,17.136,4.284c0,0.611,0,0.611,0,1.224 c0.611,1.226,1.224,1.837,2.447,1.837c1.225,0,2.448-0.611,2.448-2.447v-0.612c-1.225-4.896-0.612-9.181,1.224-13.464 c9.181-2.448,14.076,0,14.688,6.12c1.224,4.283,1.224,11.016,1.224,15.3c0,7.956-4.284,15.912-2.447,23.868 c0.611,1.836,3.061,2.447,4.283,1.224C208.107,300.652,207.496,286.576,206.884,277.396z"/>
+                                        <path d="M326.836,233.944c-1.225-3.672-5.509-6.731-7.956-9.792c0.611-1.225,0.611-2.448,0-3.061 c-4.284-10.403-19.584-3.673-25.093,1.836c-4.896,4.896-9.18,11.017-11.628,17.748c-4.896-9.792-12.239-17.137-23.256-18.359 c-13.464-1.225-22.032,8.567-22.032,21.42c-0.611,30.6,30.601,59.977,60.589,59.363c0.611,0,1.224,0,1.836-0.611 c1.836,1.225,4.284,1.225,6.12,0c13.464-11.628,20.808-31.212,22.644-48.349C329.283,246.797,329.283,240.064,326.836,233.944z M318.268,254.141c-3.672,15.912-12.239,28.151-20.195,42.229c0,0.612-0.611,0.612-0.611,1.225 c-18.973-3.061-34.885-14.076-44.063-31.212c-2.448-4.284-4.284-8.567-5.509-13.465c-2.447-9.792-3.061-12.239,5.509-17.748 c4.896-5.508,9.792-5.508,14.688,0.612c2.447,2.447,4.283,4.896,5.508,7.956c2.448,4.284,3.672,9.792,6.12,14.075 c1.225,2.448,3.672,2.448,5.508,1.225l0,0l0,0l0.612-0.611c0.611-0.611,0.611-1.225,0.611-1.837 c1.836-8.566,4.283-15.911,9.792-23.256c2.447-3.06,4.896-6.119,9.181-7.956c2.447-1.224,4.896-1.224,7.344-0.611v0.611 c1.225,4.284,6.12,8.568,6.731,14.076C320.716,244.349,319.491,249.244,318.268,254.141z"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h2 class="font-heading text-[#D4AF37] text-xs sm:text-sm tracking-[0.3em] uppercase font-bold mt-1">
+                                It’s Happening!
+                            </h2>
+                        </div>
+                        
+                        <div class="fade-element flex flex-col items-center mb-3.5 w-full" style="transition-delay: 250ms">
+                            <p class="font-heading text-[#4C0D18] text-lg sm:text-xl leading-relaxed w-full font-bold">
+                                Vishnu and I are getting married<br/>
+                                <span class="italic text-[#8B1E32] font-normal text-base sm:text-lg">and we</span> 
+                                <span class="text-[#8B1E32] font-bold underline decoration-[#D4AF37] decoration-2 underline-offset-4"> NEED </span> 
+                                <span class="italic text-[#8B1E32] font-normal text-base sm:text-lg">you there!</span>
+                            </p>
+                        </div>
+
+                        <!-- Sacred Story Card -->
+                        <div class="fade-element flex flex-col items-center w-full mb-3.5" style="transition-delay: 450ms">
+                            <div class="p-4 rounded-2xl bg-[#FDFBF7]/90 border border-[#D4AF37]/40 shadow-[0_6px_20px_rgba(212,175,55,0.1)] relative">
+                                <span class="text-2.5xl text-[#D4AF37] font-serif absolute -top-3 left-4 leading-none opacity-60">“</span>
+                                <p class="font-body text-[#8B1E32] text-base leading-relaxed text-center font-semibold pt-1">
+                                    Come celebrate with us as two families, two stories, and two lives come together for a sacred and beautiful new beginning.
+                                </p>
+                                <p class="font-body text-[#4C0D18] text-sm italic leading-relaxed text-center mt-2.5 font-semibold">
+                                    Bring your brightest smiles, your blessings, your dancing shoes, and all the love you can spare.
+                                </p>
+                                <span class="text-2.5xl text-[#D4AF37] font-serif absolute -bottom-3.5 right-4 leading-none opacity-60">”</span>
+                            </div>
+                        </div>
+
+                        <div class="fade-element flex flex-col items-center w-full" style="transition-delay: 650ms">
+                            <p class="font-script text-[#8B1E32] text-4xl sm:text-5xl drop-shadow-sm">Vishnu & Bhavana</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============================== PAGE 3: RECEPTION ============================== -->
+                <section class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#FFFDF9]" data-page-title="Reception">
+                    
+                    <!-- LIVE WALLPAPER 3: Golden Bokeh Glow -->
+                    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+                        <!-- Floating Golden Bokeh Orbs -->
+                        <div class="absolute bottom-20 left-8 w-8 h-8 rounded-full bg-[#D4AF37]/35 filter blur-md animate-bokeh-1"></div>
+                        <div class="absolute bottom-28 right-10 w-10 h-10 rounded-full bg-[#F59E0B]/30 filter blur-lg animate-bokeh-2"></div>
+                        <div class="absolute bottom-16 left-1/3 w-6 h-6 rounded-full bg-[#FFE898]/35 filter blur-sm animate-bokeh-3"></div>
+                        <div class="absolute bottom-32 right-1/3 w-9 h-9 rounded-full bg-[#D4AF37]/30 filter blur-md animate-bokeh-4"></div>
+                    </div>
+
+                    <div class="relative z-10 flex flex-col justify-center items-center w-full h-full max-w-[340px] sm:max-w-[360px] mx-auto text-center px-6 pt-16 pb-12">
+                        
+                        <!-- Celebration / Royal Sangeet Music Vector from music.svg -->
+                        <div class="fade-element flex flex-col items-center mb-2.5 w-full" style="transition-delay: 100ms">
+                            <div class="relative w-11 h-11 sm:w-13 sm:h-13 mb-1 flex items-center justify-center animate-float">
+                                <svg viewBox="0 0 682.667 682.667" class="w-full h-full drop-shadow-[0_0_12px_rgba(245,158,11,0.6)] animate-om-glow">
+                                    <defs>
+                                        <linearGradient id="p3MusicGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#B45309"/>
+                                            <stop offset="30%" stop-color="#ED7C0A"/>
+                                            <stop offset="65%" stop-color="#FFC408"/>
+                                            <stop offset="100%" stop-color="#FFF6D6"/>
+                                        </linearGradient>
+                                        <clipPath id="clipPath3014" clipPathUnits="userSpaceOnUse">
+                                            <path d="M 0,512 H 512 V 0 H 0 Z" />
+                                        </clipPath>
+                                    </defs>
+                                    <g transform="matrix(1.3333333,0,0,-1.3333333,0,682.66667)" stroke="url(#p3MusicGrad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" fill="none">
+                                        <g clip-path="url(#clipPath3014)">
+                                            <!-- Musical Note 1 -->
+                                            <g transform="translate(496.4209,252.9863)">
+                                                <path d="m 0,0 -188.943,16.182 c -4.149,0.355 -7.877,-2.531 -8.573,-6.636 l -27.827,-164.194 c -0.764,-4.513 -5.14,-7.423 -9.617,-6.472 -8.988,1.909 -19.021,1.809 -29.172,-0.72 -28.835,-7.186 -47.672,-31.226 -42.072,-53.694 5.599,-22.468 33.514,-34.856 62.349,-27.669 22.879,5.701 39.448,22.015 42.542,39.73 l 27.29,161.025 c 0.695,4.106 4.423,6.992 8.572,6.636 l 125.337,-10.734 c 4.662,-0.399 7.989,-4.696 7.207,-9.31 l -16.397,-96.748 c -0.765,-4.516 -5.146,-7.427 -9.625,-6.47 -9.004,1.923 -19.061,1.827 -29.235,-0.708 -28.836,-7.187 -47.672,-31.226 -42.072,-53.694 5.599,-22.467 33.513,-34.856 62.349,-27.67 10.253,2.556 20.012,7.446 27.849,14.581 12.259,11.16 14.77,25.186 17.412,40.81 1.927,11.394 3.853,22.788 5.779,34.183 2.392,14.144 4.784,28.288 7.175,42.432 2.412,14.267 4.824,28.533 7.236,42.799 1.989,11.76 3.977,23.52 5.965,35.28 1.12,6.626 2.242,13.252 3.362,19.878 0.105,0.625 0.211,1.251 0.317,1.876 C 7.987,-4.694 4.661,-0.398 0,0 Z" />
+                                            </g>
+                                            <!-- Sparkle Star 1 -->
+                                            <g transform="translate(125.3398,167.9082)">
+                                                <path d="m 0,0 c -4.534,-14.472 -16.31,-40.771 -43.768,-51.038 -2.242,-0.838 -2.242,-4.064 0,-4.902 27.458,-10.267 39.234,-36.567 43.768,-51.038 0.767,-2.448 4.246,-2.448 5.013,0 4.534,14.471 16.31,40.771 43.768,51.038 2.242,0.838 2.242,4.064 0,4.902 C 21.323,-40.771 9.547,-14.472 5.013,0 4.246,2.447 0.767,2.447 0,0 Z" />
+                                            </g>
+                                            <!-- Sparkle Star 2 -->
+                                            <g transform="translate(341.7344,409.1963)">
+                                                <path d="m 0,0 c -3.314,-10.575 -11.921,-29.797 -31.988,-37.3 -1.639,-0.613 -1.639,-2.971 0,-3.583 20.067,-7.504 28.674,-26.724 31.988,-37.301 0.561,-1.789 3.103,-1.789 3.663,0 3.314,10.577 11.921,29.797 31.988,37.301 1.638,0.612 1.638,2.97 0,3.583 C 15.584,-29.797 6.977,-10.575 3.663,0 3.103,1.789 0.561,1.789 0,0 Z" />
+                                            </g>
+                                            <!-- Sparkle Star 3 -->
+                                            <g transform="translate(481.4248,443.3174)">
+                                                <path d="m 0,0 c 4.129,3.077 8.829,5.735 14.176,7.734 2.064,0.773 2.064,3.744 0,4.516 -25.286,9.454 -36.131,33.674 -40.307,47.001 -0.706,2.254 -3.91,2.254 -4.616,0 -4.176,-13.327 -15.021,-37.547 -40.307,-47.001 -2.064,-0.772 -2.064,-3.743 0,-4.516 25.286,-9.454 36.131,-33.673 40.307,-47.001 0.706,-2.254 3.91,-2.254 4.616,0 1.057,3.372 2.54,7.441 4.575,11.791" />
+                                            </g>
+                                            <!-- Musical Note 2 -->
+                                            <g transform="translate(219.4893,243.7471)">
+                                                <path d="m 0,0 c 9.342,0.973 19.08,4.299 28.117,10.081 10.109,6.469 18.977,15.922 23.943,27.133 1.909,4.311 3.252,8.891 3.811,13.58 0.642,5.37 0.033,9.977 -0.813,15.308 -1.42,8.94 -2.84,17.879 -4.26,26.82 -2.031,12.789 -4.063,25.579 -6.093,38.368 -2.255,14.196 -4.51,28.394 -6.765,42.591 -2.09,13.164 -4.181,26.327 -6.271,39.491 -1.539,9.69 -3.078,19.379 -4.617,29.068 -0.599,3.774 -1.198,7.548 -1.798,11.322 -0.733,4.621 -5.257,7.629 -9.802,6.518 l -184.219,-44.995 c -4.045,-0.988 -6.656,-4.913 -6.005,-9.026 l 26.058,-164.485 c 0.716,-4.52 -2.502,-8.674 -7.048,-9.203 -9.127,-1.06 -18.604,-4.359 -27.415,-9.997 -25.031,-16.017 -35.206,-44.813 -22.725,-64.317 12.48,-19.503 42.889,-22.33 67.92,-6.313 19.86,12.709 30.354,33.459 27.628,51.235 l -25.554,161.309 c -0.652,4.113 1.96,8.038 6.005,9.027 L -7.7,203.362 c 4.546,1.111 9.071,-1.899 9.803,-6.521 L 17.457,99.921 C 18.173,95.397 14.951,91.24 10.401,90.717 1.254,89.664 -8.246,86.362 -17.078,80.711 -42.109,64.693 -52.283,35.898 -39.803,16.395 c 1.78,-2.783 3.925,-5.225 6.366,-7.322" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h2 class="font-heading text-[#8B1E32] text-2.5xl sm:text-3xl tracking-widest uppercase font-bold">
+                                Sangeet & Reception
+                            </h2>
+                        </div>
+
+                        <!-- Date & Time Badge -->
+                        <div class="fade-element flex flex-col items-center mb-2.5 w-full" style="transition-delay: 250ms">
+                            <div class="px-4 py-1 rounded-full bg-[#4C0D18] text-[#FDFBF7] border border-[#D4AF37]/80 shadow-md">
+                                <p class="font-heading tracking-[0.2em] text-[9px] sm:text-[10px] uppercase font-bold text-[#D4AF37]">
+                                    SATURDAY &middot; SEP 5, 2026
+                                </p>
+                            </div>
+                            <p class="font-body text-[#4C0D18] tracking-widest text-lg sm:text-xl uppercase font-bold mt-1.5">
+                                7:00 PM Onwards
+                            </p>
+                        </div>
+
+                        <!-- Event Description Card -->
+                        <div class="fade-element flex flex-col items-center w-full mb-3" style="transition-delay: 450ms">
+                            <div class="p-3.5 rounded-xl bg-[#FDFBF7]/90 border border-[#D4AF37]/50 shadow-sm w-full">
+                                <p class="font-body text-[#4C0D18] text-base sm:text-lg italic leading-relaxed font-bold">
+                                    “Come dressed to impress, dance the night away, enjoy a lavish feast, and celebrate with us in true royal style.”
+                                </p>
+                                <div class="w-12 h-[1px] bg-[#D4AF37] mx-auto my-2 opacity-60"></div>
+                                <p class="font-body text-[#8B1E32] text-xs sm:text-sm leading-relaxed font-semibold">
+                                    An evening filled with music, laughter, dinner, and memories to cherish forever.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Add to Calendar Action -->
+                        <div class="fade-element flex flex-col items-center w-full" style="transition-delay: 650ms">
+                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Vishnu+%26+Bhavana+-+Wedding+Reception&dates=20260905T133000Z/20260905T173000Z&details=Wedding+Reception+celebration+of+Vishnu+%26+Bhavana&location=N+Grand+Convention+Hall,+Penukonda,+Andhra+Pradesh" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full border border-[#D4AF37] bg-[#4C0D18] text-[#FFE898] font-heading text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#8B1E32] transition-all shadow-md">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3.5 h-3.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                <span>Add to Calendar</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ============================== PAGE 4: MUHURTHAM ============================== -->
+                <section class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#FFFDF9]" data-page-title="Muhurtham">
+                    
+                    <!-- LIVE WALLPAPER 4: Holy Vedic Mandap & Divine Agni Flames -->
+                    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+                        <!-- Sacred Agni Kund Base & Rising Divine Embers at Bottom -->
+                        <div class="absolute bottom-0 inset-x-0 flex flex-col items-center opacity-60">
+                            <!-- Rising Holy Smoke/Embers -->
+                            <div class="relative w-40 h-24">
+                                <div class="absolute bottom-2 left-6 w-2.5 h-2.5 rounded-full bg-[#F59E0B] animate-ember-1 filter blur-[1px]"></div>
+                                <div class="absolute bottom-4 right-8 w-2 h-2 rounded-full bg-[#EF4444] animate-ember-2 filter blur-[1px]"></div>
+                                <div class="absolute bottom-1 left-16 w-3 h-3 rounded-full bg-[#FFE898] animate-ember-3"></div>
+                                <div class="absolute bottom-3 right-16 w-2 h-2 rounded-full bg-[#F59E0B] animate-ember-4"></div>
+                            </div>
+                            <!-- Auspicious Mandap Havan Base -->
+                            <div class="w-48 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent"></div>
+                        </div>
+                    </div>
+
+                    <div class="relative z-10 flex flex-col justify-center items-center w-full h-full max-w-[340px] sm:max-w-[360px] mx-auto text-center px-6 pt-16 pb-12">
+                        
+                        <!-- Auspicious Sacred Kalash Embedded Inline Vector SVG from 4_kalash.svg (100% Self-Contained) -->
+                        <div class="fade-element flex flex-col items-center mb-2 w-full" style="transition-delay: 100ms">
+                            <div class="relative w-16 h-16 sm:w-18 sm:h-18 mb-1 drop-shadow-[0_4px_12px_rgba(212,175,55,0.4)] mx-auto flex items-center justify-center animate-float">
+                                <svg viewBox="0 0 64 64" class="w-full h-full">
+                                    <path d="m32 1c5.82 3.71 8.56 7.97 9.85 11.17-10.18 4.49-11.85 12.83-11.85 12.83h-1s-2.66-5.99-7.99-8.2c.07-1.37.96-9.41 10.99-15.8z" fill="#a67c52"/>
+                                    <path d="m41.85 12.17c-10.18 4.49-11.85 12.83-11.85 12.83h-1s-2.66-5.99-7.99-8.2a13.431 13.431 0 0 1 .68-3.36c2.57.75 4.95 1.87 6.31 3.56 3.18 3.97 5.09-4.68 11.26-9.4a20.579 20.579 0 0 1 2.59 4.57z" fill="#754c24"/>
+                                    <path d="m53 20s-7 1-10 5h-6a18.508 18.508 0 0 0 6.45-6.99c2.49-.74 6.41-1.15 9.55 1.99z" fill="#a9ba45"/>
+                                    <path d="m53 20s-7 1-10 5h-2.45a11.126 11.126 0 0 1 12.09-5.34c.12.11.24.22.36.34z" fill="#7f8b34"/>
+                                    <path d="m44 30s8 8 8 14-11 14-11 14h-18s-11-8-11-14 8-14 8-14z" fill="#ffc634"/>
+                                    <path d="m52 44c0 6-11 14-11 14h-4.75a24.515 24.515 0 0 0 .7-28h7.05s8 8 8 14z" fill="#ffb000"/>
+                                    <path d="m46 25v3l-2 2h-24l-2-2v-2.06-.94h3.06 7.94 1 7 6z" fill="#f78608"/>
+                                    <path d="m46 25v3l-2 2h-24l-2-2v-.5h23.5l2-2v-.5z" fill="#ed5607"/>
+                                    <path d="m45 11a13.243 13.243 0 0 1 -1.55 7.01 18.508 18.508 0 0 1 -6.45 6.99h-7s1.67-8.34 11.85-12.83a28.8 28.8 0 0 1 3.15-1.17z" fill="#a9ba45"/>
+                                    <path d="m43.45 18.01a18.508 18.508 0 0 1 -6.45 6.99h-7a13.369 13.369 0 0 1 1.14-3h.66a9.149 9.149 0 0 0 6.461-2.651 16.965 16.965 0 0 0 3.189-4.339 14.37 14.37 0 0 0 1.18-3.17q1.125-.45 2.37-.84a13.243 13.243 0 0 1 -1.55 7.01z" fill="#7f8b34"/>
+                                    <path d="m41 58 4 5h-13-13l4-5z" fill="#f78608"/>
+                                    <path d="m45 63h-26l1.6-2h15.328a1 1 0 0 0 .778-1.618l-1.106-1.382h5.4z" fill="#ed5607"/>
+                                    <path d="m21.01 16.8c5.33 2.21 7.99 8.2 7.99 8.2h-7.94a21.965 21.965 0 0 1 -2.63-4.8 32.3 32.3 0 0 1 -1.43-4.2 10.353 10.353 0 0 1 4.01.8z" fill="#a9ba45"/>
+                                    <path d="m29 25h-3.52c-1-1.8-3.49-5.55-7.47-7.2-.18-.07-.35-.14-.54-.21-.32-.97-.47-1.59-.47-1.59a10.353 10.353 0 0 1 4.01.8c5.33 2.21 7.99 8.2 7.99 8.2z" fill="#7f8b34"/>
+                                    <g fill="#8618a0"><circle cx="42" cy="35" r="1"/><circle cx="42" cy="51" r="1"/><circle cx="37" cy="35" r="1"/><circle cx="37" cy="51" r="1"/><circle cx="32" cy="35" r="1"/><circle cx="32" cy="51" r="1"/><circle cx="27" cy="35" r="1"/><circle cx="27" cy="51" r="1"/><circle cx="22" cy="35" r="1"/><circle cx="22" cy="51" r="1"/></g>
+                                    <path d="m21.06 25h-3.06v.94a23.943 23.943 0 0 0 -9-1.94c3.96-4.63 7.49-4.45 9.43-3.8a21.965 21.965 0 0 0 2.63 4.8z" fill="#a9ba45"/>
+                                    <path d="m21.06 25h-1.07c-1.44-2.02-4.29-3.51-7.71-3.89a7.067 7.067 0 0 1 6.15-.91 21.965 21.965 0 0 0 2.63 4.8z" fill="#7f8b34"/>
+                                    <path d="m36 42h-3v-2h3a1 1 0 0 0 0-2h-4a1 1 0 0 0 -1 1v3h-2v-3a1 1 0 0 0 -2 0v4a1 1 0 0 0 1 1h3v2h-3a1 1 0 0 0 0 2h4a1 1 0 0 0 1-1v-3h2v3a1 1 0 0 0 2 0v-4a1 1 0 0 0 -1-1z" fill="#e72846"/>
+                                    <path d="m19.708 37.2c-1.626-1.683-3.739 3.054-4.012 4.109-.459 1.776 1.41 1.973 1.938.409.326-.964 3.044-3.512 2.074-4.518z" fill="#ffdd85"/>
+                                    <circle cx="16" cy="45" fill="#ffdd85" r="1"/>
+                                    <ellipse cx="24" cy="27.5" fill="#fab66b" rx="1" ry=".5"/>
+                                    <ellipse cx="25" cy="60.5" fill="#fab66b" rx="1" ry=".5"/>
+                                    <g fill="#58391b">
+                                        <path d="m26 17a1 1 0 0 1 -.982-1.193 16.776 16.776 0 0 1 .564-2.128 1 1 0 0 1 1.9.642 14.357 14.357 0 0 0 -.5 1.872 1 1 0 0 1 -.982.807z"/>
+                                        <path d="m27.849 12a1 1 0 0 1 -.872-1.488 15.684 15.684 0 0 1 2.316-3.219 1 1 0 0 1 1.415 1.413 14.138 14.138 0 0 0 -1.985 2.782 1 1 0 0 1 -.874.512z"/>
+                                        <path d="m36 13a1 1 0 0 1 -1-1c0-1.387-1.322-3.679-1.832-4.446a1 1 0 0 1 1.664-1.109c.222.333 2.168 3.317 2.168 5.555a1 1 0 0 1 -1 1z"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h2 class="font-heading text-[#8B1E32] text-2.5xl sm:text-3xl tracking-widest uppercase font-bold">
+                                Sacred Muhurtham
+                            </h2>
+                        </div>
+
+                        <!-- Muhurtham Timing Box -->
+                        <div class="fade-element flex flex-col items-center mb-2.5 w-full" style="transition-delay: 250ms">
+                            <div class="px-4 py-1 rounded-full bg-[#8B1E32] text-[#FDFBF7] border border-[#D4AF37] shadow-md">
+                                <p class="font-heading tracking-[0.2em] text-[9px] sm:text-[10px] uppercase font-bold text-[#FFE898]">
+                                    SUNDAY &middot; SEP 6, 2026
+                                </p>
+                            </div>
+                            <p class="font-body text-[#4C0D18] tracking-widest text-lg sm:text-xl uppercase font-bold mt-1.5">
+                                9:30 AM – 10:00 AM IST
+                            </p>
+                        </div>
+
+                        <!-- Muhurtham Blessing Wording -->
+                        <div class="fade-element flex flex-col items-center w-full mb-3" style="transition-delay: 450ms">
+                            <div class="p-3.5 rounded-xl bg-[#FDFBF7]/90 border border-[#D4AF37]/50 shadow-sm w-full">
+                                <p class="font-heading text-[#8B1E32] text-sm sm:text-base font-bold leading-relaxed">
+                                    Join us for the most sacred moment of our lives.
+                                </p>
+                                <div class="w-12 h-[1px] bg-[#D4AF37] mx-auto my-2 opacity-60"></div>
+                                <p class="font-body text-[#4C0D18] text-xs sm:text-sm leading-relaxed font-semibold">
+                                    As we take the sacred vows (Saptapadi) around the holy fire, your divine presence and heartfelt blessings will guide us into a lifetime of love and joy.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Add to Calendar Action -->
+                        <div class="fade-element flex flex-col items-center w-full" style="transition-delay: 650ms">
+                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Vishnu+%26+Bhavana+-+Wedding+Muhurtham&dates=20260906T040000Z/20260906T060000Z&details=Sacred+Wedding+Muhurtham+of+Vishnu+%26+Bhavana&location=N+Grand+Convention+Hall,+Penukonda,+Andhra+Pradesh" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full border border-[#D4AF37] bg-[#8B1E32] text-[#FFE898] font-heading text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#4C0D18] transition-all shadow-md">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-3.5 h-3.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                <span>Add to Calendar</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ============================== PAGE 5: VENUE & MAP ============================== -->
+                <section class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#FFFDF9]" data-page-title="Venue & Map">
+                    
+                    <!-- LIVE WALLPAPER 5: Clean Royal Parchment Canvas -->
+
+                    <div class="relative z-10 flex flex-col justify-center items-center w-full h-full max-w-[340px] sm:max-w-[360px] mx-auto text-center px-6 pt-16 pb-12">
+                        
+                        <!-- Auspicious Grand Royal Palace Mandap Jharokha Archway SVG -->
+                        <div class="fade-element flex flex-col items-center mb-2.5 w-full" style="transition-delay: 100ms">
+                            <div class="relative w-12 h-12 sm:w-14 sm:h-14 mb-1 flex items-center justify-center animate-float">
+                                <svg viewBox="0 0 512 512" class="w-full h-full drop-shadow-[0_0_12px_rgba(245,158,11,0.6)] animate-om-glow">
+                                    <defs>
+                                        <linearGradient id="p5LocationGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#FFF6D6"/>
+                                            <stop offset="35%" stop-color="#FFC408"/>
+                                            <stop offset="70%" stop-color="#ED7C0A"/>
+                                            <stop offset="100%" stop-color="#B45309"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <g fill="url(#p5LocationGrad)">
+                                        <path d="M341.476,338.285c54.483-85.493,47.634-74.827,49.204-77.056C410.516,233.251,421,200.322,421,166 C421,74.98,347.139,0,256,0C165.158,0,91,74.832,91,166c0,34.3,10.704,68.091,31.19,96.446l48.332,75.84 C118.847,346.227,31,369.892,31,422c0,18.995,12.398,46.065,71.462,67.159C143.704,503.888,198.231,512,256,512 c108.025,0,225-30.472,225-90C481,369.883,393.256,346.243,341.476,338.285z M147.249,245.945 c-0.165-0.258-0.337-0.51-0.517-0.758C129.685,221.735,121,193.941,121,166c0-75.018,60.406-136,135-136 c74.439,0,135,61.009,135,136c0,27.986-8.521,54.837-24.646,77.671c-1.445,1.906,6.094-9.806-110.354,172.918L147.249,245.945z M256,482c-117.994,0-195-34.683-195-60c0-17.016,39.568-44.995,127.248-55.901l55.102,86.463 c2.754,4.322,7.524,6.938,12.649,6.938s9.896-2.617,12.649-6.938l55.101-86.463C411.431,377.005,451,404.984,451,422 C451,447.102,374.687,482,256,482z"/>
+                                        <path d="M256,91c-41.355,0-75,33.645-75,75s33.645,75,75,75c41.355,0,75-33.645,75-75S297.355,91,256,91z M256,211 c-24.813,0-45-20.187-45-45s20.187-45,45-45s45,20.187,45,45S280.813,211,256,211z"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h2 class="font-heading text-[#D4AF37] text-[10px] sm:text-xs tracking-[0.3em] uppercase font-bold">
+                                Celebration Venue
+                            </h2>
+                        </div>
+                        
+                        <!-- Venue Address Card -->
+                        <div class="fade-element flex flex-col items-center mb-3.5 w-full" style="transition-delay: 250ms">
+                            <div class="p-4 sm:p-5 rounded-2xl bg-[#FDFBF7]/90 border border-[#D4AF37]/50 shadow-[0_6px_20px_rgba(212,175,55,0.1)] w-full">
+                                <h3 class="font-heading text-[#4C0D18] text-xl sm:text-2xl tracking-wider uppercase mb-1.5 font-bold leading-snug">
+                                    N GRAND<br/>CONVENTION HALL
+                                </h3>
+                                <div class="w-12 h-[1px] bg-[#D4AF37] mx-auto my-2 opacity-60"></div>
+                                <p class="font-body text-[#8B1E32] text-base sm:text-lg leading-relaxed font-bold">
+                                    Penukonda, Anantapur Dist.<br/>
+                                    <span class="text-sm sm:text-base font-semibold text-[#4C0D18]">Andhra Pradesh — 515110</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Directions Button -->
+                        <div class="fade-element flex flex-col items-center w-full gap-2.5" style="transition-delay: 450ms">
+                            <a href="https://maps.google.com/?q=N+Grand+Convention+Hall+Penukonda+Andhra+Pradesh+515110" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-6 py-2.5 rounded-full border-2 border-[#D4AF37] bg-[#4C0D18] text-[#FFE898] font-heading text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold hover:bg-[#8B1E32] hover:text-[#FFFDF9] transition-all duration-300 w-full max-w-[220px] shadow-lg hover:scale-105">
+                                <span>Get Directions</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg>
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ============================== PAGE 6: COUNTDOWN ============================== -->
+                <section class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#FFFDF9]" data-page-title="Countdown">
+                    
+                    <!-- LIVE WALLPAPER 6: Festive Sky Lanterns (Deepams) & Cosmic Aura -->
+                    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+                        <!-- Floating Sky Lantern 1 (from 3_hangingLanterns.svg) -->
+                        <div class="absolute bottom-0 left-4 w-7 sm:w-9 h-14 sm:h-18 flex flex-col items-center animate-sky-lantern-1 drop-shadow-[0_0_12px_rgba(245,158,11,0.6)]">
+                            <svg viewBox="0 0 1417.3 1417.3" class="w-full h-full">
+                                <g><g><g><g><g><g><g><g><g><g><g><g><path d="m695.8 788.9h19.5v345.1h-19.5z" fill="#ee2d26"/></g></g></g></g></g></g></g></g><g><g><g><g><g><g><g><g><path d="m706.6 788.9h8.7v345.1h-8.7z" fill="#d32027"/></g></g></g></g></g></g></g></g><g><g><g><g><g><g><g><g><path d="m697.8 788.9h5.2v345.1h-5.2z" fill="#f15c5d"/></g></g></g></g></g></g></g></g><g><path d="m726.7 1124.5h-42.4v-40.8c0-6.4 5.2-11.5 11.5-11.5h19.4c6.4 0 11.5 5.2 11.5 11.5z" fill="#ee2d26"/></g><path d="m714.5 1074.2h-9c5.9 0 10.6 4.8 10.6 10.6v37.6h9v-37.6c0-5.8-4.8-10.6-10.6-10.6z" fill="#d32027"/><g><path d="m700.7 1074.2h-4.1c-5.9 0-10.6 4.8-10.6 10.6v37.6h25.3v-37.6c0-5.8-4.7-10.6-10.6-10.6z" fill="#ef3f3e"/></g><circle cx="705.5" cy="1136.6" fill="#ee2d26" r="33.4"/><path d="m705.5 1105.7c-3.2 0-6.3.5-9.1 1.4 12.6 3.9 21.7 15.6 21.7 29.5s-9.1 25.6-21.7 29.5c2.9.9 6 1.4 9.1 1.4 17 0 30.9-13.8 30.9-30.9s-13.8-30.9-30.9-30.9z" fill="#d32027"/></g><g><g><g><g><g><g><path d="m747.9 1228.5c-.4-23.1-8.3-44-8.8-67.1-17.5 0-49.3 0-67.1 0-.5 23.1-8.4 44-8.8 67.1-.9 56.4 0 112.9 0 169.2 0 26.1 84.8 26.1 84.8 0-.1-56.3.8-112.8-.1-169.2z" fill="#e8aa22"/><path d="m744.4 1234.8c-.3-21.5-7.6-41.1-8.1-62.6-6.2 0-14.4 0-23.1 0 .5 21.5 7.7 41.1 8.1 62.6.9 52.6 0 105.4 0 158 0 9.7-12.4 15.6-27.3 17.5 22.4 2.9 50.4-2.9 50.4-17.5 0-52.6.8-105.4 0-158z" fill="#d58628"/><g><path d="m708.8 1392.8c0-52.7.9-105.4 0-158-.3-21.5-7.6-41.1-8.1-62.6-9.7 0-19 0-26 0-.5 21.5-7.7 41.1-8.1 62.6-.9 52.6 0 105.4 0 158 0 8.3 9.1 13.8 21.1 16.4 12-2.6 21.1-8.1 21.1-16.4z" fill="#f3b22c"/></g><g><g fill="#febf22"><path d="m718.3 1410.2 2.1-.3c0-52.3.4-125.4 0-174.7-.2-21.1-3.7-41.7-4-62.8-.6 0-1.2 0-1.8 0 .3 21 3.5 41.7 3.6 62.8.5 49.3.2 122.7.1 175z"/><path d="m714.9 1410.6c-.1-72.6-1.8-167.9-2.8-238.2-.6 0-1.2 0-1.8 0 .7 70.5 1.8 165.9 1.9 238.5 1-.2 1.9-.2 2.7-.3z"/><path d="m723 1409.3c.7-.1 1.4-.3 2-.5 0-52.2.3-124.8 0-173.7-.1-21.1-4.1-41.6-4.3-62.8-.6 0-1.2 0-1.8 0 .2 21.1 4 41.7 4.1 62.8.3 49.1 0 122 0 174.2z"/><path d="m738.9 1402.7c.8-.6 1.5-1.3 2.2-2 .2-51.5.8-119.3 0-165.8-.4-21.4-7.1-41.2-7.6-62.6-.6 0-1.2 0-1.8 0 .5 21.4 6.9 41.2 7.2 62.6.7 47.1.1 116.1 0 167.8z"/><path d="m728 1408c.8-.2 1.5-.5 2.3-.8.1-52.1.4-123.7 0-172.2-.2-21.2-5-41.5-5.3-62.8-.6 0-1.2 0-1.8 0 .2 21.2 4.7 41.6 4.8 62.8.3 48.8 0 120.9 0 173z"/><path d="m744 1395.7c.3-.9.4-1.9.4-2.9 0-52.6.9-105.3 0-157.9-.3-21.5-7.6-41.1-8.1-62.6-.1 0-.2 0-.4 0 .5 21.5 7.6 41.1 8 62.6.8 45 .2 110 .1 160.8z"/><path d="m733.5 1406c.8-.4 1.6-.8 2.3-1.2.1-51.9.5-122 0-169.7-.3-21.4-6.1-41.4-6.5-62.8-.6 0-1.2 0-1.8 0 .3 21.3 5.8 41.4 6 62.8.4 48.1 0 118.9 0 170.9z"/><path d="m708.4 1411c0-72.6-.3-168.1-.5-238.7-.6 0-1.2 0-1.8 0-.2 70.5-.5 166.2-.5 238.7.9.1 1.9 0 2.8 0z"/><path d="m672.9 1403.2c.7.5 1.4 1 2.2 1.4-.1-51.9-.7-122 0-169.7.3-21.4 6.8-41.2 7.2-62.6-.6 0-1.2 0-1.8 0-.5 21.4-7.2 41.2-7.6 62.6-.7 47.3-.1 116.6 0 168.3z"/></g><path d="m678.3 1406.2c.7.3 1.5.6 2.3.9-.1-52.1-.5-123.6 0-172 .2-21.3 5.7-41.5 6-62.8-.6 0-1.2 0-1.8 0-.4 21.4-6.3 41.4-6.5 62.8-.6 48.1-.1 119.1 0 171.1z" fill="#ffd77c"/><path d="m668.2 1398.1c.5.9 1.1 1.8 1.9 2.6-.2-51.5-.8-119.3 0-165.8.4-21.5 7.5-41.1 8-62.6-.6 0-1.2 0-1.8 0-.5 21.5-7.7 41.1-8.1 62.6-.7 45.7-.1 112.1 0 163.2z" fill="#febf22"/><path d="m689 1409.5c.7.1 1.3.3 2 .4 0-52.3-.3-125.5 0-174.8.1-21.1 3.9-41.7 4.1-62.8-.6 0-1.2 0-1.8 0-.2 21.1-4.2 41.6-4.3 62.8-.3 49.2 0 122.1 0 174.4z" fill="#febf22"/><path d="m683.8 1408.2c.7.2 1.5.4 2.3.6 0-52.2-.3-124.8 0-173.7.1-21.2 4.6-41.6 4.8-62.8-.6 0-1.2 0-1.8 0-.3 21.2-5.1 41.5-5.3 62.8-.4 48.8-.1 120.9 0 173.1z" fill="#febf22"/><path d="m693.6 1410.3c.7.1 1.4.2 2.1.3 0-52.3-.4-125.9 0-175.4.2-21 3.3-41.7 3.6-62.8-.6 0-1.2 0-1.8 0-.3 21.1-3.8 41.7-4 62.8-.3 49.3.1 122.8.1 175.1z" fill="#ffd77c"/><path d="m701.7 1411c.1-72.6 1.2-168.1 1.9-238.6-.6 0-1.2 0-1.8 0-.9 70.4-2.6 165.9-2.8 238.5 1 0 1.9 0 2.7.1z" fill="#febf22"/></g></g><path d="m748.3 1185.4h-81.5c-7.1 0-12.8-5.7-12.8-12.8 0-7.1 5.7-12.8 12.8-12.8h81.5c7.1 0 12.8 5.7 12.8 12.8.1 7.1-5.7 12.8-12.8 12.8z" fill="#ee2d26"/></g></g></g></g></g><g><g><g><path d="m806.7 188.1h-27.7v-90.1c0-38.8-31.5-70.3-70.3-70.3s-70.3 31.5-70.3 70.3v90h-27.7v-90c0-54.1 44-98 98-98 54.1 0 98 44 98 98z" fill="#d32027"/><path d="m786.1 180.9v-82.9c0-42.7-34.7-77.5-77.5-77.5s-77.4 34.8-77.4 77.5v82.9h-13.4v-82.9c0-50.1 40.8-90.9 90.9-90.9s90.9 40.8 90.9 90.9v82.9z" fill="#ee303d"/></g><g><g><g><ellipse cx="708.7" cy="558.1" fill="#ee303d" rx="471.8" ry="360.1"/></g></g></g><g><g fill="#ef3d3c"><path d="m430.6 558.1c0-188.4 75.7-271.1 131.5-310.7-2.6.3-5.1.5-7.6.8-28.8 16.2-55.3 37-78.7 61.9-62.4 66.2-96.7 154.3-96.7 248s34.4 181.8 96.7 248c27.8 29.5 59.8 53.3 95 70.5 7.3 3.6 14.7 6.8 22.1 9.8-52.6-34.5-162.3-120.6-162.3-328.3z"/><path d="m862.2 310.8c-19.1-29.3-41-52.7-64.8-69.7-3.3-.2-6.5-.3-9.8-.5 11.1 16.3 21.4 36.1 30.5 59.3 27.3 69.1 42.3 160.8 42.3 258.1 0 97.4-15 189-42.3 258.1-11.3 28.6-24.2 52.1-38.4 70.1 30.6-17.2 58.7-44.5 82.5-81 43-66 66.8-153.8 66.8-247.3s-23.8-181.1-66.8-247.1z"/><path d="m653.5 240.7c-13.1 16.4-25.4 38.7-36.4 66.4-26.4 66.9-41 156.1-41 251.1s14.5 184.2 41 251.1c16 40.5 34.9 69.5 55.1 85.4 15-108.2 23-235.1 23-368.2 0-100.9-4.6-198.3-13.4-286.6-9.6 0-19.1.4-28.3.8z"/></g><g><path d="m903.8 251.5c18.4 13.2 35.7 28.4 51.8 45.4 65.8 69.8 102 162.6 102 261.2s-36.2 191.4-102 261.2c-16 17-33.4 32.2-51.8 45.4 116.4-59.4 195.5-174.6 195.5-306.6-.1-132.1-79.2-247.3-195.5-306.6z" fill="#ef3d3c"/></g><path d="m951.7 269.2c121.9 62.9 202.1 168.9 202.1 288.9s-80.2 225.9-202.1 288.9c126.6-60.8 210.8-167.6 210.8-288.9s-84.1-228.1-210.8-288.9z" fill="#ef485d"/><path d="m288 558.1c0-87.7 34.7-170.8 94-237.4-78.8 61.6-127.3 145.3-127.3 237.4s48.5 175.8 127.3 237.3c-59.4-66.5-94-149.6-94-237.3z" fill="#ef3d3c"/></g><path d="m799.2 307.4c-24.8-62.7-57.8-98.7-90.6-98.7-1.6 0-3.2.1-4.8.3 10.8 96.2 16.6 204.6 16.6 317.3 0 137.7-8.6 268.8-24.6 379.3 4.2 1.2 8.5 1.8 12.8 1.8 32.8 0 65.8-36 90.6-98.7 26.4-66.8 40.9-155.8 40.9-250.7s-14.5-183.8-40.9-250.6z" fill="#d32027"/></g></g><path d="m950.4 301.8c-64.6-68.6-150.4-106.3-241.7-106.3s-177.1 37.7-241.7 106.3c-64.5 68.5-100 159.5-100 256.3s35.5 187.9 100 256.3c64.6 68.5 150.4 106.3 241.7 106.3s177.1-37.7 241.7-106.3c64.5-68.5 100-159.5 100-256.3s-35.5-187.9-100-256.3zm-479.8 509.2c-63.6-67.6-98.6-157.4-98.6-252.9s35-185.3 98.7-252.9c57.2-60.7 131.4-96.9 211.1-103.5-28.7 13.3-55.1 48-76 100.9-27 68.3-41.8 159-41.8 255.5s14.8 187.2 41.8 255.5c20.9 52.9 47.2 87.5 76 100.9-79.8-6.7-154-42.8-211.2-103.5zm139.9.8c-26.8-67.8-41.5-157.8-41.5-253.7s14.7-186 41.5-253.7c26.4-67 61.3-103.9 98.2-103.9s71.7 36.9 98.2 103.9c26.7 67.7 41.5 157.8 41.5 253.7s-14.7 186-41.5 253.7c-26.4 67-61.3 103.9-98.2 103.9-36.9-.1-71.8-37-98.2-103.9zm336.2-.8c-57.2 60.7-131.4 96.9-211.1 103.5 28.7-13.3 55.1-48 76-100.9 27-68.3 41.8-159 41.8-255.5s-14.8-187.2-41.8-255.5c-20.9-52.9-47.2-87.5-76-100.9 79.8 6.7 153.9 42.8 211.1 103.5 63.6 67.5 98.7 157.3 98.7 252.9s-35.1 185.3-98.7 252.9z" fill="#931a1d"/><g fill="#d32027"><path d="m461 820c-65.9-70-102.3-163-102.3-261.9s36.4-192 102.3-262c23.8-25.3 50.5-46.5 79.3-63.3-32.2 16.8-91.4 38-118.1 63.3-73.8 70-117.8 163-117.8 261.9s44 192 117.8 262c26.7 25.3 85.9 46.5 118.1 63.3-28.8-16.8-55.5-38-79.3-63.3z"/><path d="m877 232.9c139.3 51.1 238.1 177.6 238.1 325.2s-98.8 274.2-238.1 325.2c171.2-51.1 292.7-177.6 292.7-325.2s-121.5-274.2-292.7-325.2z"/><path d="m555.8 558.1c0-97.5 15.1-189.3 42.4-258.5 14.8-37.5 32.5-66.3 52-85.3-25.6 19-186.5 69.2-186.5 343.9 0 251.6 160.9 324.8 186.5 343.9-19.5-19-37.2-47.8-52-85.3-27.4-69.4-42.4-161.2-42.4-258.7z"/><path d="m940.7 310.8c-48-51-108.2-84.2-173.6-96.6 45.3 12.4 87 45.7 120.2 96.6 43 66 66.8 153.8 66.8 247.3s-23.7 181.2-66.8 247.3c-33.2 51-74.9 84.2-120.2 96.6 65.4-12.4 125.6-45.7 173.6-96.6 62.2-66 96.4-153.8 96.4-247.3s-34.2-181.3-96.4-247.3z"/></g><path d="m530.6 883.5c77.5 9.5 216.2 20.4 356 1.4 20.5-2.8 39.9 10 45.5 30 6.8 24.4-9.6 49.2-34.7 52.4-125.4 15.9-252.1 15.9-377.5 0-25.1-3.2-41.5-28-34.7-52.4l.4-1.4c5.5-19.7 24.7-32.5 45-30z" fill="#febf22"/><path d="m932.1 914.9c-4.3-15.2-16.6-26.3-31.3-29.4 5.1 23.5-11 46.8-35.3 49.9-125.4 15.9-252.1 15.9-377.5 0-1.1-.1-2.3-.4-3.4-.6 3.6 16.6 17.1 30.2 35.3 32.5 125.4 15.9 252.1 15.9 377.5 0 25.1-3.2 41.5-28 34.7-52.4z" fill="#f2ae1d"/><g><path d="m857.7 927.5c20.6-2.6 35.3-19.8 36.2-39.3-.6 0-1.1-.1-1.7-.1-1.7 0-3.4.1-5.1.3-51.1 6.9-106.5 10.4-164.7 10.4-78.7 0-148-6.4-192.2-11.9-1.5-.2-3.1-.3-4.6-.3-16.9 0-31.9 11.4-36.5 27.7l-.4 1.4c-1.2 4.1-1.6 8.4-1.3 12.5 123 15.2 247.3 14.9 370.3-.7z" fill="#ffc649"/><path d="m669 925.2c-55 0-110.6-3.1-165.4-9.2 3.6-8.9 12.2-14.9 21.9-14.9 1 0 1.9.1 2.9.2 44.7 5.5 114.6 12 194 12 52.6 0 103-2.8 150.1-8.5-4.2 4.6-10 7.8-16.6 8.6-61.8 7.8-124.7 11.8-186.9 11.8z" fill="#ffd685"/></g><path d="m530.6 232.7c77.5-9.5 216.2-20.4 356-1.4 20.5 2.8 39.9-10 45.5-30 6.8-24.4-9.6-49.2-34.7 52.4-125.4-15.9-252.1-15.9-377.5 0-25.1 3.2-41.5 28-34.7 52.4l.4 1.4c5.5 19.7 24.7 32.5 45 30z" fill="#febf22"/><path d="m901.9 149.7c1.6 6.7 1.6 13.8-.4 21-5.5 19.9-24.5 32.7-44.7 30-137.3-18.9-273.5-8-349.6 1.4-8 1-15.9-.5-22.8-3.9.2 1 .4 2 .7 3.1l.4 1.4c5.5 19.8 24.6 32.5 45 30 77.5-9.5 216.2-20.4 356-1.4 20.5 2.8 39.9-10 45.5-30 6.5-22.9-7.6-46.2-30.1-51.6z" fill="#f2ae1d"/><g><path d="m500.8 192.9c76.1-9.5 212.3-20.4 349.6-1.4 20.1 2.8 39.2-10 44.7-30 .8-3 1.3-6.1 1.4-9.1-62.1-7.9-125.4-11.9-187.9-11.9-62.7 0-126.1 4-188.3 11.9-10.9 1.4-20.7 7.4-26.7 16.6-4.6 6.9-6.7 15.1-6.3 23.2 4.4 1 8.9 1.3 13.5.7z" fill="#ffc649"/><g><path d="m619.7 122.8c5.5-.3 9.8-4.8 9.8-10.3v-14.5c0-43.7 35.5-79.2 79.2-79.2h.4v-9.9c-49.3-.2-89.5 39.8-89.5 89.1l.1 24.8c-.1 0-.1 0 0 0z" fill="#f05366"/></g><path d="m504.8 178c.2-.4.4-.7.7-1.1 3.8-5.7 9.9-9.5 16.6-10.3 61.7-7.8 124.4-11.8 186.5-11.8 56.5 0 113.5 3.3 169.8 9.8-4.7 7.9-13.2 13-22.5 13-1.2 0-2.4-.1-3.5-.2-50.7-7-105.6-10.5-163.2-10.5-74.5-.1-140.5 5.8-184.4 11.1z" fill="#ffd685"/></g></g><g fill="#febf22"><path d="m995.9 838.4c-4.2-.8-8.5-1.2-12.8-1.2-18.3 0-35.6 7.4-46.9 19.8-2.2-7.8-6.2-15.1-11.8-21.6-9.8-11.3-23.6-18.8-38.8-21.3-3.6-.6-7.4-.9-11-.9-11.6 0-23 3-33 8.6-7.6 4.3-13.9 9.9-18.7 16.6-8.6-20.6-30.5-35.8-55.1-37.1-1.2-.1-2.5-.1-3.7-.1-14 0-27.9 4.5-39.1 12.6-6.9 5.1-12.5 11.3-16.4 18.4-3.9-7-9.5-13.3-16.4-18.4-11.1-8.1-25-12.6-39.1-12.6-1.2 0-2.5 0-3.7.1-24.6 1.3-46.5 16.5-55.1 37.1-4.7-6.6-11.1-12.3-18.7-16.6-9.9-5.6-21.3-8.6-33-8.6-3.7 0-7.4.3-11 .9-15.2 2.5-29 10.1-38.8 21.3-5.7 6.5-9.7 13.8-11.8 21.6-11.3-12.3-28.6-19.8-46.9-19.8-4.3 0-8.6.4-12.8 1.2-.4.1-3.2.4-7.3 1 5.7 3.5 11.4 6.8 17.3 10.1.9 0 1.9-.1 2.8-.1 18.4 0 34.8 8.8 42.9 22.5 4.7 2 9.4 4 14.2 5.9.4-.9.5-1.9.4-3-2.6-22.6 16.2-44.5 42-48.8 3-.5 6-.7 9-.7 23 0 43.2 14.1 48 33.5.7 2.7 3.1 4.6 5.9 4.6h.7c3.1-.4 5.4-3 5.4-6 0-22.9 21.3-42.6 47.4-44 1-.1 2-.1 3-.1 25.1 0 46.8 17 49.5 38.8.4 3 3 5.3 6 5.3s5.7-2.3 6-5.3c2.7-21.7 24.4-38.8 49.5-38.8 1 0 2 0 3 .1 26.1 1.4 47.4 21.2 47.4 44 0 3.1 2.3 5.7 5.4 6h.7c2.8 0 5.2-1.9 5.9-4.6 4.8-19.4 25-33.5 48-33.5 3 0 6 .2 9 .7 25.8 4.3 44.6 26.1 42 48.8-.1 1 .1 2.1.4 3 4.8-1.9 9.5-3.8 14.2-5.9 8.1-13.7 24.5-22.5 42.9-22.5.9 0 1.9 0 2.8.1 5.8-3.2 11.5-6.6 17.1-10-3.4-.6-6.3-1-6.9-1.1z"/><path d="m1000.7 275.3c-2.2.7-4.4 1.2-6.7 1.7-5 1-10.1 1.5-15.3 1.5-20.6 0-39.2-8-45.3-19.4-1.1-2-3.1-3.2-5.4-3.2-.7 0-1.3.1-2 .3-2.8 1-4.5 3.8-4 6.8.8 4.7-.6 9.5-3.9 14-6.9 9.2-21.1 16-37 17.9-3 .4-6.1.5-9.2.5-22.4 0-42.7-9.7-47.2-22.6-.9-2.4-3.2-4.1-5.8-4.1-.3 0-.7 0-1 .1-2.9.5-5.1 3-5.1 6 0 14.8-21.3 28-46.5 29-1 0-2 .1-3 .1-24.4 0-46.2-11.6-48.6-25.8-.5-2.9-3-5.1-6-5.1s-5.5 2.1-6 5.1c-2.5 14.2-24.3 25.8-48.6 25.8-1 0-2 0-3-.1-25.2-1-46.5-14.3-46.5-29 0-3-2.1-5.5-5.1-6-.3-.1-.7-.1-1-.1-2.6 0-4.9 1.6-5.8 4.1-4.5 12.9-24.8 22.6-47.2 22.6-3.1 0-6.1-.2-9.2-.5-16-1.9-30.2-8.7-37-17.9-3.4-4.5-4.7-9.3-3.9-14 .5-3-1.2-5.8-4-6.8-.6-.2-1.3-.3-2-.3-2.3 0-4.3 1.2-5.4 3.2-6.1 11.4-24.7 19.4-45.3 19.4-5.2 0-10.4-.5-15.3-1.5-2.3-.5-4.5-1-6.7-1.7-4.3 2.6-8.5 5.2-12.7 7.9 2 1.1 3.4 1.8 3.8 1.9 4.2 1.6 8.7 2.9 13.2 3.8 5.9 1.2 11.9 1.8 18 1.8 18.3 0 35.1-5.3 46.1-14.4 1.1 2.7 2.6 5.4 4.5 7.9 8.9 11.9 25.9 20.4 45.4 22.7 3.6.4 7.2.6 10.8.6 20.7 0 39.8-7 50.6-18.3 8.5 15 29.7 25.7 54.2 26.6 1.2 0 2.4.1 3.6.1 23.4 0 44.4-8.8 54.5-22.4 10.1 13.6 31.1 22.4 54.5 22.4 1.2 0 2.4 0 3.6-.1 24.6-1 45.8-11.6 54.3-26.6 10.9 11.3 30 18.3 50.6 18.3 3.6 0 7.2-.2 10.8-.6 19.5-2.3 36.4-10.8 45.4-22.7 1.9-2.5 3.4-5.2 4.5-7.9 11.1 9.1 27.8 14.4 46.1 14.4 6 0 12.1-.6 18-1.8 4.5-.9 9-2.2 13.2-3.8.5-.2 2.1-.8 4.2-1.6-4.3-2.8-8.7-5.5-13.2-8.2z"/></g><g fill="#f8acae"><ellipse cx="887.5" cy="718.3" rx="16.8" ry="6.6" transform="matrix(.354 -.935 .935 .354 -98.685 1293.672)"/><g><ellipse cx="433.8" cy="404.6" rx="33.7" ry="14" transform="matrix(.262 -.965 .965 .262 -70.407 717.115)"/><ellipse cx="419.4" cy="457.5" rx="10.5" ry="6.9" transform="matrix(.262 -.965 .965 .262 -132.09 742.275)"/></g></g></g><path d="m714.7 1136.6c0-13.2-8.3-24.5-20-28.9-11.7 4.4-20 15.7-20 28.9s8.3 24.5 20 28.9c11.6-4.5 20-15.7 20-28.9z" fill="#ef3f3e"/><g fill="#f8acae"><ellipse cx="688.9" cy="1122.4" rx="8.2" ry="5.7" transform="matrix(.315 -.949 .949 .315 -593.22 1423.242)"/><ellipse cx="683.2" cy="1133.9" rx="2.8" ry="2.9" transform="matrix(.315 -.949 .949 .315 -608.002 1425.746)"/></g></svg>
+                        </div>
+
+                        <!-- Floating Sky Lantern 2 (from 3_hangingLanterns.svg) -->
+                        <div class="absolute bottom-0 right-6 w-6 sm:w-8 h-12 sm:h-16 flex flex-col items-center animate-sky-lantern-2 drop-shadow-[0_0_10px_rgba(245,158,11,0.5)]">
+                            <svg viewBox="0 0 1417.3 1417.3" class="w-full h-full">
+                                <g><g><g><g><g><g><g><g><g><g><g><g><path d="m695.8 788.9h19.5v345.1h-19.5z" fill="#ee2d26"/></g></g></g></g></g></g></g></g><g><g><g><g><g><g><g><g><path d="m706.6 788.9h8.7v345.1h-8.7z" fill="#d32027"/></g></g></g></g></g></g></g></g><g><g><g><g><g><g><g><g><path d="m697.8 788.9h5.2v345.1h-5.2z" fill="#f15c5d"/></g></g></g></g></g></g></g></g><g><path d="m726.7 1124.5h-42.4v-40.8c0-6.4 5.2-11.5 11.5-11.5h19.4c6.4 0 11.5 5.2 11.5 11.5z" fill="#ee2d26"/></g><path d="m714.5 1074.2h-9c5.9 0 10.6 4.8 10.6 10.6v37.6h9v-37.6c0-5.8-4.8-10.6-10.6-10.6z" fill="#d32027"/><g><path d="m700.7 1074.2h-4.1c-5.9 0-10.6 4.8-10.6 10.6v37.6h25.3v-37.6c0-5.8-4.7-10.6-10.6-10.6z" fill="#ef3f3e"/></g><circle cx="705.5" cy="1136.6" fill="#ee2d26" r="33.4"/><path d="m705.5 1105.7c-3.2 0-6.3.5-9.1 1.4 12.6 3.9 21.7 15.6 21.7 29.5s-9.1 25.6-21.7 29.5c2.9.9 6 1.4 9.1 1.4 17 0 30.9-13.8 30.9-30.9s-13.8-30.9-30.9-30.9z" fill="#d32027"/></g><g><g><g><g><g><g><path d="m747.9 1228.5c-.4-23.1-8.3-44-8.8-67.1-17.5 0-49.3 0-67.1 0-.5 23.1-8.4 44-8.8 67.1-.9 56.4 0 112.9 0 169.2 0 26.1 84.8 26.1 84.8 0-.1-56.3.8-112.8-.1-169.2z" fill="#e8aa22"/><path d="m744.4 1234.8c-.3-21.5-7.6-41.1-8.1-62.6-6.2 0-14.4 0-23.1 0 .5 21.5 7.7 41.1 8.1 62.6.9 52.6 0 105.4 0 158 0 9.7-12.4 15.6-27.3 17.5 22.4 2.9 50.4-2.9 50.4-17.5 0-52.6.8-105.4 0-158z" fill="#d58628"/><g><path d="m708.8 1392.8c0-52.7.9-105.4 0-158-.3-21.5-7.6-41.1-8.1-62.6-9.7 0-19 0-26 0-.5 21.5-7.7 41.1-8.1 62.6-.9 52.6 0 105.4 0 158 0 8.3 9.1 13.8 21.1 16.4 12-2.6 21.1-8.1 21.1-16.4z" fill="#f3b22c"/></g><g><g fill="#febf22"><path d="m718.3 1410.2 2.1-.3c0-52.3.4-125.4 0-174.7-.2-21.1-3.7-41.7-4-62.8-.6 0-1.2 0-1.8 0 .3 21 3.5 41.7 3.6 62.8.5 49.3.2 122.7.1 175z"/><path d="m714.9 1410.6c-.1-72.6-1.8-167.9-2.8-238.2-.6 0-1.2 0-1.8 0 .7 70.5 1.8 165.9 1.9 238.5 1-.2 1.9-.2 2.7-.3z"/><path d="m723 1409.3c.7-.1 1.4-.3 2-.5 0-52.2.3-124.8 0-173.7-.1-21.1-4.1-41.6-4.3-62.8-.6 0-1.2 0-1.8 0 .2 21.1 4 41.7 4.1 62.8.3 49.1 0 122 0 174.2z"/><path d="m738.9 1402.7c.8-.6 1.5-1.3 2.2-2 .2-51.5.8-119.3 0-165.8-.4-21.4-7.1-41.2-7.6-62.6-.6 0-1.2 0-1.8 0 .5 21.4 6.9 41.2 7.2 62.6.7 47.1.1 116.1 0 167.8z"/><path d="m728 1408c.8-.2 1.5-.5 2.3-.8.1-52.1.4-123.7 0-172.2-.2-21.2-5-41.5-5.3-62.8-.6 0-1.2 0-1.8 0 .2 21.2 4.7 41.6 4.8 62.8.3 48.8 0 120.9 0 173z"/><path d="m744 1395.7c.3-.9.4-1.9.4-2.9 0-52.6.9-105.3 0-157.9-.3-21.5-7.6-41.1-8.1-62.6-.1 0-.2 0-.4 0 .5 21.5 7.6 41.1 8 62.6.8 45 .2 110 .1 160.8z"/><path d="m733.5 1406c.8-.4 1.6-.8 2.3-1.2.1-51.9.5-122 0-169.7-.3-21.4-6.1-41.4-6.5-62.8-.6 0-1.2 0-1.8 0 .3 21.3 5.8 41.4 6 62.8.4 48.1 0 118.9 0 170.9z"/><path d="m708.4 1411c0-72.6-.3-168.1-.5-238.7-.6 0-1.2 0-1.8 0-.2 70.5-.5 166.2-.5 238.7.9.1 1.9 0 2.8 0z"/><path d="m672.9 1403.2c.7.5 1.4 1 2.2 1.4-.1-51.9-.7-122 0-169.7.3-21.4 6.8-41.2 7.2-62.6-.6 0-1.2 0-1.8 0-.5 21.4-7.2 41.2-7.6 62.6-.7 47.3-.1 116.6 0 168.3z"/></g><path d="m678.3 1406.2c.7.3 1.5.6 2.3.9-.1-52.1-.5-123.6 0-172 .2-21.3 5.7-41.5 6-62.8-.6 0-1.2 0-1.8 0-.4 21.4-6.3 41.4-6.5 62.8-.6 48.1-.1 119.1 0 171.1z" fill="#ffd77c"/><path d="m668.2 1398.1c.5.9 1.1 1.8 1.9 2.6-.2-51.5-.8-119.3 0-165.8.4-21.5 7.5-41.1 8-62.6-.6 0-1.2 0-1.8 0-.5 21.5-7.7 41.1-8.1 62.6-.7 45.7-.1 112.1 0 163.2z" fill="#febf22"/><path d="m689 1409.5c.7.1 1.3.3 2 .4 0-52.3-.3-125.5 0-174.8.1-21.1 3.9-41.7 4.1-62.8-.6 0-1.2 0-1.8 0-.2 21.1-4.2 41.6-4.3 62.8-.3 49.2 0 122.1 0 174.4z" fill="#febf22"/><path d="m683.8 1408.2c.7.2 1.5.4 2.3.6 0-52.2-.3-124.8 0-173.7.1-21.2 4.6-41.6 4.8-62.8-.6 0-1.2 0-1.8 0-.3 21.2-5.1 41.5-5.3 62.8-.4 48.8-.1 120.9 0 173.1z" fill="#febf22"/><path d="m693.6 1410.3c.7.1 1.4.2 2.1.3 0-52.3-.4-125.9 0-175.4.2-21 3.3-41.7 3.6-62.8-.6 0-1.2 0-1.8 0-.3 21.1-3.8 41.7-4 62.8-.3 49.3.1 122.8.1 175.1z" fill="#ffd77c"/><path d="m701.7 1411c.1-72.6 1.2-168.1 1.9-238.6-.6 0-1.2 0-1.8 0-.9 70.4-2.6 165.9-2.8 238.5 1 0 1.9 0 2.7.1z" fill="#febf22"/></g></g><path d="m748.3 1185.4h-81.5c-7.1 0-12.8-5.7-12.8-12.8 0-7.1 5.7-12.8 12.8-12.8h81.5c7.1 0 12.8 5.7 12.8 12.8.1 7.1-5.7 12.8-12.8 12.8z" fill="#ee2d26"/></g></g></g></g></g><g><g><g><path d="m806.7 188.1h-27.7v-90.1c0-38.8-31.5-70.3-70.3-70.3s-70.3 31.5-70.3 70.3v90h-27.7v-90c0-54.1 44-98 98-98 54.1 0 98 44 98 98z" fill="#d32027"/><path d="m786.1 180.9v-82.9c0-42.7-34.7-77.5-77.5-77.5s-77.4 34.8-77.4 77.5v82.9h-13.4v-82.9c0-50.1 40.8-90.9 90.9-90.9s90.9 40.8 90.9 90.9v82.9z" fill="#ee303d"/></g><g><g><g><ellipse cx="708.7" cy="558.1" fill="#ee303d" rx="471.8" ry="360.1"/></g></g></g><g><g fill="#ef3d3c"><path d="m430.6 558.1c0-188.4 75.7-271.1 131.5-310.7-2.6.3-5.1.5-7.6.8-28.8 16.2-55.3 37-78.7 61.9-62.4 66.2-96.7 154.3-96.7 248s34.4 181.8 96.7 248c27.8 29.5 59.8 53.3 95 70.5 7.3 3.6 14.7 6.8 22.1 9.8-52.6-34.5-162.3-120.6-162.3-328.3z"/><path d="m862.2 310.8c-19.1-29.3-41-52.7-64.8-69.7-3.3-.2-6.5-.3-9.8-.5 11.1 16.3 21.4 36.1 30.5 59.3 27.3 69.1 42.3 160.8 42.3 258.1 0 97.4-15 189-42.3 258.1-11.3 28.6-24.2 52.1-38.4 70.1 30.6-17.2 58.7-44.5 82.5-81 43-66 66.8-153.8 66.8-247.3s-23.8-181.1-66.8-247.1z"/><path d="m653.5 240.7c-13.1 16.4-25.4 38.7-36.4 66.4-26.4 66.9-41 156.1-41 251.1s14.5 184.2 41 251.1c16 40.5 34.9 69.5 55.1 85.4 15-108.2 23-235.1 23-368.2 0-100.9-4.6-198.3-13.4-286.6-9.6 0-19.1.4-28.3.8z"/></g><g><path d="m903.8 251.5c18.4 13.2 35.7 28.4 51.8 45.4 65.8 69.8 102 162.6 102 261.2s-36.2 191.4-102 261.2c-16 17-33.4 32.2-51.8 45.4 116.4-59.4 195.5-174.6 195.5-306.6-.1-132.1-79.2-247.3-195.5-306.6z" fill="#ef3d3c"/></g><path d="m951.7 269.2c121.9 62.9 202.1 168.9 202.1 288.9s-80.2 225.9-202.1 288.9c126.6-60.8 210.8-167.6 210.8-288.9s-84.1-228.1-210.8-288.9z" fill="#ef485d"/><path d="m288 558.1c0-87.7 34.7-170.8 94-237.4-78.8 61.6-127.3 145.3-127.3 237.4s48.5 175.8 127.3 237.3c-59.4-66.5-94-149.6-94-237.3z" fill="#ef3d3c"/></g><path d="m799.2 307.4c-24.8-62.7-57.8-98.7-90.6-98.7-1.6 0-3.2.1-4.8.3 10.8 96.2 16.6 204.6 16.6 317.3 0 137.7-8.6 268.8-24.6 379.3 4.2 1.2 8.5 1.8 12.8 1.8 32.8 0 65.8-36 90.6-98.7 26.4-66.8 40.9-155.8 40.9-250.7s-14.5-183.8-40.9-250.6z" fill="#d32027"/></g></g><path d="m950.4 301.8c-64.6-68.6-150.4-106.3-241.7-106.3s-177.1 37.7-241.7 106.3c-64.5 68.5-100 159.5-100 256.3s35.5 187.9 100 256.3c64.6 68.5 150.4 106.3 241.7 106.3s177.1-37.7 241.7-106.3c64.5-68.5 100-159.5 100-256.3s-35.5-187.9-100-256.3zm-479.8 509.2c-63.6-67.6-98.6-157.4-98.6-252.9s35-185.3 98.7-252.9c57.2-60.7 131.4-96.9 211.1-103.5-28.7 13.3-55.1 48-76 100.9-27 68.3-41.8 159-41.8 255.5s14.8 187.2 41.8 255.5c20.9 52.9 47.2 87.5 76 100.9-79.8-6.7-154-42.8-211.2-103.5zm139.9.8c-26.8-67.8-41.5-157.8-41.5-253.7s14.7-186 41.5-253.7c26.4-67 61.3-103.9 98.2-103.9s71.7 36.9 98.2 103.9c26.7 67.7 41.5 157.8 41.5 253.7s-14.7 186-41.5 253.7c-26.4 67-61.3 103.9-98.2 103.9-36.9-.1-71.8-37-98.2-103.9zm336.2-.8c-57.2 60.7-131.4 96.9-211.1 103.5 28.7-13.3 55.1-48 76-100.9 27-68.3 41.8-159 41.8-255.5s-14.8-187.2-41.8-255.5c-20.9-52.9-47.2-87.5-76-100.9 79.8 6.7 153.9 42.8 211.1 103.5 63.6 67.5 98.7 157.3 98.7 252.9s-35.1 185.3-98.7 252.9z" fill="#931a1d"/><g fill="#d32027"><path d="m461 820c-65.9-70-102.3-163-102.3-261.9s36.4-192 102.3-262c23.8-25.3 50.5-46.5 79.3-63.3-32.2 16.8-91.4 38-118.1 63.3-73.8 70-117.8 163-117.8 261.9s44 192 117.8 262c26.7 25.3 85.9 46.5 118.1 63.3-28.8-16.8-55.5-38-79.3-63.3z"/><path d="m877 232.9c139.3 51.1 238.1 177.6 238.1 325.2s-98.8 274.2-238.1 325.2c171.2-51.1 292.7-177.6 292.7-325.2s-121.5-274.2-292.7-325.2z"/><path d="m555.8 558.1c0-97.5 15.1-189.3 42.4-258.5 14.8-37.5 32.5-66.3 52-85.3-25.6 19-186.5 69.2-186.5 343.9 0 251.6 160.9 324.8 186.5 343.9-19.5-19-37.2-47.8-52-85.3-27.4-69.4-42.4-161.2-42.4-258.7z"/><path d="m940.7 310.8c-48-51-108.2-84.2-173.6-96.6 45.3 12.4 87 45.7 120.2 96.6 43 66 66.8 153.8 66.8 247.3s-23.7 181.2-66.8 247.3c-33.2 51-74.9 84.2-120.2 96.6 65.4-12.4 125.6-45.7 173.6-96.6 62.2-66 96.4-153.8 96.4-247.3s-34.2-181.3-96.4-247.3z"/></g><path d="m530.6 883.5c77.5 9.5 216.2 20.4 356 1.4 20.5-2.8 39.9 10 45.5 30 6.8 24.4-9.6 49.2-34.7 52.4-125.4 15.9-252.1 15.9-377.5 0-25.1-3.2-41.5-28-34.7-52.4l.4-1.4c5.5-19.7 24.7-32.5 45-30z" fill="#febf22"/><path d="m932.1 914.9c-4.3-15.2-16.6-26.3-31.3-29.4 5.1 23.5-11 46.8-35.3 49.9-125.4 15.9-252.1 15.9-377.5 0-1.1-.1-2.3-.4-3.4-.6 3.6 16.6 17.1 30.2 35.3 32.5 125.4 15.9 252.1 15.9 377.5 0 25.1-3.2 41.5-28 34.7-52.4z" fill="#f2ae1d"/><g><path d="m857.7 927.5c20.6-2.6 35.3-19.8 36.2-39.3-.6 0-1.1-.1-1.7-.1-1.7 0-3.4.1-5.1.3-51.1 6.9-106.5 10.4-164.7 10.4-78.7 0-148-6.4-192.2-11.9-1.5-.2-3.1-.3-4.6-.3-16.9 0-31.9 11.4-36.5 27.7l-.4 1.4c-1.2 4.1-1.6 8.4-1.3 12.5 123 15.2 247.3 14.9 370.3-.7z" fill="#ffc649"/><path d="m669 925.2c-55 0-110.6-3.1-165.4-9.2 3.6-8.9 12.2-14.9 21.9-14.9 1 0 1.9.1 2.9.2 44.7 5.5 114.6 12 194 12 52.6 0 103-2.8 150.1-8.5-4.2 4.6-10 7.8-16.6 8.6-61.8 7.8-124.7 11.8-186.9 11.8z" fill="#ffd685"/></g><path d="m530.6 232.7c77.5-9.5 216.2-20.4 356-1.4 20.5 2.8 39.9-10 45.5-30 6.8-24.4-9.6-49.2-34.7 52.4-125.4-15.9-252.1-15.9-377.5 0-25.1 3.2-41.5 28-34.7 52.4l.4 1.4c5.5 19.7 24.7 32.5 45 30z" fill="#febf22"/><path d="m901.9 149.7c1.6 6.7 1.6 13.8-.4 21-5.5 19.9-24.5 32.7-44.7 30-137.3-18.9-273.5-8-349.6 1.4-8 1-15.9-.5-22.8-3.9.2 1 .4 2 .7 3.1l.4 1.4c5.5 19.8 24.6 32.5 45 30 77.5-9.5 216.2-20.4 356-1.4 20.5 2.8 39.9-10 45.5-30 6.5-22.9-7.6-46.2-30.1-51.6z" fill="#f2ae1d"/><g><path d="m500.8 192.9c76.1-9.5 212.3-20.4 349.6-1.4 20.1 2.8 39.2-10 44.7-30 .8-3 1.3-6.1 1.4-9.1-62.1-7.9-125.4-11.9-187.9-11.9-62.7 0-126.1 4-188.3 11.9-10.9 1.4-20.7 7.4-26.7 16.6-4.6 6.9-6.7 15.1-6.3 23.2 4.4 1 8.9 1.3 13.5.7z" fill="#ffc649"/><g><path d="m619.7 122.8c5.5-.3 9.8-4.8 9.8-10.3v-14.5c0-43.7 35.5-79.2 79.2-79.2h.4v-9.9c-49.3-.2-89.5 39.8-89.5 89.1l.1 24.8c-.1 0-.1 0 0 0z" fill="#f05366"/></g><path d="m504.8 178c.2-.4.4-.7.7-1.1 3.8-5.7 9.9-9.5 16.6-10.3 61.7-7.8 124.4-11.8 186.5-11.8 56.5 0 113.5 3.3 169.8 9.8-4.7 7.9-13.2 13-22.5 13-1.2 0-2.4-.1-3.5-.2-50.7-7-105.6-10.5-163.2-10.5-74.5-.1-140.5 5.8-184.4 11.1z" fill="#ffd685"/></g></g><g fill="#febf22"><path d="m995.9 838.4c-4.2-.8-8.5-1.2-12.8-1.2-18.3 0-35.6 7.4-46.9 19.8-2.2-7.8-6.2-15.1-11.8-21.6-9.8-11.3-23.6-18.8-38.8-21.3-3.6-.6-7.4-.9-11-.9-11.6 0-23 3-33 8.6-7.6 4.3-13.9 9.9-18.7 16.6-8.6-20.6-30.5-35.8-55.1-37.1-1.2-.1-2.5-.1-3.7-.1-14 0-27.9 4.5-39.1 12.6-6.9 5.1-12.5 11.3-16.4 18.4-3.9-7-9.5-13.3-16.4-18.4-11.1-8.1-25-12.6-39.1-12.6-1.2 0-2.5 0-3.7.1-24.6 1.3-46.5 16.5-55.1 37.1-4.7-6.6-11.1-12.3-18.7-16.6-9.9-5.6-21.3-8.6-33-8.6-3.7 0-7.4.3-11 .9-15.2 2.5-29 10.1-38.8 21.3-5.7 6.5-9.7 13.8-11.8 21.6-11.3-12.3-28.6-19.8-46.9-19.8-4.3 0-8.6.4-12.8 1.2-.4.1-3.2.4-7.3 1 5.7 3.5 11.4 6.8 17.3 10.1.9 0 1.9-.1 2.8-.1 18.4 0 34.8 8.8 42.9 22.5 4.7 2 9.4 4 14.2 5.9.4-.9.5-1.9.4-3-2.6-22.6 16.2-44.5 42-48.8 3-.5 6-.7 9-.7 23 0 43.2 14.1 48 33.5.7 2.7 3.1 4.6 5.9 4.6h.7c3.1-.4 5.4-3 5.4-6 0-22.9 21.3-42.6 47.4-44 1-.1 2-.1 3-.1 25.1 0 46.8 17 49.5 38.8.4 3 3 5.3 6 5.3s5.7-2.3 6-5.3c2.7-21.7 24.4-38.8 49.5-38.8 1 0 2 0 3 .1 26.1 1.4 47.4 21.2 47.4 44 0 3.1 2.3 5.7 5.4 6h.7c2.8 0 5.2-1.9 5.9-4.6 4.8-19.4 25-33.5 48-33.5 3 0 6 .2 9 .7 25.8 4.3 44.6 26.1 42 48.8-.1 1 .1 2.1.4 3 4.8-1.9 9.5-3.8 14.2-5.9 8.1-13.7 24.5-22.5 42.9-22.5.9 0 1.9 0 2.8.1 5.8-3.2 11.5-6.6 17.1-10-3.4-.6-6.3-1-6.9-1.1z"/><path d="m1000.7 275.3c-2.2.7-4.4 1.2-6.7 1.7-5 1-10.1 1.5-15.3 1.5-20.6 0-39.2-8-45.3-19.4-1.1-2-3.1-3.2-5.4-3.2-.7 0-1.3.1-2 .3-2.8 1-4.5 3.8-4 6.8.8 4.7-.6 9.5-3.9 14-6.9 9.2-21.1 16-37 17.9-3 .4-6.1.5-9.2.5-22.4 0-42.7-9.7-47.2-22.6-.9-2.4-3.2-4.1-5.8-4.1-.3 0-.7 0-1 .1-2.9.5-5.1 3-5.1 6 0 14.8-21.3 28-46.5 29-1 0-2 .1-3 .1-24.4 0-46.2-11.6-48.6-25.8-.5-2.9-3-5.1-6-5.1s-5.5 2.1-6 5.1c-2.5 14.2-24.3 25.8-48.6 25.8-1 0-2 0-3-.1-25.2-1-46.5-14.3-46.5-29 0-3-2.1-5.5-5.1-6-.3-.1-.7-.1-1-.1-2.6 0-4.9 1.6-5.8 4.1-4.5 12.9-24.8 22.6-47.2 22.6-3.1 0-6.1-.2-9.2-.5-16-1.9-30.2-8.7-37-17.9-3.4-4.5-4.7-9.3-3.9-14 .5-3-1.2-5.8-4-6.8-.6-.2-1.3-.3-2-.3-2.3 0-4.3 1.2-5.4 3.2-6.1 11.4-24.7 19.4-45.3 19.4-5.2 0-10.4-.5-15.3-1.5-2.3-.5-4.5-1-6.7-1.7-4.3 2.6-8.5 5.2-12.7 7.9 2 1.1 3.4 1.8 3.8 1.9 4.2 1.6 8.7 2.9 13.2 3.8 5.9 1.2 11.9 1.8 18 1.8 18.3 0 35.1-5.3 46.1-14.4 1.1 2.7 2.6 5.4 4.5 7.9 8.9 11.9 25.9 20.4 45.4 22.7 3.6.4 7.2.6 10.8.6 20.7 0 39.8-7 50.6-18.3 8.5 15 29.7 25.7 54.2 26.6 1.2 0 2.4.1 3.6.1 23.4 0 44.4-8.8 54.5-22.4 10.1 13.6 31.1 22.4 54.5 22.4 1.2 0 2.4 0 3.6-.1 24.6-1 45.8-11.6 54.3-26.6 10.9 11.3 30 18.3 50.6 18.3 3.6 0 7.2-.2 10.8-.6 19.5-2.3 36.4-10.8 45.4-22.7 1.9-2.5 3.4-5.2 4.5-7.9 11.1 9.1 27.8 14.4 46.1 14.4 6 0 12.1-.6 18-1.8 4.5-.9 9-2.2 13.2-3.8.5-.2 2.1-.8 4.2-1.6-4.3-2.8-8.7-5.5-13.2-8.2z"/></g><g fill="#f8acae"><ellipse cx="887.5" cy="718.3" rx="16.8" ry="6.6" transform="matrix(.354 -.935 .935 .354 -98.685 1293.672)"/><g><ellipse cx="433.8" cy="404.6" rx="33.7" ry="14" transform="matrix(.262 -.965 .965 .262 -70.407 717.115)"/><ellipse cx="419.4" cy="457.5" rx="10.5" ry="6.9" transform="matrix(.262 -.965 .965 .262 -132.09 742.275)"/></g></g></g><path d="m714.7 1136.6c0-13.2-8.3-24.5-20-28.9-11.7 4.4-20 15.7-20 28.9s8.3 24.5 20 28.9c11.6-4.5 20-15.7 20-28.9z" fill="#ef3f3e"/><g fill="#f8acae"><ellipse cx="688.9" cy="1122.4" rx="8.2" ry="5.7" transform="matrix(.315 -.949 .949 .315 -593.22 1423.242)"/><ellipse cx="683.2" cy="1133.9" rx="2.8" ry="2.9" transform="matrix(.315 -.949 .949 .315 -608.002 1425.746)"/></g></svg>
+                        </div>
+
+                        <!-- Floating Sky Lantern 3 (from 3_hangingLanterns.svg) -->
+                        <div class="absolute bottom-0 left-1/4 w-8 sm:w-10 h-16 sm:h-20 flex flex-col items-center animate-sky-lantern-3 drop-shadow-[0_0_14px_rgba(245,158,11,0.7)]">
+                            <svg viewBox="0 0 1417.3 1417.3" class="w-full h-full">
+                                <g><g><g><g><g><g><g><g><g><g><g><g><path d="m695.8 788.9h19.5v345.1h-19.5z" fill="#ee2d26"/></g></g></g></g></g></g></g></g><g><g><g><g><g><g><g><g><path d="m706.6 788.9h8.7v345.1h-8.7z" fill="#d32027"/></g></g></g></g></g></g></g></g><g><g><g><g><g><g><g><g><path d="m697.8 788.9h5.2v345.1h-5.2z" fill="#f15c5d"/></g></g></g></g></g></g></g></g><g><path d="m726.7 1124.5h-42.4v-40.8c0-6.4 5.2-11.5 11.5-11.5h19.4c6.4 0 11.5 5.2 11.5 11.5z" fill="#ee2d26"/></g><path d="m714.5 1074.2h-9c5.9 0 10.6 4.8 10.6 10.6v37.6h9v-37.6c0-5.8-4.8-10.6-10.6-10.6z" fill="#d32027"/><g><path d="m700.7 1074.2h-4.1c-5.9 0-10.6 4.8-10.6 10.6v37.6h25.3v-37.6c0-5.8-4.7-10.6-10.6-10.6z" fill="#ef3f3e"/></g><circle cx="705.5" cy="1136.6" fill="#ee2d26" r="33.4"/><path d="m705.5 1105.7c-3.2 0-6.3.5-9.1 1.4 12.6 3.9 21.7 15.6 21.7 29.5s-9.1 25.6-21.7 29.5c2.9.9 6 1.4 9.1 1.4 17 0 30.9-13.8 30.9-30.9s-13.8-30.9-30.9-30.9z" fill="#d32027"/></g><g><g><g><g><g><g><path d="m747.9 1228.5c-.4-23.1-8.3-44-8.8-67.1-17.5 0-49.3 0-67.1 0-.5 23.1-8.4 44-8.8 67.1-.9 56.4 0 112.9 0 169.2 0 26.1 84.8 26.1 84.8 0-.1-56.3.8-112.8-.1-169.2z" fill="#e8aa22"/><path d="m744.4 1234.8c-.3-21.5-7.6-41.1-8.1-62.6-6.2 0-14.4 0-23.1 0 .5 21.5 7.7 41.1 8.1 62.6.9 52.6 0 105.4 0 158 0 9.7-12.4 15.6-27.3 17.5 22.4 2.9 50.4-2.9 50.4-17.5 0-52.6.8-105.4 0-158z" fill="#d58628"/><g><path d="m708.8 1392.8c0-52.7.9-105.4 0-158-.3-21.5-7.6-41.1-8.1-62.6-9.7 0-19 0-26 0-.5 21.5-7.7 41.1-8.1 62.6-.9 52.6 0 105.4 0 158 0 8.3 9.1 13.8 21.1 16.4 12-2.6 21.1-8.1 21.1-16.4z" fill="#f3b22c"/></g><g><g fill="#febf22"><path d="m718.3 1410.2 2.1-.3c0-52.3.4-125.4 0-174.7-.2-21.1-3.7-41.7-4-62.8-.6 0-1.2 0-1.8 0 .3 21 3.5 41.7 3.6 62.8.5 49.3.2 122.7.1 175z"/><path d="m714.9 1410.6c-.1-72.6-1.8-167.9-2.8-238.2-.6 0-1.2 0-1.8 0 .7 70.5 1.8 165.9 1.9 238.5 1-.2 1.9-.2 2.7-.3z"/><path d="m723 1409.3c.7-.1 1.4-.3 2-.5 0-52.2.3-124.8 0-173.7-.1-21.1-4.1-41.6-4.3-62.8-.6 0-1.2 0-1.8 0 .2 21.1 4 41.7 4.1 62.8.3 49.1 0 122 0 174.2z"/><path d="m738.9 1402.7c.8-.6 1.5-1.3 2.2-2 .2-51.5.8-119.3 0-165.8-.4-21.4-7.1-41.2-7.6-62.6-.6 0-1.2 0-1.8 0 .5 21.4 6.9 41.2 7.2 62.6.7 47.1.1 116.1 0 167.8z"/><path d="m728 1408c.8-.2 1.5-.5 2.3-.8.1-52.1.4-123.7 0-172.2-.2-21.2-5-41.5-5.3-62.8-.6 0-1.2 0-1.8 0 .2 21.2 4.7 41.6 4.8 62.8.3 48.8 0 120.9 0 173z"/><path d="m744 1395.7c.3-.9.4-1.9.4-2.9 0-52.6.9-105.3 0-157.9-.3-21.5-7.6-41.1-8.1-62.6-.1 0-.2 0-.4 0 .5 21.5 7.6 41.1 8 62.6.8 45 .2 110 .1 160.8z"/><path d="m733.5 1406c.8-.4 1.6-.8 2.3-1.2.1-51.9.5-122 0-169.7-.3-21.4-6.1-41.4-6.5-62.8-.6 0-1.2 0-1.8 0 .3 21.3 5.8 41.4 6 62.8.4 48.1 0 118.9 0 170.9z"/><path d="m708.4 1411c0-72.6-.3-168.1-.5-238.7-.6 0-1.2 0-1.8 0-.2 70.5-.5 166.2-.5 238.7.9.1 1.9 0 2.8 0z"/><path d="m672.9 1403.2c.7.5 1.4 1 2.2 1.4-.1-51.9-.7-122 0-169.7.3-21.4 6.8-41.2 7.2-62.6-.6 0-1.2 0-1.8 0-.5 21.4-7.2 41.2-7.6 62.6-.7 47.3-.1 116.6 0 168.3z"/></g><path d="m678.3 1406.2c.7.3 1.5.6 2.3.9-.1-52.1-.5-123.6 0-172 .2-21.3 5.7-41.5 6-62.8-.6 0-1.2 0-1.8 0-.4 21.4-6.3 41.4-6.5 62.8-.6 48.1-.1 119.1 0 171.1z" fill="#ffd77c"/><path d="m668.2 1398.1c.5.9 1.1 1.8 1.9 2.6-.2-51.5-.8-119.3 0-165.8.4-21.5 7.5-41.1 8-62.6-.6 0-1.2 0-1.8 0-.5 21.5-7.7 41.1-8.1 62.6-.7 45.7-.1 112.1 0 163.2z" fill="#febf22"/><path d="m689 1409.5c.7.1 1.3.3 2 .4 0-52.3-.3-125.5 0-174.8.1-21.1 3.9-41.7 4.1-62.8-.6 0-1.2 0-1.8 0-.2 21.1-4.2 41.6-4.3 62.8-.3 49.2 0 122.1 0 174.4z" fill="#febf22"/><path d="m683.8 1408.2c.7.2 1.5.4 2.3.6 0-52.2-.3-124.8 0-173.7.1-21.2 4.6-41.6 4.8-62.8-.6 0-1.2 0-1.8 0-.3 21.2-5.1 41.5-5.3 62.8-.4 48.8-.1 120.9 0 173.1z" fill="#febf22"/><path d="m693.6 1410.3c.7.1 1.4.2 2.1.3 0-52.3-.4-125.9 0-175.4.2-21 3.3-41.7 3.6-62.8-.6 0-1.2 0-1.8 0-.3 21.1-3.8 41.7-4 62.8-.3 49.3.1 122.8.1 175.1z" fill="#ffd77c"/><path d="m701.7 1411c.1-72.6 1.2-168.1 1.9-238.6-.6 0-1.2 0-1.8 0-.9 70.4-2.6 165.9-2.8 238.5 1 0 1.9 0 2.7.1z" fill="#febf22"/></g></g><path d="m748.3 1185.4h-81.5c-7.1 0-12.8-5.7-12.8-12.8 0-7.1 5.7-12.8 12.8-12.8h81.5c7.1 0 12.8 5.7 12.8 12.8.1 7.1-5.7 12.8-12.8 12.8z" fill="#ee2d26"/></g></g></g></g></g><g><g><g><path d="m806.7 188.1h-27.7v-90.1c0-38.8-31.5-70.3-70.3-70.3s-70.3 31.5-70.3 70.3v90h-27.7v-90c0-54.1 44-98 98-98 54.1 0 98 44 98 98z" fill="#d32027"/><path d="m786.1 180.9v-82.9c0-42.7-34.7-77.5-77.5-77.5s-77.4 34.8-77.4 77.5v82.9h-13.4v-82.9c0-50.1 40.8-90.9 90.9-90.9s90.9 40.8 90.9 90.9v82.9z" fill="#ee303d"/></g><g><g><g><ellipse cx="708.7" cy="558.1" fill="#ee303d" rx="471.8" ry="360.1"/></g></g></g><g><g fill="#ef3d3c"><path d="m430.6 558.1c0-188.4 75.7-271.1 131.5-310.7-2.6.3-5.1.5-7.6.8-28.8 16.2-55.3 37-78.7 61.9-62.4 66.2-96.7 154.3-96.7 248s34.4 181.8 96.7 248c27.8 29.5 59.8 53.3 95 70.5 7.3 3.6 14.7 6.8 22.1 9.8-52.6-34.5-162.3-120.6-162.3-328.3z"/><path d="m862.2 310.8c-19.1-29.3-41-52.7-64.8-69.7-3.3-.2-6.5-.3-9.8-.5 11.1 16.3 21.4 36.1 30.5 59.3 27.3 69.1 42.3 160.8 42.3 258.1 0 97.4-15 189-42.3 258.1-11.3 28.6-24.2 52.1-38.4 70.1 30.6-17.2 58.7-44.5 82.5-81 43-66 66.8-153.8 66.8-247.3s-23.8-181.1-66.8-247.1z"/><path d="m653.5 240.7c-13.1 16.4-25.4 38.7-36.4 66.4-26.4 66.9-41 156.1-41 251.1s14.5 184.2 41 251.1c16 40.5 34.9 69.5 55.1 85.4 15-108.2 23-235.1 23-368.2 0-100.9-4.6-198.3-13.4-286.6-9.6 0-19.1.4-28.3.8z"/></g><g><path d="m903.8 251.5c18.4 13.2 35.7 28.4 51.8 45.4 65.8 69.8 102 162.6 102 261.2s-36.2 191.4-102 261.2c-16 17-33.4 32.2-51.8 45.4 116.4-59.4 195.5-174.6 195.5-306.6-.1-132.1-79.2-247.3-195.5-306.6z" fill="#ef3d3c"/></g><path d="m951.7 269.2c121.9 62.9 202.1 168.9 202.1 288.9s-80.2 225.9-202.1 288.9c126.6-60.8 210.8-167.6 210.8-288.9s-84.1-228.1-210.8-288.9z" fill="#ef485d"/><path d="m288 558.1c0-87.7 34.7-170.8 94-237.4-78.8 61.6-127.3 145.3-127.3 237.4s48.5 175.8 127.3 237.3c-59.4-66.5-94-149.6-94-237.3z" fill="#ef3d3c"/></g><path d="m799.2 307.4c-24.8-62.7-57.8-98.7-90.6-98.7-1.6 0-3.2.1-4.8.3 10.8 96.2 16.6 204.6 16.6 317.3 0 137.7-8.6 268.8-24.6 379.3 4.2 1.2 8.5 1.8 12.8 1.8 32.8 0 65.8-36 90.6-98.7 26.4-66.8 40.9-155.8 40.9-250.7s-14.5-183.8-40.9-250.6z" fill="#d32027"/></g></g><path d="m950.4 301.8c-64.6-68.6-150.4-106.3-241.7-106.3s-177.1 37.7-241.7 106.3c-64.5 68.5-100 159.5-100 256.3s35.5 187.9 100 256.3c64.6 68.5 150.4 106.3 241.7 106.3s177.1-37.7 241.7-106.3c64.5-68.5 100-159.5 100-256.3s-35.5-187.9-100-256.3zm-479.8 509.2c-63.6-67.6-98.6-157.4-98.6-252.9s35-185.3 98.7-252.9c57.2-60.7 131.4-96.9 211.1-103.5-28.7 13.3-55.1 48-76 100.9-27 68.3-41.8 159-41.8 255.5s14.8 187.2 41.8 255.5c20.9 52.9 47.2 87.5 76 100.9-79.8-6.7-154-42.8-211.2-103.5zm139.9.8c-26.8-67.8-41.5-157.8-41.5-253.7s14.7-186 41.5-253.7c26.4-67 61.3-103.9 98.2-103.9s71.7 36.9 98.2 103.9c26.7 67.7 41.5 157.8 41.5 253.7s-14.7 186-41.5 253.7c-26.4 67-61.3 103.9-98.2 103.9-36.9-.1-71.8-37-98.2-103.9zm336.2-.8c-57.2 60.7-131.4 96.9-211.1 103.5 28.7-13.3 55.1-48 76-100.9 27-68.3 41.8-159 41.8-255.5s-14.8-187.2-41.8-255.5c-20.9-52.9-47.2-87.5-76-100.9 79.8 6.7 153.9 42.8 211.1 103.5 63.6 67.5 98.7 157.3 98.7 252.9s-35.1 185.3-98.7 252.9z" fill="#931a1d"/><g fill="#d32027"><path d="m461 820c-65.9-70-102.3-163-102.3-261.9s36.4-192 102.3-262c23.8-25.3 50.5-46.5 79.3-63.3-32.2 16.8-91.4 38-118.1 63.3-73.8 70-117.8 163-117.8 261.9s44 192 117.8 262c26.7 25.3 85.9 46.5 118.1 63.3-28.8-16.8-55.5-38-79.3-63.3z"/><path d="m877 232.9c139.3 51.1 238.1 177.6 238.1 325.2s-98.8 274.2-238.1 325.2c171.2-51.1 292.7-177.6 292.7-325.2s-121.5-274.2-292.7-325.2z"/><path d="m555.8 558.1c0-97.5 15.1-189.3 42.4-258.5 14.8-37.5 32.5-66.3 52-85.3-25.6 19-186.5 69.2-186.5 343.9 0 251.6 160.9 324.8 186.5 343.9-19.5-19-37.2-47.8-52-85.3-27.4-69.4-42.4-161.2-42.4-258.7z"/><path d="m940.7 310.8c-48-51-108.2-84.2-173.6-96.6 45.3 12.4 87 45.7 120.2 96.6 43 66 66.8 153.8 66.8 247.3s-23.7 181.2-66.8 247.3c-33.2 51-74.9 84.2-120.2 96.6 65.4-12.4 125.6-45.7 173.6-96.6 62.2-66 96.4-153.8 96.4-247.3s-34.2-181.3-96.4-247.3z"/></g><path d="m530.6 883.5c77.5 9.5 216.2 20.4 356 1.4 20.5-2.8 39.9 10 45.5 30 6.8 24.4-9.6 49.2-34.7 52.4-125.4 15.9-252.1 15.9-377.5 0-25.1-3.2-41.5-28-34.7-52.4l.4-1.4c5.5-19.7 24.7-32.5 45-30z" fill="#febf22"/><path d="m932.1 914.9c-4.3-15.2-16.6-26.3-31.3-29.4 5.1 23.5-11 46.8-35.3 49.9-125.4 15.9-252.1 15.9-377.5 0-1.1-.1-2.3-.4-3.4-.6 3.6 16.6 17.1 30.2 35.3 32.5 125.4 15.9 252.1 15.9 377.5 0 25.1-3.2 41.5-28 34.7-52.4z" fill="#f2ae1d"/><g><path d="m857.7 927.5c20.6-2.6 35.3-19.8 36.2-39.3-.6 0-1.1-.1-1.7-.1-1.7 0-3.4.1-5.1.3-51.1 6.9-106.5 10.4-164.7 10.4-78.7 0-148-6.4-192.2-11.9-1.5-.2-3.1-.3-4.6-.3-16.9 0-31.9 11.4-36.5 27.7l-.4 1.4c-1.2 4.1-1.6 8.4-1.3 12.5 123 15.2 247.3 14.9 370.3-.7z" fill="#ffc649"/><path d="m669 925.2c-55 0-110.6-3.1-165.4-9.2 3.6-8.9 12.2-14.9 21.9-14.9 1 0 1.9.1 2.9.2 44.7 5.5 114.6 12 194 12 52.6 0 103-2.8 150.1-8.5-4.2 4.6-10 7.8-16.6 8.6-61.8 7.8-124.7 11.8-186.9 11.8z" fill="#ffd685"/></g><path d="m530.6 232.7c77.5-9.5 216.2-20.4 356-1.4 20.5 2.8 39.9-10 45.5-30 6.8-24.4-9.6-49.2-34.7 52.4-125.4-15.9-252.1-15.9-377.5 0-25.1 3.2-41.5 28-34.7 52.4l.4 1.4c5.5 19.7 24.7 32.5 45 30z" fill="#febf22"/><path d="m901.9 149.7c1.6 6.7 1.6 13.8-.4 21-5.5 19.9-24.5 32.7-44.7 30-137.3-18.9-273.5-8-349.6 1.4-8 1-15.9-.5-22.8-3.9.2 1 .4 2 .7 3.1l.4 1.4c5.5 19.8 24.6 32.5 45 30 77.5-9.5 216.2-20.4 356-1.4 20.5 2.8 39.9-10 45.5-30 6.5-22.9-7.6-46.2-30.1-51.6z" fill="#f2ae1d"/><g><path d="m500.8 192.9c76.1-9.5 212.3-20.4 349.6-1.4 20.1 2.8 39.2-10 44.7-30 .8-3 1.3-6.1 1.4-9.1-62.1-7.9-125.4-11.9-187.9-11.9-62.7 0-126.1 4-188.3 11.9-10.9 1.4-20.7 7.4-26.7 16.6-4.6 6.9-6.7 15.1-6.3 23.2 4.4 1 8.9 1.3 13.5.7z" fill="#ffc649"/><g><path d="m619.7 122.8c5.5-.3 9.8-4.8 9.8-10.3v-14.5c0-43.7 35.5-79.2 79.2-79.2h.4v-9.9c-49.3-.2-89.5 39.8-89.5 89.1l.1 24.8c-.1 0-.1 0 0 0z" fill="#f05366"/></g><path d="m504.8 178c.2-.4.4-.7.7-1.1 3.8-5.7 9.9-9.5 16.6-10.3 61.7-7.8 124.4-11.8 186.5-11.8 56.5 0 113.5 3.3 169.8 9.8-4.7 7.9-13.2 13-22.5 13-1.2 0-2.4-.1-3.5-.2-50.7-7-105.6-10.5-163.2-10.5-74.5-.1-140.5 5.8-184.4 11.1z" fill="#ffd685"/></g></g><g fill="#febf22"><path d="m995.9 838.4c-4.2-.8-8.5-1.2-12.8-1.2-18.3 0-35.6 7.4-46.9 19.8-2.2-7.8-6.2-15.1-11.8-21.6-9.8-11.3-23.6-18.8-38.8-21.3-3.6-.6-7.4-.9-11-.9-11.6 0-23 3-33 8.6-7.6 4.3-13.9 9.9-18.7 16.6-8.6-20.6-30.5-35.8-55.1-37.1-1.2-.1-2.5-.1-3.7-.1-14 0-27.9 4.5-39.1 12.6-6.9 5.1-12.5 11.3-16.4 18.4-3.9-7-9.5-13.3-16.4-18.4-11.1-8.1-25-12.6-39.1-12.6-1.2 0-2.5 0-3.7.1-24.6 1.3-46.5 16.5-55.1 37.1-4.7-6.6-11.1-12.3-18.7-16.6-9.9-5.6-21.3-8.6-33-8.6-3.7 0-7.4.3-11 .9-15.2 2.5-29 10.1-38.8 21.3-5.7 6.5-9.7 13.8-11.8 21.6-11.3-12.3-28.6-19.8-46.9-19.8-4.3 0-8.6.4-12.8 1.2-.4.1-3.2.4-7.3 1 5.7 3.5 11.4 6.8 17.3 10.1.9 0 1.9-.1 2.8-.1 18.4 0 34.8 8.8 42.9 22.5 4.7 2 9.4 4 14.2 5.9.4-.9.5-1.9.4-3-2.6-22.6 16.2-44.5 42-48.8 3-.5 6-.7 9-.7 23 0 43.2 14.1 48 33.5.7 2.7 3.1 4.6 5.9 4.6h.7c3.1-.4 5.4-3 5.4-6 0-22.9 21.3-42.6 47.4-44 1-.1 2-.1 3-.1 25.1 0 46.8 17 49.5 38.8.4 3 3 5.3 6 5.3s5.7-2.3 6-5.3c2.7-21.7 24.4-38.8 49.5-38.8 1 0 2 0 3 .1 26.1 1.4 47.4 21.2 47.4 44 0 3.1 2.3 5.7 5.4 6h.7c2.8 0 5.2-1.9 5.9-4.6 4.8-19.4 25-33.5 48-33.5 3 0 6 .2 9 .7 25.8 4.3 44.6 26.1 42 48.8-.1 1 .1 2.1.4 3 4.8-1.9 9.5-3.8 14.2-5.9 8.1-13.7 24.5-22.5 42.9-22.5.9 0 1.9 0 2.8.1 5.8-3.2 11.5-6.6 17.1-10-3.4-.6-6.3-1-6.9-1.1z"/><path d="m1000.7 275.3c-2.2.7-4.4 1.2-6.7 1.7-5 1-10.1 1.5-15.3 1.5-20.6 0-39.2-8-45.3-19.4-1.1-2-3.1-3.2-5.4-3.2-.7 0-1.3.1-2 .3-2.8 1-4.5 3.8-4 6.8.8 4.7-.6 9.5-3.9 14-6.9 9.2-21.1 16-37 17.9-3 .4-6.1.5-9.2.5-22.4 0-42.7-9.7-47.2-22.6-.9-2.4-3.2-4.1-5.8-4.1-.3 0-.7 0-1 .1-2.9.5-5.1 3-5.1 6 0 14.8-21.3 28-46.5 29-1 0-2 .1-3 .1-24.4 0-46.2-11.6-48.6-25.8-.5-2.9-3-5.1-6-5.1s-5.5 2.1-6 5.1c-2.5 14.2-24.3 25.8-48.6 25.8-1 0-2 0-3-.1-25.2-1-46.5-14.3-46.5-29 0-3-2.1-5.5-5.1-6-.3-.1-.7-.1-1-.1-2.6 0-4.9 1.6-5.8 4.1-4.5 12.9-24.8 22.6-47.2 22.6-3.1 0-6.1-.2-9.2-.5-16-1.9-30.2-8.7-37-17.9-3.4-4.5-4.7-9.3-3.9-14 .5-3-1.2-5.8-4-6.8-.6-.2-1.3-.3-2-.3-2.3 0-4.3 1.2-5.4 3.2-6.1 11.4-24.7 19.4-45.3 19.4-5.2 0-10.4-.5-15.3-1.5-2.3-.5-4.5-1-6.7-1.7-4.3 2.6-8.5 5.2-12.7 7.9 2 1.1 3.4 1.8 3.8 1.9 4.2 1.6 8.7 2.9 13.2 3.8 5.9 1.2 11.9 1.8 18 1.8 18.3 0 35.1-5.3 46.1-14.4 1.1 2.7 2.6 5.4 4.5 7.9 8.9 11.9 25.9 20.4 45.4 22.7 3.6.4 7.2.6 10.8.6 20.7 0 39.8-7 50.6-18.3 8.5 15 29.7 25.7 54.2 26.6 1.2 0 2.4.1 3.6.1 23.4 0 44.4-8.8 54.5-22.4 10.1 13.6 31.1 22.4 54.5 22.4 1.2 0 2.4 0 3.6-.1 24.6-1 45.8-11.6 54.3-26.6 10.9 11.3 30 18.3 50.6 18.3 3.6 0 7.2-.2 10.8-.6 19.5-2.3 36.4-10.8 45.4-22.7 1.9-2.5 3.4-5.2 4.5-7.9 11.1 9.1 27.8 14.4 46.1 14.4 6 0 12.1-.6 18-1.8 4.5-.9 9-2.2 13.2-3.8.5-.2 2.1-.8 4.2-1.6-4.3-2.8-8.7-5.5-13.2-8.2z"/></g><g fill="#f8acae"><ellipse cx="887.5" cy="718.3" rx="16.8" ry="6.6" transform="matrix(.354 -.935 .935 .354 -98.685 1293.672)"/><g><ellipse cx="433.8" cy="404.6" rx="33.7" ry="14" transform="matrix(.262 -.965 .965 .262 -70.407 717.115)"/><ellipse cx="419.4" cy="457.5" rx="10.5" ry="6.9" transform="matrix(.262 -.965 .965 .262 -132.09 742.275)"/></g></g></g><path d="m714.7 1136.6c0-13.2-8.3-24.5-20-28.9-11.7 4.4-20 15.7-20 28.9s8.3 24.5 20 28.9c11.6-4.5 20-15.7 20-28.9z" fill="#ef3f3e"/><g fill="#f8acae"><ellipse cx="688.9" cy="1122.4" rx="8.2" ry="5.7" transform="matrix(.315 -.949 .949 .315 -593.22 1423.242)"/><ellipse cx="683.2" cy="1133.9" rx="2.8" ry="2.9" transform="matrix(.315 -.949 .949 .315 -608.002 1425.746)"/></g></svg>
+                        </div>
+
+                        <!-- Floating Sky Lantern 4 (from 3_hangingLanterns.svg) -->
+                        <div class="absolute bottom-0 right-1/4 w-6 sm:w-8 h-12 sm:h-16 flex flex-col items-center animate-sky-lantern-4 drop-shadow-[0_0_10px_rgba(245,158,11,0.5)]">
+                            <svg viewBox="0 0 1417.3 1417.3" class="w-full h-full">
+                                <g><g><g><g><g><g><g><g><g><g><g><g><path d="m695.8 788.9h19.5v345.1h-19.5z" fill="#ee2d26"/></g></g></g></g></g></g></g></g><g><g><g><g><g><g><g><g><path d="m706.6 788.9h8.7v345.1h-8.7z" fill="#d32027"/></g></g></g></g></g></g></g></g><g><g><g><g><g><g><g><g><path d="m697.8 788.9h5.2v345.1h-5.2z" fill="#f15c5d"/></g></g></g></g></g></g></g></g><g><path d="m726.7 1124.5h-42.4v-40.8c0-6.4 5.2-11.5 11.5-11.5h19.4c6.4 0 11.5 5.2 11.5 11.5z" fill="#ee2d26"/></g><path d="m714.5 1074.2h-9c5.9 0 10.6 4.8 10.6 10.6v37.6h9v-37.6c0-5.8-4.8-10.6-10.6-10.6z" fill="#d32027"/><g><path d="m700.7 1074.2h-4.1c-5.9 0-10.6 4.8-10.6 10.6v37.6h25.3v-37.6c0-5.8-4.7-10.6-10.6-10.6z" fill="#ef3f3e"/></g><circle cx="705.5" cy="1136.6" fill="#ee2d26" r="33.4"/><path d="m705.5 1105.7c-3.2 0-6.3.5-9.1 1.4 12.6 3.9 21.7 15.6 21.7 29.5s-9.1 25.6-21.7 29.5c2.9.9 6 1.4 9.1 1.4 17 0 30.9-13.8 30.9-30.9s-13.8-30.9-30.9-30.9z" fill="#d32027"/></g><g><g><g><g><g><g><path d="m747.9 1228.5c-.4-23.1-8.3-44-8.8-67.1-17.5 0-49.3 0-67.1 0-.5 23.1-8.4 44-8.8 67.1-.9 56.4 0 112.9 0 169.2 0 26.1 84.8 26.1 84.8 0-.1-56.3.8-112.8-.1-169.2z" fill="#e8aa22"/><path d="m744.4 1234.8c-.3-21.5-7.6-41.1-8.1-62.6-6.2 0-14.4 0-23.1 0 .5 21.5 7.7 41.1 8.1 62.6.9 52.6 0 105.4 0 158 0 9.7-12.4 15.6-27.3 17.5 22.4 2.9 50.4-2.9 50.4-17.5 0-52.6.8-105.4 0-158z" fill="#d58628"/><g><path d="m708.8 1392.8c0-52.7.9-105.4 0-158-.3-21.5-7.6-41.1-8.1-62.6-9.7 0-19 0-26 0-.5 21.5-7.7 41.1-8.1 62.6-.9 52.6 0 105.4 0 158 0 8.3 9.1 13.8 21.1 16.4 12-2.6 21.1-8.1 21.1-16.4z" fill="#f3b22c"/></g><g><g fill="#febf22"><path d="m718.3 1410.2 2.1-.3c0-52.3.4-125.4 0-174.7-.2-21.1-3.7-41.7-4-62.8-.6 0-1.2 0-1.8 0 .3 21 3.5 41.7 3.6 62.8.5 49.3.2 122.7.1 175z"/><path d="m714.9 1410.6c-.1-72.6-1.8-167.9-2.8-238.2-.6 0-1.2 0-1.8 0 .7 70.5 1.8 165.9 1.9 238.5 1-.2 1.9-.2 2.7-.3z"/><path d="m723 1409.3c.7-.1 1.4-.3 2-.5 0-52.2.3-124.8 0-173.7-.1-21.1-4.1-41.6-4.3-62.8-.6 0-1.2 0-1.8 0 .2 21.1 4 41.7 4.1 62.8.3 49.1 0 122 0 174.2z"/><path d="m738.9 1402.7c.8-.6 1.5-1.3 2.2-2 .2-51.5.8-119.3 0-165.8-.4-21.4-7.1-41.2-7.6-62.6-.6 0-1.2 0-1.8 0 .5 21.4 6.9 41.2 7.2 62.6.7 47.1.1 116.1 0 167.8z"/><path d="m728 1408c.8-.2 1.5-.5 2.3-.8.1-52.1.4-123.7 0-172.2-.2-21.2-5-41.5-5.3-62.8-.6 0-1.2 0-1.8 0 .2 21.2 4.7 41.6 4.8 62.8.3 48.8 0 120.9 0 173z"/><path d="m744 1395.7c.3-.9.4-1.9.4-2.9 0-52.6.9-105.3 0-157.9-.3-21.5-7.6-41.1-8.1-62.6-.1 0-.2 0-.4 0 .5 21.5 7.6 41.1 8 62.6.8 45 .2 110 .1 160.8z"/><path d="m733.5 1406c.8-.4 1.6-.8 2.3-1.2.1-51.9.5-122 0-169.7-.3-21.4-6.1-41.4-6.5-62.8-.6 0-1.2 0-1.8 0 .3 21.3 5.8 41.4 6 62.8.4 48.1 0 118.9 0 170.9z"/><path d="m708.4 1411c0-72.6-.3-168.1-.5-238.7-.6 0-1.2 0-1.8 0-.2 70.5-.5 166.2-.5 238.7.9.1 1.9 0 2.8 0z"/><path d="m672.9 1403.2c.7.5 1.4 1 2.2 1.4-.1-51.9-.7-122 0-169.7.3-21.4 6.8-41.2 7.2-62.6-.6 0-1.2 0-1.8 0-.5 21.4-7.2 41.2-7.6 62.6-.7 47.3-.1 116.6 0 168.3z"/></g><path d="m678.3 1406.2c.7.3 1.5.6 2.3.9-.1-52.1-.5-123.6 0-172 .2-21.3 5.7-41.5 6-62.8-.6 0-1.2 0-1.8 0-.4 21.4-6.3 41.4-6.5 62.8-.6 48.1-.1 119.1 0 171.1z" fill="#ffd77c"/><path d="m668.2 1398.1c.5.9 1.1 1.8 1.9 2.6-.2-51.5-.8-119.3 0-165.8.4-21.5 7.5-41.1 8-62.6-.6 0-1.2 0-1.8 0-.5 21.5-7.7 41.1-8.1 62.6-.7 45.7-.1 112.1 0 163.2z" fill="#febf22"/><path d="m689 1409.5c.7.1 1.3.3 2 .4 0-52.3-.3-125.5 0-174.8.1-21.1 3.9-41.7 4.1-62.8-.6 0-1.2 0-1.8 0-.2 21.1-4.2 41.6-4.3 62.8-.3 49.2 0 122.1 0 174.4z" fill="#febf22"/><path d="m683.8 1408.2c.7.2 1.5.4 2.3.6 0-52.2-.3-124.8 0-173.7.1-21.2 4.6-41.6 4.8-62.8-.6 0-1.2 0-1.8 0-.3 21.2-5.1 41.5-5.3 62.8-.4 48.8-.1 120.9 0 173.1z" fill="#febf22"/><path d="m693.6 1410.3c.7.1 1.4.2 2.1.3 0-52.3-.4-125.9 0-175.4.2-21 3.3-41.7 3.6-62.8-.6 0-1.2 0-1.8 0-.3 21.1-3.8 41.7-4 62.8-.3 49.3.1 122.8.1 175.1z" fill="#ffd77c"/><path d="m701.7 1411c.1-72.6 1.2-168.1 1.9-238.6-.6 0-1.2 0-1.8 0-.9 70.4-2.6 165.9-2.8 238.5 1 0 1.9 0 2.7.1z" fill="#febf22"/></g></g><path d="m748.3 1185.4h-81.5c-7.1 0-12.8-5.7-12.8-12.8 0-7.1 5.7-12.8 12.8-12.8h81.5c7.1 0 12.8 5.7 12.8 12.8.1 7.1-5.7 12.8-12.8 12.8z" fill="#ee2d26"/></g></g></g></g></g><g><g><g><path d="m806.7 188.1h-27.7v-90.1c0-38.8-31.5-70.3-70.3-70.3s-70.3 31.5-70.3 70.3v90h-27.7v-90c0-54.1 44-98 98-98 54.1 0 98 44 98 98z" fill="#d32027"/><path d="m786.1 180.9v-82.9c0-42.7-34.7-77.5-77.5-77.5s-77.4 34.8-77.4 77.5v82.9h-13.4v-82.9c0-50.1 40.8-90.9 90.9-90.9s90.9 40.8 90.9 90.9v82.9z" fill="#ee303d"/></g><g><g><g><ellipse cx="708.7" cy="558.1" fill="#ee303d" rx="471.8" ry="360.1"/></g></g></g><g><g fill="#ef3d3c"><path d="m430.6 558.1c0-188.4 75.7-271.1 131.5-310.7-2.6.3-5.1.5-7.6.8-28.8 16.2-55.3 37-78.7 61.9-62.4 66.2-96.7 154.3-96.7 248s34.4 181.8 96.7 248c27.8 29.5 59.8 53.3 95 70.5 7.3 3.6 14.7 6.8 22.1 9.8-52.6-34.5-162.3-120.6-162.3-328.3z"/><path d="m862.2 310.8c-19.1-29.3-41-52.7-64.8-69.7-3.3-.2-6.5-.3-9.8-.5 11.1 16.3 21.4 36.1 30.5 59.3 27.3 69.1 42.3 160.8 42.3 258.1 0 97.4-15 189-42.3 258.1-11.3 28.6-24.2 52.1-38.4 70.1 30.6-17.2 58.7-44.5 82.5-81 43-66 66.8-153.8 66.8-247.3s-23.8-181.1-66.8-247.1z"/><path d="m653.5 240.7c-13.1 16.4-25.4 38.7-36.4 66.4-26.4 66.9-41 156.1-41 251.1s14.5 184.2 41 251.1c16 40.5 34.9 69.5 55.1 85.4 15-108.2 23-235.1 23-368.2 0-100.9-4.6-198.3-13.4-286.6-9.6 0-19.1.4-28.3.8z"/></g><g><path d="m903.8 251.5c18.4 13.2 35.7 28.4 51.8 45.4 65.8 69.8 102 162.6 102 261.2s-36.2 191.4-102 261.2c-16 17-33.4 32.2-51.8 45.4 116.4-59.4 195.5-174.6 195.5-306.6-.1-132.1-79.2-247.3-195.5-306.6z" fill="#ef3d3c"/></g><path d="m951.7 269.2c121.9 62.9 202.1 168.9 202.1 288.9s-80.2 225.9-202.1 288.9c126.6-60.8 210.8-167.6 210.8-288.9s-84.1-228.1-210.8-288.9z" fill="#ef485d"/><path d="m288 558.1c0-87.7 34.7-170.8 94-237.4-78.8 61.6-127.3 145.3-127.3 237.4s48.5 175.8 127.3 237.3c-59.4-66.5-94-149.6-94-237.3z" fill="#ef3d3c"/></g><path d="m799.2 307.4c-24.8-62.7-57.8-98.7-90.6-98.7-1.6 0-3.2.1-4.8.3 10.8 96.2 16.6 204.6 16.6 317.3 0 137.7-8.6 268.8-24.6 379.3 4.2 1.2 8.5 1.8 12.8 1.8 32.8 0 65.8-36 90.6-98.7 26.4-66.8 40.9-155.8 40.9-250.7s-14.5-183.8-40.9-250.6z" fill="#d32027"/></g></g><path d="m950.4 301.8c-64.6-68.6-150.4-106.3-241.7-106.3s-177.1 37.7-241.7 106.3c-64.5 68.5-100 159.5-100 256.3s35.5 187.9 100 256.3c64.6 68.5 150.4 106.3 241.7 106.3s177.1-37.7 241.7-106.3c64.5-68.5 100-159.5 100-256.3s-35.5-187.9-100-256.3zm-479.8 509.2c-63.6-67.6-98.6-157.4-98.6-252.9s35-185.3 98.7-252.9c57.2-60.7 131.4-96.9 211.1-103.5-28.7 13.3-55.1 48-76 100.9-27 68.3-41.8 159-41.8 255.5s14.8 187.2 41.8 255.5c20.9 52.9 47.2 87.5 76 100.9-79.8-6.7-154-42.8-211.2-103.5zm139.9.8c-26.8-67.8-41.5-157.8-41.5-253.7s14.7-186 41.5-253.7c26.4-67 61.3-103.9 98.2-103.9s71.7 36.9 98.2 103.9c26.7 67.7 41.5 157.8 41.5 253.7s-14.7 186-41.5 253.7c-26.4 67-61.3 103.9-98.2 103.9-36.9-.1-71.8-37-98.2-103.9zm336.2-.8c-57.2 60.7-131.4 96.9-211.1 103.5 28.7-13.3 55.1-48 76-100.9 27-68.3 41.8-159 41.8-255.5s-14.8-187.2-41.8-255.5c-20.9-52.9-47.2-87.5-76-100.9 79.8 6.7 153.9 42.8 211.1 103.5 63.6 67.5 98.7 157.3 98.7 252.9s-35.1 185.3-98.7 252.9z" fill="#931a1d"/><g fill="#d32027"><path d="m461 820c-65.9-70-102.3-163-102.3-261.9s36.4-192 102.3-262c23.8-25.3 50.5-46.5 79.3-63.3-32.2 16.8-91.4 38-118.1 63.3-73.8 70-117.8 163-117.8 261.9s44 192 117.8 262c26.7 25.3 85.9 46.5 118.1 63.3-28.8-16.8-55.5-38-79.3-63.3z"/><path d="m877 232.9c139.3 51.1 238.1 177.6 238.1 325.2s-98.8 274.2-238.1 325.2c171.2-51.1 292.7-177.6 292.7-325.2s-121.5-274.2-292.7-325.2z"/><path d="m555.8 558.1c0-97.5 15.1-189.3 42.4-258.5 14.8-37.5 32.5-66.3 52-85.3-25.6 19-186.5 69.2-186.5 343.9 0 251.6 160.9 324.8 186.5 343.9-19.5-19-37.2-47.8-52-85.3-27.4-69.4-42.4-161.2-42.4-258.7z"/><path d="m940.7 310.8c-48-51-108.2-84.2-173.6-96.6 45.3 12.4 87 45.7 120.2 96.6 43 66 66.8 153.8 66.8 247.3s-23.7 181.2-66.8 247.3c-33.2 51-74.9 84.2-120.2 96.6 65.4-12.4 125.6-45.7 173.6-96.6 62.2-66 96.4-153.8 96.4-247.3s-34.2-181.3-96.4-247.3z"/></g><path d="m530.6 883.5c77.5 9.5 216.2 20.4 356 1.4 20.5-2.8 39.9 10 45.5 30 6.8 24.4-9.6 49.2-34.7 52.4-125.4 15.9-252.1 15.9-377.5 0-25.1-3.2-41.5-28-34.7-52.4l.4-1.4c5.5-19.7 24.7-32.5 45-30z" fill="#febf22"/><path d="m932.1 914.9c-4.3-15.2-16.6-26.3-31.3-29.4 5.1 23.5-11 46.8-35.3 49.9-125.4 15.9-252.1 15.9-377.5 0-1.1-.1-2.3-.4-3.4-.6 3.6 16.6 17.1 30.2 35.3 32.5 125.4 15.9 252.1 15.9 377.5 0 25.1-3.2 41.5-28 34.7-52.4z" fill="#f2ae1d"/><g><path d="m857.7 927.5c20.6-2.6 35.3-19.8 36.2-39.3-.6 0-1.1-.1-1.7-.1-1.7 0-3.4.1-5.1.3-51.1 6.9-106.5 10.4-164.7 10.4-78.7 0-148-6.4-192.2-11.9-1.5-.2-3.1-.3-4.6-.3-16.9 0-31.9 11.4-36.5 27.7l-.4 1.4c-1.2 4.1-1.6 8.4-1.3 12.5 123 15.2 247.3 14.9 370.3-.7z" fill="#ffc649"/><path d="m669 925.2c-55 0-110.6-3.1-165.4-9.2 3.6-8.9 12.2-14.9 21.9-14.9 1 0 1.9.1 2.9.2 44.7 5.5 114.6 12 194 12 52.6 0 103-2.8 150.1-8.5-4.2 4.6-10 7.8-16.6 8.6-61.8 7.8-124.7 11.8-186.9 11.8z" fill="#ffd685"/></g><path d="m530.6 232.7c77.5-9.5 216.2-20.4 356-1.4 20.5 2.8 39.9-10 45.5-30 6.8-24.4-9.6-49.2-34.7 52.4-125.4-15.9-252.1-15.9-377.5 0-25.1 3.2-41.5 28-34.7 52.4l.4 1.4c5.5 19.7 24.7 32.5 45 30z" fill="#febf22"/><path d="m901.9 149.7c1.6 6.7 1.6 13.8-.4 21-5.5 19.9-24.5 32.7-44.7 30-137.3-18.9-273.5-8-349.6 1.4-8 1-15.9-.5-22.8-3.9.2 1 .4 2 .7 3.1l.4 1.4c5.5 19.8 24.6 32.5 45 30 77.5-9.5 216.2-20.4 356-1.4 20.5 2.8 39.9-10 45.5-30 6.5-22.9-7.6-46.2-30.1-51.6z" fill="#f2ae1d"/><g><path d="m500.8 192.9c76.1-9.5 212.3-20.4 349.6-1.4 20.1 2.8 39.2-10 44.7-30 .8-3 1.3-6.1 1.4-9.1-62.1-7.9-125.4-11.9-187.9-11.9-62.7 0-126.1 4-188.3 11.9-10.9 1.4-20.7 7.4-26.7 16.6-4.6 6.9-6.7 15.1-6.3 23.2 4.4 1 8.9 1.3 13.5.7z" fill="#ffc649"/><g><path d="m619.7 122.8c5.5-.3 9.8-4.8 9.8-10.3v-14.5c0-43.7 35.5-79.2 79.2-79.2h.4v-9.9c-49.3-.2-89.5 39.8-89.5 89.1l.1 24.8c-.1 0-.1 0 0 0z" fill="#f05366"/></g><path d="m504.8 178c.2-.4.4-.7.7-1.1 3.8-5.7 9.9-9.5 16.6-10.3 61.7-7.8 124.4-11.8 186.5-11.8 56.5 0 113.5 3.3 169.8 9.8-4.7 7.9-13.2 13-22.5 13-1.2 0-2.4-.1-3.5-.2-50.7-7-105.6-10.5-163.2-10.5-74.5-.1-140.5 5.8-184.4 11.1z" fill="#ffd685"/></g></g><g fill="#febf22"><path d="m995.9 838.4c-4.2-.8-8.5-1.2-12.8-1.2-18.3 0-35.6 7.4-46.9 19.8-2.2-7.8-6.2-15.1-11.8-21.6-9.8-11.3-23.6-18.8-38.8-21.3-3.6-.6-7.4-.9-11-.9-11.6 0-23 3-33 8.6-7.6 4.3-13.9 9.9-18.7 16.6-8.6-20.6-30.5-35.8-55.1-37.1-1.2-.1-2.5-.1-3.7-.1-14 0-27.9 4.5-39.1 12.6-6.9 5.1-12.5 11.3-16.4 18.4-3.9-7-9.5-13.3-16.4-18.4-11.1-8.1-25-12.6-39.1-12.6-1.2 0-2.5 0-3.7.1-24.6 1.3-46.5 16.5-55.1 37.1-4.7-6.6-11.1-12.3-18.7-16.6-9.9-5.6-21.3-8.6-33-8.6-3.7 0-7.4.3-11 .9-15.2 2.5-29 10.1-38.8 21.3-5.7 6.5-9.7 13.8-11.8 21.6-11.3-12.3-28.6-19.8-46.9-19.8-4.3 0-8.6.4-12.8 1.2-.4.1-3.2.4-7.3 1 5.7 3.5 11.4 6.8 17.3 10.1.9 0 1.9-.1 2.8-.1 18.4 0 34.8 8.8 42.9 22.5 4.7 2 9.4 4 14.2 5.9.4-.9.5-1.9.4-3-2.6-22.6 16.2-44.5 42-48.8 3-.5 6-.7 9-.7 23 0 43.2 14.1 48 33.5.7 2.7 3.1 4.6 5.9 4.6h.7c3.1-.4 5.4-3 5.4-6 0-22.9 21.3-42.6 47.4-44 1-.1 2-.1 3-.1 25.1 0 46.8 17 49.5 38.8.4 3 3 5.3 6 5.3s5.7-2.3 6-5.3c2.7-21.7 24.4-38.8 49.5-38.8 1 0 2 0 3 .1 26.1 1.4 47.4 21.2 47.4 44 0 3.1 2.3 5.7 5.4 6h.7c2.8 0 5.2-1.9 5.9-4.6 4.8-19.4 25-33.5 48-33.5 3 0 6 .2 9 .7 25.8 4.3 44.6 26.1 42 48.8-.1 1 .1 2.1.4 3 4.8-1.9 9.5-3.8 14.2-5.9 8.1-13.7 24.5-22.5 42.9-22.5.9 0 1.9 0 2.8.1 5.8-3.2 11.5-6.6 17.1-10-3.4-.6-6.3-1-6.9-1.1z"/><path d="m1000.7 275.3c-2.2.7-4.4 1.2-6.7 1.7-5 1-10.1 1.5-15.3 1.5-20.6 0-39.2-8-45.3-19.4-1.1-2-3.1-3.2-5.4-3.2-.7 0-1.3.1-2 .3-2.8 1-4.5 3.8-4 6.8.8 4.7-.6 9.5-3.9 14-6.9 9.2-21.1 16-37 17.9-3 .4-6.1.5-9.2.5-22.4 0-42.7-9.7-47.2-22.6-.9-2.4-3.2-4.1-5.8-4.1-.3 0-.7 0-1 .1-2.9.5-5.1 3-5.1 6 0 14.8-21.3 28-46.5 29-1 0-2 .1-3 .1-24.4 0-46.2-11.6-48.6-25.8-.5-2.9-3-5.1-6-5.1s-5.5 2.1-6 5.1c-2.5 14.2-24.3 25.8-48.6 25.8-1 0-2 0-3-.1-25.2-1-46.5-14.3-46.5-29 0-3-2.1-5.5-5.1-6-.3-.1-.7-.1-1-.1-2.6 0-4.9 1.6-5.8 4.1-4.5 12.9-24.8 22.6-47.2 22.6-3.1 0-6.1-.2-9.2-.5-16-1.9-30.2-8.7-37-17.9-3.4-4.5-4.7-9.3-3.9-14 .5-3-1.2-5.8-4-6.8-.6-.2-1.3-.3-2-.3-2.3 0-4.3 1.2-5.4 3.2-6.1 11.4-24.7 19.4-45.3 19.4-5.2 0-10.4-.5-15.3-1.5-2.3-.5-4.5-1-6.7-1.7-4.3 2.6-8.5 5.2-12.7 7.9 2 1.1 3.4 1.8 3.8 1.9 4.2 1.6 8.7 2.9 13.2 3.8 5.9 1.2 11.9 1.8 18 1.8 18.3 0 35.1-5.3 46.1-14.4 1.1 2.7 2.6 5.4 4.5 7.9 8.9 11.9 25.9 20.4 45.4 22.7 3.6.4 7.2.6 10.8.6 20.7 0 39.8-7 50.6-18.3 8.5 15 29.7 25.7 54.2 26.6 1.2 0 2.4.1 3.6.1 23.4 0 44.4-8.8 54.5-22.4 10.1 13.6 31.1 22.4 54.5 22.4 1.2 0 2.4 0 3.6-.1 24.6-1 45.8-11.6 54.3-26.6 10.9 11.3 30 18.3 50.6 18.3 3.6 0 7.2-.2 10.8-.6 19.5-2.3 36.4-10.8 45.4-22.7 1.9-2.5 3.4-5.2 4.5-7.9 11.1 9.1 27.8 14.4 46.1 14.4 6 0 12.1-.6 18-1.8 4.5-.9 9-2.2 13.2-3.8.5-.2 2.1-.8 4.2-1.6-4.3-2.8-8.7-5.5-13.2-8.2z"/></g><g fill="#f8acae"><ellipse cx="887.5" cy="718.3" rx="16.8" ry="6.6" transform="matrix(.354 -.935 .935 .354 -98.685 1293.672)"/><g><ellipse cx="433.8" cy="404.6" rx="33.7" ry="14" transform="matrix(.262 -.965 .965 .262 -70.407 717.115)"/><ellipse cx="419.4" cy="457.5" rx="10.5" ry="6.9" transform="matrix(.262 -.965 .965 .262 -132.09 742.275)"/></g></g></g><path d="m714.7 1136.6c0-13.2-8.3-24.5-20-28.9-11.7 4.4-20 15.7-20 28.9s8.3 24.5 20 28.9c11.6-4.5 20-15.7 20-28.9z" fill="#ef3f3e"/><g fill="#f8acae"><ellipse cx="688.9" cy="1122.4" rx="8.2" ry="5.7" transform="matrix(.315 -.949 .949 .315 -593.22 1423.242)"/><ellipse cx="683.2" cy="1133.9" rx="2.8" ry="2.9" transform="matrix(.315 -.949 .949 .315 -608.002 1425.746)"/></g></svg>
+                        </div>
+
+                    </div>
+
+                    <div class="relative z-10 flex flex-col justify-center items-center w-full h-full max-w-[340px] sm:max-w-[360px] mx-auto text-center px-6 pt-16 pb-12">
+                        
+                        <!-- Auspicious Namaste / Blooming Lotus SVG Animation -->
+                        <div class="fade-element flex flex-col items-center mb-3 w-full" style="transition-delay: 100ms">
+                            <div class="relative w-12 h-12 sm:w-14 sm:h-14 mb-1 flex items-center justify-center animate-float">
+                                <svg viewBox="0 0 492 492" class="w-full h-full drop-shadow-[0_0_12px_rgba(245,158,11,0.6)] animate-om-glow">
+                                    <defs>
+                                        <linearGradient id="p6ThanksGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#FFF6D6"/>
+                                            <stop offset="35%" stop-color="#FFC408"/>
+                                            <stop offset="70%" stop-color="#ED7C0A"/>
+                                            <stop offset="100%" stop-color="#B45309"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <g fill="url(#p6ThanksGrad)">
+                                        <path d="m195.891 405.178c0 2.565-.976 5.13-2.929 7.083l-15.73 15.73c-3.641 3.641-9.564 3.641-13.205 0l-49.541-49.541c-3.641-3.641-3.641-9.567 0-13.208l15.727-15.727c1.955-1.952 4.52-2.929 7.086-2.929 2.565 0 5.13.976 7.083 2.929l48.58 48.578c1.952 1.954 2.929 4.519 2.929 7.085z"/>
+                                        <path d="m226.575 182.741c-.003.063-.003.124-.003.185.003.206.038 4.18.114 10.841-7.988-8.604-17.337-11.303-17.878-11.453-1.251-.346-2.593-.076-3.613.73-1.017.806-1.591 2.049-1.541 3.346 1.904 49.546-2.352 78.412-6.26 93.906-4.083 16.195-8.636 21.534-9.01 21.954.023-.023.035-.033.035-.033l5.647 5.855c.603-.582 6.028-6.198 10.777-24.09 5.88-22.144 8.286-52.887 7.157-91.452.859.473 1.777 1.03 2.731 1.673 5.524 3.737 9.605 8.644 12.137 14.596.47 35.805 1.548 100.074 3.531 135.912 1.68 30.336-15.796 42.626-31.77 47.548l-47.647-47.647c17.232-32.774 18.717-52.673 18.771-53.53.005-.086.01-.175.01-.264v-39.94c0-27.839 6.018-54.921 17.891-80.492 17.568-37.846 32.093-91.933 36.214-107.963.62.539 1.223 1.213 1.815 2.026 7.119 9.801 9.315 36.456 4.902 59.419-2.243 11.653-3.939 56.951-4.01 58.873z"/>
+                                        <path d="m378.008 378.681-48.712 49.943c-1.533 1.571-3.574 2.435-5.751 2.435-2.176 0-4.22-.865-5.751-2.435l-15.923-16.327s0 0-.003 0c-3.829-3.925-3.829-10.314.003-14.24l47.383-48.578c1.81-1.859 4.228-2.883 6.803-2.883 2.573 0 4.991 1.024 6.803 2.883l15.148 15.532c3.676 3.767 3.676 9.902 0 13.67z"/>
+                                        <path d="m342.623 344.623-46.437 47.611c-15.531-4.937-32.477-17.24-30.842-47.53 1.935-35.843 2.985-100.12 3.445-135.919 0-.003 0-.003 0-.003 2.466-5.957 6.443-10.866 11.825-14.601.859-.595 1.691-1.116 2.474-1.566-1.093 38.515 1.251 69.222 6.979 91.341 4.632 17.881 9.923 23.497 10.51 24.079.793.783 1.828 1.175 2.86 1.175 1.05 0 2.098-.402 2.893-1.208 1.579-1.597 1.566-4.172-.033-5.751-.04-.041-4.332-4.805-8.354-20.334-4.022-15.532-8.415-44.713-6.511-95.53.051-1.302-.529-2.55-1.553-3.353-1.024-.804-2.372-1.068-3.625-.712-.524.15-9.521 2.812-17.283 11.255.074-6.547.107-10.447.109-10.65 0-.061 0-.122-.003-.18-.069-1.922-1.724-47.215-3.91-58.864-4.35-23.187-2.151-49.938 4.902-59.632.486-.669.979-1.236 1.48-1.708 4.07 16.21 18.201 70.078 35.283 107.805 11.586 25.582 17.459 52.676 17.459 80.528v39.941c0 .087.003.173.008.259.052.853 1.498 20.755 18.324 53.547z"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h2 class="font-heading text-[#4C0D18] text-xl sm:text-2xl tracking-[0.15em] uppercase leading-relaxed font-bold">
+                                We can’t wait<br/>to celebrate with you
+                            </h2>
+                        </div>
+
+                        <!-- Live Countdown Timer Boxes -->
+                        <div class="fade-element flex flex-col items-center w-full mb-6" style="transition-delay: 250ms">
+                            <div class="grid grid-cols-4 gap-2.5 sm:gap-3 w-full">
+                                <!-- Days -->
+                                <div class="flex flex-col items-center p-2.5 rounded-xl bg-[#4C0D18] border border-[#D4AF37]/70 shadow-md">
+                                    <div id="cd-days" class="font-heading text-xl sm:text-2xl text-[#FFE898] font-bold">00</div>
+                                    <div class="font-heading text-[#D4AF37] text-[8px] sm:text-[9px] tracking-widest uppercase font-bold mt-0.5">Days</div>
+                                </div>
+                                <!-- Hours -->
+                                <div class="flex flex-col items-center p-2.5 rounded-xl bg-[#4C0D18] border border-[#D4AF37]/70 shadow-md">
+                                    <div id="cd-hours" class="font-heading text-xl sm:text-2xl text-[#FFE898] font-bold">00</div>
+                                    <div class="font-heading text-[#D4AF37] text-[8px] sm:text-[9px] tracking-widest uppercase font-bold mt-0.5">Hours</div>
+                                </div>
+                                <!-- Mins -->
+                                <div class="flex flex-col items-center p-2.5 rounded-xl bg-[#4C0D18] border border-[#D4AF37]/70 shadow-md">
+                                    <div id="cd-mins" class="font-heading text-xl sm:text-2xl text-[#FFE898] font-bold">00</div>
+                                    <div class="font-heading text-[#D4AF37] text-[8px] sm:text-[9px] tracking-widest uppercase font-bold mt-0.5">Mins</div>
+                                </div>
+                                <!-- Secs -->
+                                <div class="flex flex-col items-center p-2.5 rounded-xl bg-[#4C0D18] border border-[#D4AF37]/70 shadow-md">
+                                    <div id="cd-secs" class="font-heading text-xl sm:text-2xl text-[#FFE898] font-bold">00</div>
+                                    <div class="font-heading text-[#D4AF37] text-[8px] sm:text-[9px] tracking-widest uppercase font-bold mt-0.5">Secs</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Auspicious Celestial Gold Divider -->
+                        <div class="fade-element flex flex-col items-center w-full mb-4" style="transition-delay: 400ms">
+                            <div class="relative w-3/5 mx-auto h-3 text-[#D4AF37]">
+                                <svg viewBox="0 0 300 24" class="w-full h-full fill-current">
+                                    <line x1="10" y1="12" x2="115" y2="12" stroke="#D4AF37" stroke-width="1.2" />
+                                    <line x1="185" y1="12" x2="290" y2="12" stroke="#D4AF37" stroke-width="1.2" />
+                                    <circle cx="150" cy="12" r="4" fill="#8B1E32" stroke="#D4AF37" stroke-width="1" />
+                                    <path d="M150 4 Q 155 12 162 12 Q 155 12 150 20 Q 145 12 138 12 Q 145 12 150 4 Z" fill="#D4AF37" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Warm Closing Blessing Note -->
+                        <div class="fade-element flex flex-col items-center w-full mb-5" style="transition-delay: 550ms">
+                            <p class="font-body italic text-[#4C0D18] text-base sm:text-lg font-bold">
+                                “Your presence and blessings will make our wedding day complete.”
+                            </p>
+                            <p class="font-script text-[#8B1E32] text-4xl sm:text-5xl mt-1 drop-shadow-sm">
+                                Vishnu & Bhavana
+                            </p>
+                        </div>
+
+                        <!-- Back to Beginning Button -->
+                        <div class="fade-element flex flex-col items-center w-full" style="transition-delay: 700ms">
+                            <button onclick="goToPage(0)" class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-[#D4AF37]/80 bg-[#4C0D18] text-[#FFE898] font-heading text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#8B1E32] transition-all shadow-md">
+                                <span>↑ Back to Beginning</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ============================== PAGE 7: SAVE THE DATE FILM ============================== -->
+                <section id="video-page" class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#21040A]" data-page-title="Save the Date Film">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(139,30,50,0.55),_transparent_45%)] pointer-events-none"></div>
+                    <div class="relative z-10 flex flex-col items-center justify-center w-full h-full max-w-5xl mx-auto px-5 pt-20 pb-12 text-center">
+                        <p class="fade-element font-heading text-[#D4AF37] text-[9px] sm:text-[10px] tracking-[0.32em] uppercase font-bold mb-2" style="transition-delay: 100ms">Save the Date</p>
+                        <h2 class="fade-element font-script text-4xl sm:text-5xl text-[#FFF6D6] leading-none mb-5" style="transition-delay: 200ms">Vishnu &amp; Bhavana</h2>
+                        <div class="fade-element w-full rounded-2xl overflow-hidden border border-[#D4AF37]/70 bg-black shadow-[0_20px_60px_rgba(0,0,0,0.5)]" style="transition-delay: 350ms">
+                            <video id="invitation-video" controls playsinline webkit-playsinline x5-playsinline preload="metadata" poster="assets/images/video_thumbnail.png" class="block w-full max-h-[62dvh] bg-black rounded-xl" aria-label="Vishnu and Bhavana save the date video">
+                                <source src="assets/video/save_the_date.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <p class="fade-element font-body italic text-[#F9E8B8] text-sm sm:text-base mt-4" style="transition-delay: 500ms">Our celebration begins with your blessings.</p>
+                        <button onclick="goToPage(0)" class="fade-element inline-flex items-center gap-1.5 mt-5 px-4 py-1.5 rounded-full border border-[#D4AF37]/80 bg-[#4C0D18] text-[#FFE898] font-heading text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#8B1E32] transition-all shadow-md" style="transition-delay: 650ms"><span>↑ Back to Beginning</span></button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- ================================================================= -->
+    <!-- JAVASCRIPT: ANIMATIONS, TOUCH/SWIPE, NAVIGATION & AUDIO ENGINE -->
+    <!-- ================================================================= -->
+
+    <!-- Embedded Inlined Wedding Audio Track from muisc_file.mpeg -->
+    <audio id="wedding-audio" loop preload="auto" src="assets/audio/wedding_music.mp3"></audio>
+    <script>
+        // ==========================================
+        // 1. PAGE NAVIGATION & UI CUE SYSTEM
+        // ==========================================
+        const scrollContainer = document.getElementById('scroll-container');
+        const sections = document.querySelectorAll('.page-section');
+        const navDots = document.querySelectorAll('.nav-dot');
+        const progressBar = document.getElementById('progress-bar');
+        const pageCounterBadge = document.getElementById('page-counter-badge');
+        const topFloatingBar = document.getElementById('top-floating-bar');
+        const sideNavDots = document.getElementById('side-nav-dots');
+        const bottomNavCue = document.getElementById('bottom-nav-cue');
+
+        let currentPageIndex = 0;
+        const totalPages = sections.length;
+
+        function updateNavigationUI(index) {
+            currentPageIndex = index;
+            const currentSection = sections[index];
+            const pageTitle = currentSection.getAttribute('data-page-title') || `PAGE ${index + 1}`;
+
+            // Update Progress Bar
+            const progressPercent = ((index + 1) / totalPages) * 100;
+            progressBar.style.width = `${progressPercent}%`;
+
+            // Update Badge
+            pageCounterBadge.innerText = `${index + 1} / ${totalPages} • ${pageTitle.toUpperCase()}`;
+
+            // Update Side Navigation Dots
+            navDots.forEach((dot, dIdx) => {
+                if (dIdx === index) {
+                    dot.classList.add('bg-[#FFE898]', 'h-3', 'shadow-[0_0_6px_#D4AF37]');
+                    dot.classList.remove('bg-[#D4AF37]/40', 'h-1.5');
+                } else {
+                    dot.classList.remove('bg-[#FFE898]', 'h-3', 'shadow-[0_0_6px_#D4AF37]');
+                    dot.classList.add('bg-[#D4AF37]/40', 'h-1.5');
+                }
+            });
+
+            // Update Bottom-Right Next Page Button Visibility
+            if (index >= totalPages - 1) {
+                bottomNavCue.style.opacity = '0';
+                bottomNavCue.style.pointerEvents = 'none';
+            } else {
+                bottomNavCue.style.opacity = '1';
+                bottomNavCue.style.pointerEvents = 'auto';
+            }
+
+            // Keep the invitation music and the film soundtrack from playing together.
+            const isVideoPage = currentSection && currentSection.id === 'video-page';
+            if (isVideoPage) {
+                stopWeddingMusic();
+                if (invitationVideo && invitationVideo.paused) {
+                    invitationVideo.play().catch(() => { /* Mobile browsers require the guest to tap Play. */ });
+                }
+            } else if (invitationVideo && !invitationVideo.paused) {
+                invitationVideo.pause();
+            }
+            // Trigger Staggered Entrance Animations
+            sections.forEach((sec, sIdx) => {
+                if (sIdx === index) {
+                    sec.classList.add('page-active');
+                } else {
+                    sec.classList.remove('page-active');
+                }
+            });
+        }
+
+        function goToPage(index) {
+            if (index < 0 || index >= totalPages) return;
+            const targetSection = sections[index];
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+            updateNavigationUI(index);
+        }
+
+        function goToNextPage() {
+            if (currentPageIndex < totalPages - 1) {
+                goToPage(currentPageIndex + 1);
+            }
+        }
+
+        function goToPrevPage() {
+            if (currentPageIndex > 0) {
+                goToPage(currentPageIndex - 1);
+            }
+        }
+
+        // Scroll Observer for Tracking Active Page
+        const pageObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const idx = Array.from(sections).indexOf(entry.target);
+                    if (idx !== -1) {
+                        updateNavigationUI(idx);
+                    }
+                }
+            });
+        }, {
+            root: scrollContainer,
+            threshold: 0.55
+        });
+
+        sections.forEach(sec => pageObserver.observe(sec));
+
+        // Keyboard Navigation (Arrow Up / Down / Space)
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+                e.preventDefault();
+                goToNextPage();
+            } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+                e.preventDefault();
+                goToPrevPage();
+            }
+        });
+
+        // Touch Swipe Navigation for Mobile Screens
+        let touchStartY = 0;
+        let touchEndY = 0;
+        scrollContainer.addEventListener('touchstart', (e) => {
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        scrollContainer.addEventListener('touchend', (e) => {
+            touchEndY = e.changedTouches[0].screenY;
+            const diff = touchStartY - touchEndY;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    goToNextPage();
+                } else {
+                    goToPrevPage();
+                }
+            }
+        }, { passive: true });
+
+
+        // ==========================================
+        // 2. ROYAL DOOR OPENING & AUTO-MUSIC LOGIC
+        // ==========================================
+        let invitationOpened = false;
+
+        function openInvitation() {
+            if (invitationOpened) return;
+            invitationOpened = true;
+
+            // Start Wedding Shehnai/Sitar Music & Temple Chime automatically
+            startWeddingMusic();
+
+            // Animate doors open
+            document.getElementById('door-left').classList.add('door-open-left');
+            document.getElementById('door-right').classList.add('door-open-right');
+            document.getElementById('door-seal').classList.add('seal-open');
+            
+            // Show Navigation Bars & Cues
+            setTimeout(() => {
+                topFloatingBar.style.opacity = '1';
+                topFloatingBar.style.pointerEvents = 'auto';
+                sideNavDots.style.opacity = '1';
+                sideNavDots.style.pointerEvents = 'auto';
+                bottomNavCue.style.opacity = '1';
+                bottomNavCue.style.pointerEvents = 'auto';
+                document.getElementById('door-container').style.pointerEvents = 'none';
+                
+                // Spawn a soft celebratory flower shower
+                burstPetals(window.innerWidth / 2, window.innerHeight / 2, 20);
+            }, 800);
+
+            // Activate page 1 animations
+            updateNavigationUI(0);
+        }
+
+
+        // ==========================================
+        // 3. LIVE CANVAS ANIMATION (Petals from petals.svg)
+        // ==========================================
+        const canvas = document.getElementById('wedding-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            const rect = document.getElementById('invitation-card').getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // 100% Inlined Data URIs generated from petals.svg with authentic color variants
+        const petalSvgSources = [
+            // 1. Classic Radiant Rose-Pink (petals.svg original)
+            `data:image/svg+xml;utf8,` + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.943 511.943" width="512" height="512"><g><path d="m477.354 27.949c-2.076-3.232-6.21-4.448-9.703-2.856-4.688 2.134-13.406 5.161-19.123 1.442-5.719-3.719-6.486-12.916-6.434-18.066.038-3.84-2.75-7.125-6.544-7.713-29.804-4.613-62.782 12.213-82.074 41.872-17.479 26.872-15.293 54.761-12.978 84.287 1.311 16.722 2.667 34.013.526 52.188-.73 6.198 6.237 10.735 11.61 7.553 15.748-9.325 32.104-15.094 47.922-20.674 27.929-9.852 54.311-19.158 71.791-46.031 19.29-29.659 21.302-66.631 5.007-92.002z" fill="#ff8bdf"/><path d="m410.167 371.754c-4.458 1.487-12.646 3.405-17.392-.45-4.747-3.856-4.548-12.263-4.006-16.931.443-3.814-1.984-7.375-5.696-8.359-27.382-7.253-59.85 5.185-80.786 30.961-18.966 23.35-19.678 49.522-20.431 77.232-.426 15.616-.864 31.764-4.624 48.366-1.329 5.871 5.247 11.25 10.751 8.732 15.478-7.084 31.194-10.824 46.392-14.442 26.966-6.418 52.436-12.481 71.402-35.831 20.935-25.776 26.457-60.103 13.74-85.419-1.725-3.428-5.707-5.074-9.35-3.859z" fill="#ff8bdf"/><path d="m477.354 27.949c-2.076-3.232-6.21-4.448-9.703-2.856-4.688 2.134-13.406 5.161-19.123 1.442-.284-.185-.556-.384-.817-.595l-103.408 160.296c2.346 1.645 5.551 2.064 8.33.418 15.748-9.325 32.104-15.094 47.922-20.674 27.929-9.852 54.311-19.158 71.791-46.031 19.291-29.657 21.303-66.629 5.008-92z" fill="#ff5ca8"/><path d="m61.663 121.013c-3.555 1.454-5.503 5.298-4.572 9.023 1.246 4.998 2.638 14.121-2.059 19.067-4.697 4.947-13.88 4.03-18.935 3.042-3.769-.736-7.507 1.409-8.774 5.033-9.954 28.469.597 63.957 26.254 88.318 23.247 22.073 51.068 24.993 80.523 28.084 16.682 1.751 33.931 3.56 51.414 8.97 5.962 1.845 11.69-4.181 9.537-10.044-6.307-17.181-9.007-34.313-11.618-50.882-4.611-29.255-8.966-56.888-32.213-78.962-25.656-24.361-61.646-33.061-89.557-21.649z" fill="#ff8bdf"/><g fill="#ff5ca8"><path d="m61.663 121.013c-3.555 1.454-5.503 5.298-4.572 9.023 1.246 4.998 2.638 14.121-2.059 19.067-.234.246-.479.477-.734.695l138.828 130.823c2.044-2.008 3.039-5.083 1.925-8.115-6.307-17.181-9.007-34.313-11.618-50.882-4.611-29.255-8.966-56.888-32.213-78.962-25.656-24.361-61.646-33.061-89.557-21.649z"/><path d="m419.516 375.616c-1.724-3.431-5.706-5.077-9.349-3.861-4.458 1.487-12.646 3.405-17.392-.45-.261-.212-.506-.438-.737-.676l-112.369 139.133c2.183 1.996 5.398 2.878 8.313 1.544 15.478-7.084 31.194-10.824 46.392-14.442 26.966-6.418 52.436-12.481 71.402-35.831 20.936-25.774 26.457-60.101 13.74-85.417z"/></g></g></svg>`),
+            
+            // 2. Auspicious Saffron/Marigold Gold (petals.svg variant)
+            `data:image/svg+xml;utf8,` + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.943 511.943" width="512" height="512"><g><path d="m477.354 27.949c-2.076-3.232-6.21-4.448-9.703-2.856-4.688 2.134-13.406 5.161-19.123 1.442-5.719-3.719-6.486-12.916-6.434-18.066.038-3.84-2.75-7.125-6.544-7.713-29.804-4.613-62.782 12.213-82.074 41.872-17.479 26.872-15.293 54.761-12.978 84.287 1.311 16.722 2.667 34.013.526 52.188-.73 6.198 6.237 10.735 11.61 7.553 15.748-9.325 32.104-15.094 47.922-20.674 27.929-9.852 54.311-19.158 71.791-46.031 19.29-29.659 21.302-66.631 5.007-92.002z" fill="#FFE082"/><path d="m410.167 371.754c-4.458 1.487-12.646 3.405-17.392-.45-4.747-3.856-4.548-12.263-4.006-16.931.443-3.814-1.984-7.375-5.696-8.359-27.382-7.253-59.85 5.185-80.786 30.961-18.966 23.35-19.678 49.522-20.431 77.232-.426 15.616-.864 31.764-4.624 48.366-1.329 5.871 5.247 11.25 10.751 8.732 15.478-7.084 31.194-10.824 46.392-14.442 26.966-6.418 52.436-12.481 71.402-35.831 20.935-25.776 26.457-60.103 13.74-85.419-1.725-3.428-5.707-5.074-9.35-3.859z" fill="#FFE082"/><path d="m477.354 27.949c-2.076-3.232-6.21-4.448-9.703-2.856-4.688 2.134-13.406 5.161-19.123 1.442-.284-.185-.556-.384-.817-.595l-103.408 160.296c2.346 1.645 5.551 2.064 8.33.418 15.748-9.325 32.104-15.094 47.922-20.674 27.929-9.852 54.311-19.158 71.791-46.031 19.291-29.657 21.303-66.629 5.008-92z" fill="#F59E0B"/><path d="m61.663 121.013c-3.555 1.454-5.503 5.298-4.572 9.023 1.246 4.998 2.638 14.121-2.059 19.067-4.697 4.947-13.88 4.03-18.935 3.042-3.769-.736-7.507 1.409-8.774 5.033-9.954 28.469.597 63.957 26.254 88.318 23.247 22.073 51.068 24.993 80.523 28.084 16.682 1.751 33.931 3.56 51.414 8.97 5.962 1.845 11.69-4.181 9.537-10.044-6.307-17.181-9.007-34.313-11.618-50.882-4.611-29.255-8.966-56.888-32.213-78.962-25.656-24.361-61.646-33.061-89.557-21.649z" fill="#FFE082"/><g fill="#F59E0B"><path d="m61.663 121.013c-3.555 1.454-5.503 5.298-4.572 9.023 1.246 4.998 2.638 14.121-2.059 19.067-.234.246-.479.477-.734.695l138.828 130.823c2.044-2.008 3.039-5.083 1.925-8.115-6.307-17.181-9.007-34.313-11.618-50.882-4.611-29.255-8.966-56.888-32.213-78.962-25.656-24.361-61.646-33.061-89.557-21.649z"/><path d="m419.516 375.616c-1.724-3.431-5.706-5.077-9.349-3.861-4.458 1.487-12.646 3.405-17.392-.45-.261-.212-.506-.438-.737-.676l-112.369 139.133c2.183 1.996 5.398 2.878 8.313 1.544 15.478-7.084 31.194-10.824 46.392-14.442 26.966-6.418 52.436-12.481 71.402-35.831 20.936-25.774 26.457-60.101 13.74-85.417z"/></g></g></svg>`),
+
+            // 3. Soft Lotus Pastel Pink (bright & elegant)
+            `data:image/svg+xml;utf8,` + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.943 511.943" width="512" height="512"><g><path d="m477.354 27.949c-2.076-3.232-6.21-4.448-9.703-2.856-4.688 2.134-13.406 5.161-19.123 1.442-5.719-3.719-6.486-12.916-6.434-18.066.038-3.84-2.75-7.125-6.544-7.713-29.804-4.613-62.782 12.213-82.074 41.872-17.479 26.872-15.293 54.761-12.978 84.287 1.311 16.722 2.667 34.013.526 52.188-.73 6.198 6.237 10.735 11.61 7.553 15.748-9.325 32.104-15.094 47.922-20.674 27.929-9.852 54.311-19.158 71.791-46.031 19.29-29.659 21.302-66.631 5.007-92.002z" fill="#FFC1E3"/><path d="m410.167 371.754c-4.458 1.487-12.646 3.405-17.392-.45-4.747-3.856-4.548-12.263-4.006-16.931.443-3.814-1.984-7.375-5.696-8.359-27.382-7.253-59.85 5.185-80.786 30.961-18.966 23.35-19.678 49.522-20.431 77.232-.426 15.616-.864 31.764-4.624 48.366-1.329 5.871 5.247 11.25 10.751 8.732 15.478-7.084 31.194-10.824 46.392-14.442 26.966-6.418 52.436-12.481 71.402-35.831 20.935-25.776 26.457-60.103 13.74-85.419-1.725-3.428-5.707-5.074-9.35-3.859z" fill="#FFC1E3"/><path d="m477.354 27.949c-2.076-3.232-6.21-4.448-9.703-2.856-4.688 2.134-13.406 5.161-19.123 1.442-.284-.185-.556-.384-.817-.595l-103.408 160.296c2.346 1.645 5.551 2.064 8.33.418 15.748-9.325 32.104-15.094 47.922-20.674 27.929-9.852 54.311-19.158 71.791-46.031 19.291-29.657 21.303-66.629 5.008-92z" fill="#FF85C0"/><path d="m61.663 121.013c-3.555 1.454-5.503 5.298-4.572 9.023 1.246 4.998 2.638 14.121-2.059 19.067-4.697 4.947-13.88 4.03-18.935 3.042-3.769-.736-7.507 1.409-8.774 5.033-9.954 28.469.597 63.957 26.254 88.318 23.247 22.073 51.068 24.993 80.523 28.084 16.682 1.751 33.931 3.56 51.414 8.97 5.962 1.845 11.69-4.181 9.537-10.044-6.307-17.181-9.007-34.313-11.618-50.882-4.611-29.255-8.966-56.888-32.213-78.962-25.656-24.361-61.646-33.061-89.557-21.649z" fill="#FFC1E3"/><g fill="#FF85C0"><path d="m61.663 121.013c-3.555 1.454-5.503 5.298-4.572 9.023 1.246 4.998 2.638 14.121-2.059 19.067-.234.246-.479.477-.734.695l138.828 130.823c2.044-2.008 3.039-5.083 1.925-8.115-6.307-17.181-9.007-34.313-11.618-50.882-4.611-29.255-8.966-56.888-32.213-78.962-25.656-24.361-61.646-33.061-89.557-21.649z"/><path d="m419.516 375.616c-1.724-3.431-5.706-5.077-9.349-3.861-4.458 1.487-12.646 3.405-17.392-.45-.261-.212-.506-.438-.737-.676l-112.369 139.133c2.183 1.996 5.398 2.878 8.313 1.544 15.478-7.084 31.194-10.824 46.392-14.442 26.966-6.418 52.436-12.481 71.402-35.831 20.936-25.774 26.457-60.101 13.74-85.417z"/></g></g></svg>`)
+        ];
+
+        const petalImages = petalSvgSources.map(src => {
+            const img = new Image();
+            img.src = src;
+            return img;
+        });
+
+        class Petal {
+            constructor(isBurst = false, burstX = 0, burstY = 0) {
+                this.isBurst = isBurst;
+                this.reset(burstX, burstY);
+            }
+
+            reset(burstX = 0, burstY = 0) {
+                const w = canvas.width;
+                const h = canvas.height;
+
+                if (this.isBurst) {
+                    this.x = burstX;
+                    this.y = burstY;
+                    const angle = Math.random() * Math.PI * 2;
+                    const speed = 1.2 + Math.random() * 3;
+                    this.vx = Math.cos(angle) * speed;
+                    this.vy = Math.sin(angle) * speed - 1;
+                    this.life = 1;
+                    this.decay = 0.014 + Math.random() * 0.012;
+                } else {
+                    this.x = Math.random() * w;
+                    this.y = Math.random() * -h * 0.5 - 20;
+                    // Gentle serene descent speed
+                    this.vx = -0.25 + Math.random() * 0.5;
+                    this.vy = 0.35 + Math.random() * 0.45;
+                    this.life = 1;
+                    this.decay = 0;
+                }
+
+                // Random Petal SVG variant index
+                this.imgIndex = Math.floor(Math.random() * petalImages.length);
+                this.size = 17 + Math.random() * 15; // 20% larger high-resolution SVG petal scaling
+
+                this.rotation = Math.random() * Math.PI * 2;
+                this.rotSpeed = -0.012 + Math.random() * 0.024;
+                this.flip = Math.random() * Math.PI;
+                this.flipSpeed = 0.008 + Math.random() * 0.016;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.rotation += this.rotSpeed;
+                this.flip += this.flipSpeed;
+
+                if (this.isBurst) {
+                    this.life -= this.decay;
+                    this.vy += 0.04; // Gentle gravity
+                } else {
+                    // Soft organic wind sway
+                    this.x += Math.sin(this.y * 0.012) * 0.35;
+
+                    if (this.y > canvas.height + 30) {
+                        this.reset();
+                    }
+                }
+            }
+
+            draw() {
+                if (this.life <= 0) return;
+                const img = petalImages[this.imgIndex];
+                if (!img || !img.complete) return;
+
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.rotation);
+                ctx.scale(Math.cos(this.flip), 1);
+                ctx.globalAlpha = Math.max(0, this.isBurst ? this.life * 0.9 : 0.82);
+
+                ctx.drawImage(img, -this.size / 2, -this.size / 2, this.size, this.size);
+
+                ctx.restore();
+            }
+        }
+
+        // Reduced Petal Quantity (10 gently drifting petals from petals.svg across all pages)
+        const petals = Array.from({ length: 10 }, () => new Petal(false));
+        const burstParticles = [];
+
+        function burstPetals(x, y, count = 10) {
+            for (let i = 0; i < count; i++) {
+                burstParticles.push(new Petal(true, x, y));
+            }
+        }
+
+        // Interactive Tap / Click Petal Shower
+        document.getElementById('invitation-card').addEventListener('pointerdown', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            burstPetals(x, y, 8);
+
+            // Add visual golden ripple
+            const ripple = document.createElement('div');
+            ripple.className = 'touch-pulse';
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+            ripple.style.width = '50px';
+            ripple.style.height = '50px';
+            document.getElementById('invitation-card').appendChild(ripple);
+            setTimeout(() => ripple.remove(), 800);
+        });
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            petals.forEach(p => {
+                p.update();
+                p.draw();
+            });
+
+            for (let i = burstParticles.length - 1; i >= 0; i--) {
+                const bp = burstParticles[i];
+                bp.update();
+                bp.draw();
+                if (bp.life <= 0) {
+                    burstParticles.splice(i, 1);
+                }
+            }
+
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
+
+
+        // ==========================================
+        // 4. AUSPICIOUS INDIAN WEDDING MUSIC ENGINE
+        // (Inlined Studio Audio Track from muisc_file.mpeg)
+        // ==========================================
+        let isMusicPlaying = false;
+        const weddingAudio = document.getElementById('wedding-audio');
+        const invitationVideo = document.getElementById('invitation-video');
+        if (invitationVideo) {
+            invitationVideo.addEventListener('play', stopWeddingMusic);
+            invitationVideo.addEventListener('ended', function() {
+                try {
+                    invitationVideo.load();
+                } catch(e){}
+                startWeddingMusic();
+            });
+        }
+
+        function startWeddingMusic() {
+            if (isMusicPlaying) return;
+            isMusicPlaying = true;
+
+            const iconMuted = document.getElementById('audio-icon-muted');
+            const iconPlaying = document.getElementById('audio-icon-playing');
+            const label = document.getElementById('audio-btn-label');
+
+            if (iconMuted && iconPlaying && label) {
+                iconMuted.classList.add('hidden');
+                iconPlaying.classList.remove('hidden');
+                label.innerText = 'Playing';
+            }
+
+            if (weddingAudio) {
+                weddingAudio.play().catch(err => {
+                    console.log("Audio autoplay waiting for user interaction:", err);
+                });
+            }
+        }
+
+        function stopWeddingMusic() {
+            isMusicPlaying = false;
+            const iconMuted = document.getElementById('audio-icon-muted');
+            const iconPlaying = document.getElementById('audio-icon-playing');
+            const label = document.getElementById('audio-btn-label');
+
+            if (iconMuted && iconPlaying && label) {
+                iconMuted.classList.remove('hidden');
+                iconPlaying.classList.add('hidden');
+                label.innerText = 'Music';
+            }
+
+            if (weddingAudio) {
+                weddingAudio.pause();
+            }
+        }
+
+        function toggleWeddingMusic() {
+            if (isMusicPlaying) {
+                stopWeddingMusic();
+            } else {
+                startWeddingMusic();
+            }
+        }
+
+        
+// ==========================================
+        // 5. LIVE COUNTDOWN TIMER
+        // Target: September 6, 2026 at 9:30 AM IST (UTC+5:30)
+        // ==========================================
+        const targetDate = new Date('2026-09-06T09:30:00+05:30').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                const dEl = document.getElementById('cd-days');
+                const hEl = document.getElementById('cd-hours');
+                const mEl = document.getElementById('cd-mins');
+                const sEl = document.getElementById('cd-secs');
+
+                if (dEl) dEl.innerText = String(days).padStart(2, '0');
+                if (hEl) hEl.innerText = String(hours).padStart(2, '0');
+                if (mEl) mEl.innerText = String(minutes).padStart(2, '0');
+                if (sEl) sEl.innerText = String(seconds).padStart(2, '0');
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>

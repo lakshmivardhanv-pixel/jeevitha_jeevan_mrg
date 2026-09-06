@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Primary Meta Tags -->
+    <title>Jeevitha & Jeevan | Wedding Invitation</title>
+    <meta name="title" content="Jeevitha & Jeevan | Wedding Invitation">
+    <meta name="description"
+        content="Your invitation is inside ✨ Tap to open the card and discover the celebrations, venue, schedule, map and more.">
+    <meta name="theme-color" content="#4C0D18">
+    <link rel="image_src" href="preview.jpg">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jeevitha & Jeevan Wedding">
+    <meta property="og:title" content="Jeevitha & Jeevan | Wedding Invitation">
+    <meta property="og:description"
+        content="Your invitation is inside ✨ Tap to open the card and discover the celebrations, venue, schedule, map and more.">
+    <meta property="og:image" content="preview.jpg">
+    <meta property="og:image:secure_url" content="preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="683">
+    <meta property="og:image:alt" content="Jeevitha & Jeevan Wedding Invitation">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jeevitha & Jeevan | Wedding Invitation">
+    <meta name="twitter:description"
+        content="Your invitation is inside ✨ Tap to open the card and discover the celebrations, venue, schedule, map and more.">
+    <meta name="twitter:image" content="preview.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Marcellus&family=Rozha+One&family=Tangerine:wght@700&family=Yantra+Kuttav:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Custom Font Definitions */
+        .font-body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        .font-heading {
+            font-family: 'Marcellus', 'Cinzel', serif;
+        }
+
+        .font-royal {
+            font-family: 'Cinzel Decorative', 'Cinzel', serif;
+        }
+
+        .font-script {
+            font-family: 'Tangerine', 'Great Vibes', cursive;
+        }
+
+        .font-hindi {
+            font-family: 'Yantra Kuttav', 'Rozha One', serif;
+        }
+
+        /* Metallic Gold Shimmer & Gradients */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF8DC 0%, #FFD700 35%, #DAA520 70%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #E6CA65 0%, #D4AF37 35%, #996515 70%, #F5D061 100%);
+        }
+
+        .royal-card-shadow {
+            box-shadow: 0 20px 60px rgba(20, 2, 5, 0.85), 0 0 0 1px rgba(212, 175, 55, 0.35);
+        }
+
+        /* Scrollbar Hiding */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Staggered Element Fade-ins */
+        .fade-element {
+            opacity: 0;
+            transform: translateY(22px) scale(0.98);
+            transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+                transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: transform, opacity;
+        }
+
+        .page-active .fade-element {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Door Animation Classes */
+        .door-open-left {
+            transform: translateX(-102%) rotateY(-20deg);
+            box-shadow: none !important;
+        }
+
+        .door-open-right {
+            transform: translateX(102%) rotateY(20deg);
+            box-shadow: none !important;
+        }
+
+        .seal-open {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(1.3) rotate(15deg);
+            pointer-events: none;
+        }
+
+        /* Sacred Rotating Mandala Animation */
+        @keyframes spinSlow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate-spin-mandala {
+            animation: spinSlow 120s linear infinite;
+        }
+
+        /* Subtle floating pulse */
+        @keyframes floatSlow {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        .animate-float {
+            animation: floatSlow 4s ease-in-out infinite;
+        }
+
+        /* Glowing Om Animation */
+        @keyframes omGlow {
+
+            0%,
+            100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 10px rgba(255, 140, 0, 0.8));
+            }
+
+            50% {
+                transform: scale(1.08);
+                filter: drop-shadow(0 0 20px rgba(255, 180, 0, 1));
+            }
+        }
+
+        .animate-om-glow {
+            animation: omGlow 3s ease-in-out infinite;
+        }
+
+        /* Ember Rise animation */
+        @keyframes emberRise {
+            0% {
+                transform: translateY(0) translateX(0) scale(0.6);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.85;
+            }
+
+            80% {
+                opacity: 0.85;
+            }
+
+            100% {
+                transform: translateY(-180px) translateX(25px) scale(1.1);
+                opacity: 0;
+            }
+        }
+
+        .animate-ember-1 {
+            animation: emberRise 6s ease-out infinite;
+        }
+
+        .animate-ember-2 {
+            animation: emberRise 7.5s ease-out infinite 1.8s;
+        }
+
+        .animate-ember-3 {
+            animation: emberRise 5.5s ease-out infinite 3.2s;
+        }
+
+        .animate-ember-4 {
+            animation: emberRise 8s ease-out infinite 4.8s;
+        }
+
+        @keyframes skyLanternFloat {
+            0% {
+                transform: translateY(140px) translateX(0) scale(0.7);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.85;
+            }
+
+            85% {
+                opacity: 0.85;
+            }
+
+            100% {
+                transform: translateY(-520px) translateX(35px) scale(1.1);
+                opacity: 0;
+            }
+        }
+
+        .animate-sky-lantern-1 {
+            animation: skyLanternFloat 14s linear infinite;
+        }
+
+        .animate-sky-lantern-2 {
+            animation: skyLanternFloat 18s linear infinite 3.5s;
+        }
+
+        /* Custom Touch Pulse Ripple Effect */
+        .touch-pulse {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.8) 0%, rgba(212, 175, 55, 0) 70%);
+            transform: translate(-50%, -50%) scale(0);
+            animation: rippleAnimation 0.8s ease-out forwards;
+            z-index: 999;
+        }
+
+        @keyframes rippleAnimation {
+            to {
+                transform: translate(-50%, -50%) scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* TRADITIONAL INDIAN WEDDING OPENING ANIMATIONS */
+        @keyframes traditionalGarlandDrop {
+            0% {
+                transform: translateY(-35px) scaleY(0.7);
+                opacity: 0;
+            }
+
+            70% {
+                transform: translateY(4px) scaleY(1.04);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(0) scaleY(1);
+                opacity: 1;
+            }
+        }
+
+        .page-active .traditional-garland-reveal {
+            animation: traditionalGarlandDrop 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes traditionalHeroBloom {
+            0% {
+                transform: scale(0.82) translateY(18px);
+                opacity: 0;
+                filter: drop-shadow(0 0 0px transparent);
+            }
+
+            60% {
+                transform: scale(1.03) translateY(-2px);
+                opacity: 1;
+                filter: drop-shadow(0 10px 30px rgba(212, 175, 55, 0.7));
+            }
+
+            100% {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+                filter: drop-shadow(0 8px 24px rgba(212, 175, 55, 0.5));
+            }
+        }
+
+        .page-active .traditional-hero-symbol {
+            animation: traditionalHeroBloom 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes traditionalSunbeamRotate {
+            0% {
+                transform: rotate(0deg) scale(0.8);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.45;
+            }
+
+            100% {
+                transform: rotate(180deg) scale(1.1);
+                opacity: 0.15;
+            }
+        }
+
+        .page-active .traditional-sunbeam-bg {
+            animation: traditionalSunbeamRotate 25s linear infinite;
+        }
+
+        @keyframes diyaLampSway {
+
+            0%,
+            100% {
+                transform: rotate(-6deg);
+            }
+
+            50% {
+                transform: rotate(6deg);
+            }
+        }
+
+        .animate-diya-sway {
+            transform-origin: top center;
+            animation: diyaLampSway 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-[#1e0307] overflow-hidden m-0 p-0 h-[100dvh] w-full select-none touch-none">
+
+    <!-- Ambient Silk Texture Background for Viewport -->
+    <div
+        class="fixed inset-0 bg-[#26050b] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#450912] via-[#200307] to-[#0d0103] pointer-events-none z-0">
+    </div>
+
+    <!-- MAIN APP CONTAINER -->
+    <main class="fixed inset-0 flex items-center justify-center p-0 sm:p-4 md:p-6 z-10">
+
+        <!-- WEDDING CARD BOUNDARY -->
+        <div id="invitation-card"
+            class="relative w-full h-[100dvh] sm:h-[94dvh] sm:max-h-[880px] sm:max-w-[480px] sm:rounded-2xl overflow-hidden royal-card-shadow bg-[#FFFDF9]">
+
+            <!-- LIVE CANVAS ANIMATION (Event Specific Falling Petals & Sparks) -->
+            <canvas id="wedding-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-30"></canvas>
+
+            <!-- CLASSIC ROYAL ORNAMENTAL FRAME & BORDER (All Pages) -->
+            <!-- ================================================================= -->
+            <div class="absolute inset-0 pointer-events-none z-20 overflow-hidden">
+                <!-- Traditional Mango Leaf & Marigold Toran Garland Banner -->
+                <div
+                    class="absolute top-1 inset-x-10 h-7 text-[#D4AF37] opacity-90 pointer-events-none z-30 flex justify-center">
+                    <svg viewBox="0 0 400 30" class="w-full h-full preserve-3d">
+                        <!-- Rope Thread -->
+                        <path d="M 0 5 Q 100 15 200 5 Q 300 15 400 5" fill="none" stroke="#D4AF37" stroke-width="1.5"
+                            stroke-dasharray="3 2" />
+                        <!-- Mango Leaves -->
+                        <path d="M 30 7 Q 35 22 30 27 Q 25 22 30 7 Z" fill="#2E7D32" stroke="#1B5E20"
+                            stroke-width="0.5" />
+                        <path d="M 80 10 Q 85 25 80 29 Q 75 25 80 10 Z" fill="#2E7D32" stroke="#1B5E20"
+                            stroke-width="0.5" />
+                        <path d="M 130 8 Q 135 23 130 28 Q 125 23 130 8 Z" fill="#2E7D32" stroke="#1B5E20"
+                            stroke-width="0.5" />
+                        <path d="M 180 6 Q 185 21 180 26 Q 175 21 180 6 Z" fill="#2E7D32" stroke="#1B5E20"
+                            stroke-width="0.5" />
+                        <path d="M 220 6 Q 225 21 220 26 Q 215 21 220 6 Z" fill="#2E7D32" stroke="#1B5E20"
+                            stroke-width="0.5" />
+                        <path d="M 270 8 Q 275 23 270 28 Q 265 23 270 8 Z" fill="#2E7D32" stroke="#1B5E20"
+                            stroke-width="0.5" />
+                        <path d="M 320 10 Q 325 25 320 29 Q 315 25 320 10 Z" fill="#2E7D32" stroke="#1B5E20"
+                            stroke-width="0.5" />
+                        <path d="M 370 7 Q 375 22 370 27 Q 365 22 370 7 Z" fill="#2E7D32" stroke="#1B5E20"
+                            stroke-width="0.5" />
+                        <!-- Marigold Flowers -->
+                        <circle cx="55" cy="14" r="4" fill="#FF8F00" />
+                        <circle cx="105" cy="13" r="4.5" fill="#FFC107" />
+                        <circle cx="155" cy="12" r="4" fill="#FF8F00" />
+                        <circle cx="200" cy="10" r="5" fill="#FF3D00" />
+                        <circle cx="245" cy="12" r="4" fill="#FF8F00" />
+                        <circle cx="295" cy="13" r="4.5" fill="#FFC107" />
+                        <circle cx="345" cy="14" r="4" fill="#FF8F00" />
+                    </svg>
+                </div>
+
+                <!-- Top-Left Corner -->
+                <div
+                    class="absolute top-2 left-2 sm:top-3 sm:left-3 w-12 h-12 sm:w-14 sm:h-14 text-[#D4AF37] drop-shadow-[0_2px_4px_rgba(139,30,50,0.25)] pointer-events-none">
+                    <svg viewBox="0 0 64 64" class="w-full h-full transform scale-y-[-1]" fill="currentColor">
+                        <path d="m18 56h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path d="m26 56h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path d="m26 48h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path
+                            d="m29 48h-5v-10h5c2.76 0 5 2.24 5 5s-2.24 5-5 5zm-3-2h3c1.65 0 3-1.35 3-3s-1.35-3-3-3h-3z" />
+                        <path
+                            d="m13 64c-2.76 0-5-2.24-5-5v-5h10v5c0 2.76-2.24 5-5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3v-3z" />
+                        <path
+                            d="m26 40h-10v-5c0-2.76 2.24-5 5-5s5 2.24 5 5zm-8-2h6v-3c0-1.65-1.35-3-3-3s-3 1.35-3 3z" />
+                        <path d="m10 56h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5h5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-6z" />
+                        <path d="m18 48h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path
+                            d="m29 64c-2.76 0-5-2.24-5-5v-5h5c2.76 0 5 2.24 5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3-1.35-3-3-3z" />
+                        <path
+                            d="m10 40h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-3c0-1.65-1.35-3-3-3z" />
+                        <path d="m8 1h2v34h-2z" />
+                        <path d="m29 54h34v2h-34z" />
+                        <path d="m13 1h2v28h-2z" />
+                        <path d="m35 49h28v2h-28z" />
+                    </svg>
+                </div>
+
+                <!-- Top-Right Corner -->
+                <div
+                    class="absolute top-2 right-2 sm:top-3 sm:right-3 w-12 h-12 sm:w-14 sm:h-14 text-[#D4AF37] drop-shadow-[0_2px_4px_rgba(139,30,50,0.25)] pointer-events-none">
+                    <svg viewBox="0 0 64 64" class="w-full h-full transform scale-[-1]" fill="currentColor">
+                        <path d="m18 56h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path d="m26 56h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path d="m26 48h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path
+                            d="m29 48h-5v-10h5c2.76 0 5 2.24 5 5s-2.24 5-5 5zm-3-2h3c1.65 0 3-1.35 3-3s-1.35-3-3-3h-3z" />
+                        <path
+                            d="m13 64c-2.76 0-5-2.24-5-5v-5h10v5c0 2.76-2.24 5-5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3v-3z" />
+                        <path
+                            d="m26 40h-10v-5c0-2.76 2.24-5 5-5s5 2.24 5 5zm-8-2h6v-3c0-1.65-1.35-3-3-3s-3 1.35-3 3z" />
+                        <path d="m10 56h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5h5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-6z" />
+                        <path d="m18 48h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path
+                            d="m29 64c-2.76 0-5-2.24-5-5v-5h5c2.76 0 5 2.24 5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3-1.35-3-3-3z" />
+                        <path
+                            d="m10 40h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-3c0-1.65-1.35-3-3-3z" />
+                        <path d="m8 1h2v34h-2z" />
+                        <path d="m29 54h34v2h-34z" />
+                        <path d="m13 1h2v28h-2z" />
+                        <path d="m35 49h28v2h-28z" />
+                    </svg>
+                </div>
+
+                <!-- Bottom-Left Corner -->
+                <div
+                    class="absolute bottom-2 left-2 sm:bottom-3 sm:left-3 w-12 h-12 sm:w-14 sm:h-14 text-[#D4AF37] drop-shadow-[0_2px_4px_rgba(139,30,50,0.25)] pointer-events-none">
+                    <svg viewBox="0 0 64 64" class="w-full h-full" fill="currentColor">
+                        <path d="m18 56h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path d="m26 56h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path d="m26 48h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path
+                            d="m29 48h-5v-10h5c2.76 0 5 2.24 5 5s-2.24 5-5 5zm-3-2h3c1.65 0 3-1.35 3-3s-1.35-3-3-3h-3z" />
+                        <path
+                            d="m13 64c-2.76 0-5-2.24-5-5v-5h10v5c0 2.76-2.24 5-5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3v-3z" />
+                        <path
+                            d="m26 40h-10v-5c0-2.76 2.24-5 5-5s5 2.24 5 5zm-8-2h6v-3c0-1.65-1.35-3-3-3s-3 1.35-3 3z" />
+                        <path d="m10 56h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5h5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-6z" />
+                        <path d="m18 48h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path
+                            d="m29 64c-2.76 0-5-2.24-5-5v-5h5c2.76 0 5 2.24 5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3-1.35-3-3-3z" />
+                        <path
+                            d="m10 40h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-3c0-1.65-1.35-3-3-3z" />
+                        <path d="m8 1h2v34h-2z" />
+                        <path d="m29 54h34v2h-34z" />
+                        <path d="m13 1h2v28h-2z" />
+                        <path d="m35 49h28v2h-28z" />
+                    </svg>
+                </div>
+
+                <!-- Bottom-Right Corner -->
+                <div
+                    class="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 w-12 h-12 sm:w-14 sm:h-14 text-[#D4AF37] drop-shadow-[0_2px_4px_rgba(139,30,50,0.25)] pointer-events-none">
+                    <svg viewBox="0 0 64 64" class="w-full h-full transform scale-x-[-1]" fill="currentColor">
+                        <path d="m18 56h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path d="m26 56h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path d="m26 48h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path
+                            d="m29 48h-5v-10h5c2.76 0 5 2.24 5 5s-2.24 5-5 5zm-3-2h3c1.65 0 3-1.35 3-3s-1.35-3-3-3h-3z" />
+                        <path
+                            d="m13 64c-2.76 0-5-2.24-5-5v-5h10v5c0 2.76-2.24 5-5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3v-3z" />
+                        <path
+                            d="m26 40h-10v-5c0-2.76 2.24-5 5-5s5 2.24 5 5zm-8-2h6v-3c0-1.65-1.35-3-3-3s-3 1.35-3 3z" />
+                        <path d="m10 56h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5h5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-6z" />
+                        <path d="m18 48h-10v-10h10zm-8-2h6v-6h-6z" />
+                        <path
+                            d="m29 64c-2.76 0-5-2.24-5-5v-5h5c2.76 0 5 2.24 5 5zm-3-8v3c0 1.65 1.35 3 3 3s3-1.35 3-3-1.35-3-3-3z" />
+                        <path
+                            d="m10 40h-5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5zm-5-8c-1.65 0-3 1.35-3 3s1.35 3 3 3h3v-3c0-1.65-1.35-3-3-3z" />
+                        <path d="m8 1h2v34h-2z" />
+                        <path d="m29 54h34v2h-34z" />
+                        <path d="m13 1h2v28h-2z" />
+                        <path d="m35 49h28v2h-28z" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- ================================================================= -->
+            <!-- FLOATING HEADER CONTROLS -->
+            <!-- ================================================================= -->
+
+            <!-- Top Progress Bar -->
+            <div class="absolute top-0 inset-x-0 h-1 bg-[#4C0D18]/10 z-40">
+                <div id="progress-bar"
+                    class="h-full gold-gradient-bg w-1/8 transition-all duration-500 ease-out shadow-[0_0_8px_#D4AF37]">
+                </div>
+            </div>
+
+            <!-- Top Floating Bar -->
+            <div id="top-floating-bar"
+                class="absolute top-8 sm:top-9 inset-x-8 sm:inset-x-10 flex justify-between items-center z-40 transition-opacity duration-700 opacity-0 pointer-events-none">
+                <!-- Page Label Pill -->
+                <div
+                    class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#4C0D18]/95 border border-[#D4AF37]/70 backdrop-blur-md shadow-md">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-ping"></span>
+                    <span id="page-counter-badge"
+                        class="font-heading text-[8.5px] sm:text-[9.5px] tracking-[0.2em] text-[#FDFBF7] uppercase font-bold">
+                        1 / 8 • WELCOME
+                    </span>
+                </div>
+
+                <!-- Ambient Music Toggle Button -->
+                <button id="audio-toggle-btn" onclick="toggleWeddingMusic()" title="Play Auspicious Wedding Melody"
+                    class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#4C0D18]/95 border border-[#D4AF37]/70 text-[#D4AF37] hover:text-[#FFFDF9] hover:bg-[#8B1E32] backdrop-blur-md shadow-md transition-all pointer-events-auto">
+                    <svg id="audio-icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        class="w-3 h-3">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 9.75L19.5 12m0 0l2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.268-1.604.722-2.246.234-.847 1.058-1.354 1.938-1.354h2.24z" />
+                    </svg>
+                    <svg id="audio-icon-playing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        class="w-3 h-3 hidden text-amber-300">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.268-1.604.722-2.246.234-.847 1.058-1.354 1.938-1.354h2.24z" />
+                    </svg>
+                    <span id="audio-btn-label"
+                        class="font-heading text-[8px] sm:text-[9px] tracking-widest uppercase font-bold">Music</span>
+                </button>
+            </div>
+
+            <!-- Side Quick-Nav Dots (8 Pages Total) -->
+            <div id="side-nav-dots"
+                class="absolute right-4 sm:right-5 top-1/2 -translate-y-1/2 flex flex-col items-center gap-1.5 py-2 px-1 rounded-full bg-[#4C0D18]/85 border border-[#D4AF37]/50 backdrop-blur-md shadow-md z-40 transition-opacity duration-700 opacity-0 pointer-events-none">
+                <button onclick="goToPage(0)"
+                    class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto"
+                    data-index="0" title="Welcome">
+                    <span
+                        class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">1.
+                        Welcome</span>
+                </button>
+                <button onclick="goToPage(1)"
+                    class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto"
+                    data-index="1" title="Our Story">
+                    <span
+                        class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">2.
+                        Our Story</span>
+                </button>
+                <button onclick="goToPage(2)"
+                    class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto"
+                    data-index="2" title="Haldi">
+                    <span
+                        class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">3.
+                        Haldi</span>
+                </button>
+                <button onclick="goToPage(3)"
+                    class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto"
+                    data-index="3" title="Reception">
+                    <span
+                        class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">4.
+                        Reception</span>
+                </button>
+                <button onclick="goToPage(4)"
+                    class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto"
+                    data-index="4" title="Muhurtham">
+                    <span
+                        class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">5.
+                        Muhurtham</span>
+                </button>
+                <button onclick="goToPage(5)"
+                    class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto"
+                    data-index="5" title="Venue">
+                    <span
+                        class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">6.
+                        Venue</span>
+                </button>
+                <button onclick="goToPage(6)"
+                    class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto"
+                    data-index="6" title="Countdown">
+                    <span
+                        class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">7.
+                        Countdown</span>
+                </button>
+                <button onclick="goToPage(7)"
+                    class="nav-dot group relative w-1.5 h-1.5 rounded-full bg-[#D4AF37]/40 border border-[#D4AF37]/70 transition-all duration-300 focus:outline-none pointer-events-auto"
+                    data-index="7" title="Save the Date Film">
+                    <span
+                        class="absolute right-4 top-1/2 -translate-y-1/2 px-2 py-0.5 rounded bg-[#4C0D18] text-[#FDFBF7] font-heading text-[8px] tracking-wider uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md border border-[#D4AF37]/50">8.
+                        Save the Date Film</span>
+                </button>
+            </div>
+
+            <!-- Floating Next Page Button -->
+            <div id="bottom-nav-cue"
+                class="absolute bottom-4 right-4 sm:bottom-5 sm:right-5 z-40 transition-opacity duration-700 opacity-0 pointer-events-none">
+                <button id="next-page-btn" onclick="goToNextPage()" title="Next Page"
+                    class="group flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#4C0D18]/95 border border-[#D4AF37] text-[#D4AF37] hover:bg-[#8B1E32] hover:text-[#FFFDF9] shadow-[0_4px_16px_rgba(76,13,24,0.5)] backdrop-blur-md transition-all duration-300 pointer-events-auto animate-bounce hover:animate-none hover:scale-110">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        class="w-4 h-4 transform group-hover:translate-y-0.5 transition-transform">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- ================================================================= -->
+            <!-- THE ROYAL TEMPLE DOORS (Opening Experience) -->
+            <!-- ================================================================= -->
+            <div id="door-container" class="absolute inset-0 z-50 flex transition-opacity duration-1000">
+
+                <!-- Left Door Panel -->
+                <div id="door-left"
+                    class="relative w-1/2 h-full bg-[#4C0D18] flex justify-end items-center overflow-hidden transition-transform duration-[1400ms] ease-[cubic-bezier(0.4,0,0.2,1)] shadow-[8px_0_25px_rgba(0,0,0,0.7)] border-r border-[#D4AF37]/50">
+                    <div
+                        class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]">
+                    </div>
+                    <div
+                        class="absolute inset-y-6 left-6 right-3 border-2 border-[#D4AF37]/40 pointer-events-none z-10 flex flex-col justify-between p-3">
+                        <div class="text-[#D4AF37]/60 text-xs">✦</div>
+                        <div class="w-full flex justify-center opacity-40 text-[#D4AF37] font-hindi text-xl">ॐ</div>
+                        <div class="text-[#D4AF37]/60 text-xs">✦</div>
+                    </div>
+                    <div class="absolute inset-y-8 left-8 right-5 border border-[#D4AF37]/20 pointer-events-none z-10">
+                    </div>
+                    <div class="border-r-2 border-[#D4AF37] h-[92%] w-1 mr-[2px] bg-[#D4AF37]/40 z-10"></div>
+                </div>
+
+                <!-- Right Door Panel -->
+                <div id="door-right"
+                    class="relative w-1/2 h-full bg-[#4C0D18] flex justify-start items-center overflow-hidden transition-transform duration-[1400ms] ease-[cubic-bezier(0.4,0,0.2,1)] shadow-[-8px_0_25px_rgba(0,0,0,0.7)] border-l border-[#D4AF37]/50">
+                    <div
+                        class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]">
+                    </div>
+                    <div
+                        class="absolute inset-y-6 left-3 right-6 border-2 border-[#D4AF37]/40 pointer-events-none z-10 flex flex-col justify-between p-3 items-end">
+                        <div class="text-[#D4AF37]/60 text-xs">✦</div>
+                        <div class="w-full flex justify-center opacity-40 text-[#D4AF37] font-hindi text-xl">ॐ</div>
+                        <div class="text-[#D4AF37]/60 text-xs">✦</div>
+                    </div>
+                    <div class="absolute inset-y-8 left-5 right-8 border border-[#D4AF37]/20 pointer-events-none z-10">
+                    </div>
+                    <div class="border-l-2 border-[#D4AF37] h-[92%] w-1 ml-[2px] bg-[#D4AF37]/40 z-10"></div>
+                </div>
+
+                <!-- Center Auspicious Royal Seal (With User Uploaded Om Symbol Image) -->
+                <div id="door-seal" onclick="openInvitation()"
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-[1000ms] ease-in-out cursor-pointer flex flex-col items-center justify-center bg-[#3D050E] border-2 border-[#D4AF37] rounded-full w-[245px] h-[245px] sm:w-[285px] sm:h-[285px] z-20 hover:scale-105 shadow-[0_0_55px_rgba(255,140,0,0.65)]">
+                    <div
+                        class="absolute inset-2 sm:inset-3 border border-[#D4AF37]/60 rounded-full pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute inset-3 sm:inset-4 border border-dashed border-[#D4AF37]/40 rounded-full pointer-events-none animate-spin-mandala">
+                    </div>
+
+                    <!-- Exact Calligraphy Om Symbol matching user's uploaded image -->
+                    <div
+                        class="relative w-16 h-16 sm:w-20 sm:h-20 mb-2 -translate-y-1 z-10 flex items-center justify-center animate-om-glow">
+                        <img src="om_symbol.png" alt="Om Symbol"
+                            class="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(255,215,0,0.95)]">
+                    </div>
+
+                    <span
+                        class="font-royal text-2xl sm:text-2.5xl gold-gradient-text tracking-widest uppercase font-bold z-10">JEEVITHA</span>
+                    <span class="font-body text-[#D4AF37] italic -my-0.5 z-10 text-base font-bold">&amp;</span>
+                    <span
+                        class="font-royal text-2xl sm:text-2.5xl gold-gradient-text tracking-widest uppercase font-bold z-10">JEEVAN</span>
+
+                    <div class="mt-2 z-10 flex items-center justify-center w-full">
+                        <span
+                            class="font-heading text-[8.5px] sm:text-[9.5px] tracking-[0.3em] text-[#FFE898] uppercase font-bold border-2 border-[#D4AF37] px-4 py-1 rounded-full bg-[#4C0D18]/90 shadow-[0_0_12px_rgba(212,175,55,0.6)] animate-pulse">
+                            Tap to Open
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================================================================= -->
+            <!-- THE BOOKLET PAGES (8 Pages Total) -->
+            <!-- ================================================================= -->
+            <div id="scroll-container"
+                class="h-full w-full overflow-y-auto overflow-x-hidden snap-y snap-mandatory scrollbar-hide smooth-scroll relative z-10">
+
+                <!-- ============================== PAGE 1: WELCOME & BRIDE/GROOM ============================== -->
+                <section
+                    class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#FFFDF9]"
+                    data-page-title="Welcome">
+                    <div
+                        class="absolute inset-0 pointer-events-none overflow-hidden z-0 flex items-center justify-center">
+                        <div
+                            class="absolute bottom-10 left-10 w-2.5 h-2.5 rounded-full bg-[#D4AF37] animate-ember-1 filter blur-[1px]">
+                        </div>
+                        <div
+                            class="absolute bottom-16 right-12 w-2.5 h-2.5 rounded-full bg-[#F59E0B] animate-ember-2 filter blur-[1px]">
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative z-10 flex flex-col justify-center items-center w-full h-full max-w-[340px] sm:max-w-[360px] mx-auto text-center px-5 pt-14 pb-10">
+
+                        <!-- Auspicious Ganesha Shloka Invocation -->
+                        <div class="fade-element flex flex-col items-center mb-1 w-full" style="transition-delay: 80ms">
+                            <p
+                                class="font-hindi text-[#8B1E32] text-xs sm:text-sm font-bold tracking-widest border-b border-[#D4AF37]/50 pb-0.5">
+                                || ಶ್ರೀ ಗಣೇಶಾಯ ನಮಃ ||
+                            </p>
+                        </div>
+
+                        <!-- Exact Calligraphy Om Symbol Header -->
+                        <div class="fade-element flex flex-col items-center mb-1 w-full"
+                            style="transition-delay: 150ms">
+                            <div
+                                class="relative w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center animate-float">
+                                <img src="om_symbol.png" alt="Om Symbol"
+                                    class="w-full h-full object-contain mix-blend-multiply filter drop-shadow-[0_0_12px_rgba(255,180,0,0.85)]">
+                            </div>
+                        </div>
+
+                        <!-- Invitation Wording -->
+                        <div class="fade-element flex flex-col items-center mb-2 w-full"
+                            style="transition-delay: 250ms">
+                            <p
+                                class="font-heading text-[#8B1E32] text-[8px] sm:text-[9px] tracking-[0.28em] uppercase leading-relaxed mb-0.5 font-bold">
+                                With the divine blessings of our families
+                            </p>
+                            <p
+                                class="font-heading text-[#4C0D18] text-[8px] sm:text-[9px] tracking-[0.18em] uppercase font-semibold">
+                                We cordially invite you to celebrate the wedding of
+                            </p>
+                        </div>
+
+                        <!-- Bride & Groom Detailed Section -->
+                        <div class="fade-element flex flex-col items-center w-full mb-2"
+                            style="transition-delay: 400ms">
+                            <!-- Bride -->
+                            <div
+                                class="bg-[#FDFBF7] p-2.5 sm:p-3 rounded-xl border-2 border-[#D4AF37]/50 w-full mb-1.5 shadow-sm relative overflow-hidden">
+                                <div class="absolute -right-3 -top-3 text-[#D4AF37]/20 font-hindi text-4xl select-none">
+                                    ॐ</div>
+                                <h1
+                                    class="font-royal text-xl sm:text-2xl text-[#8B1E32] tracking-wider uppercase font-extrabold drop-shadow-sm">
+                                    JEEVITHA S</h1>
+                                <p
+                                    class="font-heading text-[#D4AF37] text-[8.5px] sm:text-[9.5px] tracking-widest uppercase font-bold mt-0.5">
+                                    ELDER DAUGHTER OF</p>
+                                <p class="font-body text-[#4C0D18] text-xs sm:text-sm font-bold">Janaki S &amp; Sanjeeva
+                                    Murthy G</p>
+                                <p class="font-body text-[#8B1E32] text-[10px] sm:text-xs italic font-semibold">
+                                    Lakshmipura, Gauribidanur</p>
+                            </div>
+
+                            <div
+                                class="font-heading italic text-[#D4AF37] text-sm font-bold my-0 uppercase tracking-widest">
+                                &amp;</div>
+
+                            <!-- Groom -->
+                            <div
+                                class="bg-[#FDFBF7] p-2.5 sm:p-3 rounded-xl border-2 border-[#D4AF37]/50 w-full mt-1 shadow-sm relative overflow-hidden">
+                                <div
+                                    class="absolute -left-3 -bottom-3 text-[#D4AF37]/20 font-hindi text-4xl select-none">
+                                    ॐ</div>
+                                <h1
+                                    class="font-royal text-xl sm:text-2xl text-[#8B1E32] tracking-wider uppercase font-extrabold drop-shadow-sm">
+                                    JEEVAN R</h1>
+                                <p
+                                    class="font-heading text-[#D4AF37] text-[8.5px] sm:text-[9.5px] tracking-widest uppercase font-bold mt-0.5">
+                                    SON OF</p>
+                                <p class="font-body text-[#4C0D18] text-xs sm:text-sm font-bold">Lakshmi &amp;
+                                    Ramachandra</p>
+                                <p class="font-body text-[#8B1E32] text-[10px] sm:text-xs italic font-semibold">
+                                    Kurubarahalli, Bengaluru</p>
+                            </div>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="fade-element flex flex-col items-center w-full mb-2"
+                            style="transition-delay: 550ms">
+                            <div class="relative w-4/5 mx-auto h-2.5 text-[#D4AF37]">
+                                <svg viewBox="0 0 300 24" class="w-full h-full fill-current">
+                                    <line x1="10" y1="12" x2="115" y2="12" stroke="#D4AF37" stroke-width="1.2" />
+                                    <line x1="185" y1="12" x2="290" y2="12" stroke="#D4AF37" stroke-width="1.2" />
+                                    <circle cx="150" cy="12" r="4" fill="#8B1E32" stroke="#D4AF37" stroke-width="1" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Venue Brief -->
+                        <div class="fade-element flex flex-col items-center w-full" style="transition-delay: 700ms">
+                            <p
+                                class="font-heading text-[#8B1E32] text-[7.5px] sm:text-[8.5px] tracking-[0.25em] uppercase mb-0.5 font-bold">
+                                Celebration Venue</p>
+                            <p
+                                class="font-heading text-[#4C0D18] text-[11px] sm:text-xs font-bold tracking-wider leading-snug">
+                                JKR FARMS &amp; RESORT
+                            </p>
+                            <p class="font-body text-[#8B1E32] text-[11px] sm:text-xs italic font-semibold">Marsandra
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ============================== PAGE 2: USER'S EXACT STORY ============================== -->
+                <section
+                    class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#FFFDF9]"
+                    data-page-title="Our Story">
+                    <div
+                        class="relative z-10 flex flex-col justify-between items-center w-full h-full max-w-[340px] sm:max-w-[360px] mx-auto text-center px-4 pt-12 pb-6">
+
+                        <!-- Interlinked Hearts Vector SVG -->
+                        <div class="fade-element flex flex-col items-center mb-1 w-full"
+                            style="transition-delay: 100ms">
+                            <div
+                                class="relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center animate-float">
+                                <svg viewBox="0 0 328.863 328.863"
+                                    class="w-full h-full drop-shadow-[0_0_12px_rgba(245,158,11,0.6)] animate-om-glow">
+                                    <defs>
+                                        <linearGradient id="p2LoveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#FFF6D6" />
+                                            <stop offset="35%" stop-color="#FFC408" />
+                                            <stop offset="70%" stop-color="#ED7C0A" />
+                                            <stop offset="100%" stop-color="#B45309" />
+                                        </linearGradient>
+                                    </defs>
+                                    <g fill="url(#p2LoveGrad)">
+                                        <path
+                                            d="M206.271,75.437c-32.437-17.748-55.692,20.196-60.588,50.184c-7.344-12.24-17.748-22.032-31.824-24.48 c-19.584-3.06-36.108,12.24-39.168,30.6c-7.956,47.124,56.916,82.62,96.695,74.664c0.612,0,1.225-0.612,1.836-1.225 c2.448,2.448,6.731,2.448,9.181-0.611C200.151,177.641,255.231,102.365,206.271,75.437z" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <h2
+                                class="font-heading text-[#D4AF37] text-[10px] sm:text-xs tracking-[0.3em] uppercase font-bold mt-0.5">
+                                Our Sacred Story
+                            </h2>
+                        </div>
+
+                        <!-- User's Exact Story Text -->
+                        <div class="fade-element flex flex-col items-center w-full my-auto"
+                            style="transition-delay: 250ms">
+                            <div
+                                class="p-3.5 sm:p-4 rounded-2xl bg-[#FDFBF7]/95 border-2 border-[#D4AF37]/50 shadow-[0_6px_22px_rgba(212,175,55,0.15)] relative w-full">
+                                <div
+                                    class="text-[#D4AF37] text-[9px] font-bold tracking-[0.25em] uppercase mb-1 text-center font-heading">
+                                    A Journey Written in Stars</div>
+                                <div
+                                    class="w-10 h-[1px] bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto mb-2">
+                                </div>
+                                <p
+                                    class="font-body text-[#8B1E32] text-xs sm:text-sm leading-relaxed font-bold italic text-center">
+                                    They were born as family,<br />
+                                    grew together as friends,<br />
+                                    and somewhere along the journey,<br />
+                                    their friendship blossomed into love.<br /><br />
+                                    Years turned familiar moments into cherished memories,<br />
+                                    and a bond they never expected became a bond they chose.<br />
+                                    From cousins, to friends, to soulmates—<br />
+                                    their story now begins its most beautiful chapter:<br />
+                                    <span class="text-[#4C0D18] font-extrabold not-italic uppercase tracking-wide">a lifetime together</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="fade-element flex flex-col items-center w-full mt-1 mb-1"
+                            style="transition-delay: 450ms">
+                            <p class="font-script text-[#8B1E32] text-3xl sm:text-4xl drop-shadow-sm font-bold">Jeevitha
+                                &amp; Jeevan</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============================== PAGE 3: HALDI (USER ASSET + TRADITIONAL MARIGOLD ENTRANCE) ============================== -->
+                <section
+                    class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#FFFDF9]"
+                    data-page-title="Haldi">
+                    <div
+                        class="relative z-10 flex flex-col justify-center items-center w-full h-full max-w-[340px] sm:max-w-[360px] mx-auto text-center px-6 pt-14 pb-10">
+
+                        <!-- Traditional Golden Sunbeam Backdrop Radiance -->
+                        <div
+                            class="absolute inset-0 pointer-events-none flex items-center justify-center overflow-hidden z-0">
+                            <div
+                                class="w-[320px] h-[320px] rounded-full bg-[radial-gradient(circle,_rgba(255,215,0,0.28)_0%,_rgba(245,158,11,0.08)_50%,_transparent_70%)] traditional-sunbeam-bg">
+                            </div>
+                        </div>
+
+                        <!-- Top Traditional Marigold & Mango Leaf Floral Garland Drop -->
+                        <div class="fade-element traditional-garland-reveal absolute top-2 inset-x-8 h-8 text-[#D4AF37] pointer-events-none z-20 flex justify-center opacity-90"
+                            style="transition-delay: 80ms">
+                            <svg viewBox="0 0 300 30" class="w-full h-full preserve-3d">
+                                <path d="M 0 4 Q 75 14 150 4 Q 225 14 300 4" fill="none" stroke="#D4AF37"
+                                    stroke-width="1.2" />
+                                <path d="M 40 6 Q 45 20 40 25 Q 35 20 40 6 Z" fill="#2E7D32" />
+                                <path d="M 110 6 Q 115 20 110 25 Q 105 20 110 6 Z" fill="#2E7D32" />
+                                <path d="M 190 6 Q 195 20 190 25 Q 185 20 190 6 Z" fill="#2E7D32" />
+                                <path d="M 260 6 Q 265 20 260 25 Q 255 20 260 6 Z" fill="#2E7D32" />
+                                <circle cx="75" cy="11" r="4.5" fill="#FF8F00" />
+                                <circle cx="150" cy="11" r="5" fill="#FFC107" />
+                                <circle cx="225" cy="11" r="4.5" fill="#FF8F00" />
+                            </svg>
+                        </div>
+
+                        <!-- User's Uploaded Haldi Symbol with Traditional Hero Entrance -->
+                        <div class="fade-element flex flex-col items-center mb-2 w-full z-10"
+                            style="transition-delay: 150ms">
+                            <div
+                                class="relative w-24 h-24 sm:w-28 sm:h-28 mb-1 flex items-center justify-center animate-float traditional-hero-symbol">
+                                <img src="haldi.png" alt="Haldi Ceremony"
+                                    class="w-full h-full object-contain filter drop-shadow-[0_8px_24px_rgba(245,158,11,0.65)]">
+                            </div>
+                            <h2
+                                class="font-heading text-[#8B1E32] text-2.5xl sm:text-3xl tracking-widest uppercase font-bold">
+                                Haldi Ceremony
+                            </h2>
+                        </div>
+
+                        <!-- Date Badge -->
+                        <div class="fade-element flex flex-col items-center mb-3 w-full z-10"
+                            style="transition-delay: 280ms">
+                            <div
+                                class="px-4 py-1.5 rounded-full bg-[#D4AF37] text-[#4C0D18] border border-[#8B1E32]/40 shadow-md">
+                                <p class="font-heading tracking-[0.2em] text-[10px] sm:text-[11px] uppercase font-bold">
+                                    WEDNESDAY &middot; SEP 16, 2026
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Description Card -->
+                        <div class="fade-element flex flex-col items-center w-full mb-4 z-10"
+                            style="transition-delay: 400ms">
+                            <div class="p-4 rounded-xl bg-[#FDFBF7]/90 border border-[#D4AF37]/50 shadow-sm w-full">
+                                <p
+                                    class="font-body text-[#4C0D18] text-base sm:text-lg italic leading-relaxed font-bold">
+                                    “A splash of golden turmeric, a shower of marigolds, laughter, and divine
+                                    blessings!”
+                                </p>
+                                <div class="w-12 h-[1px] bg-[#D4AF37] mx-auto my-2 opacity-60"></div>
+                                <p class="font-body text-[#8B1E32] text-xs sm:text-sm leading-relaxed font-semibold">
+                                    Join us as we celebrate the sacred Haldi ritual to bless the bride and groom with
+                                    joy, love, and radiance.
+                                </p>
+                                <p class="font-heading text-[#4C0D18] text-[10px] sm:text-xs font-bold tracking-wider leading-snug mt-3">
+                                    VENUE: GAURIBIDANUR
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Calendar Button -->
+                        <div class="fade-element flex flex-col items-center w-full z-10"
+                            style="transition-delay: 550ms">
+                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Jeevan+%26+Jeevitha+-+Haldi+Ceremony&dates=20260916T040000Z/20260916T080000Z&details=Haldi+Ceremony+celebration+of+Jeevan+%26+Jeevitha&location=Gauribidanur"
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full border border-[#D4AF37] bg-[#4C0D18] text-[#FFE898] font-heading text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#8B1E32] transition-all shadow-md">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="w-3.5 h-3.5">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                                <span>Add to Calendar</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ============================== PAGE 4: RECEPTION (USER ASSET + ROYAL CANOPY ENTRANCE) ============================== -->
+                <section
+                    class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#FFFDF9]"
+                    data-page-title="Reception">
+                    <div
+                        class="relative z-10 flex flex-col justify-center items-center w-full h-full max-w-[340px] sm:max-w-[360px] mx-auto text-center px-6 pt-14 pb-10">
+
+                        <!-- Traditional Royal Shimmer Sunbeam Radiance -->
+                        <div
+                            class="absolute inset-0 pointer-events-none flex items-center justify-center overflow-hidden z-0">
+                            <div
+                                class="w-[330px] h-[330px] rounded-full bg-[radial-gradient(circle,_rgba(212,175,55,0.3)_0%,_rgba(139,30,50,0.08)_55%,_transparent_75%)] traditional-sunbeam-bg">
+                            </div>
+                        </div>
+
+                        <!-- Top Royal Palace Archway with Swinging Brass Bells -->
+                        <div class="fade-element traditional-garland-reveal absolute top-2 inset-x-10 h-7 text-[#D4AF37] pointer-events-none z-20 flex justify-between opacity-85"
+                            style="transition-delay: 80ms">
+                            <div class="w-6 h-6 animate-diya-sway">
+                                <svg viewBox="0 0 24 24" fill="#D4AF37" class="w-full h-full">
+                                    <path
+                                        d="M12 2a2 2 0 00-2 2v2.1A6 6 0 005 12v5h14v-5a6 6 0 00-5-5.9V4a2 2 0 00-2-2zM8 19h8v1a2 2 0 01-2 2h-4a2 2 0 01-2-2v-1z" />
+                                </svg>
+                            </div>
+                            <div class="w-6 h-6 animate-diya-sway" style="animation-delay: 0.8s;">
+                                <svg viewBox="0 0 24 24" fill="#D4AF37" class="w-full h-full">
+                                    <path
+                                        d="M12 2a2 2 0 00-2 2v2.1A6 6 0 005 12v5h14v-5a6 6 0 00-5-5.9V4a2 2 0 00-2-2zM8 19h8v1a2 2 0 01-2 2h-4a2 2 0 01-2-2v-1z" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- User's Uploaded Reception Symbol with Traditional Hero Entrance -->
+                        <div class="fade-element flex flex-col items-center mb-2 w-full z-10"
+                            style="transition-delay: 150ms">
+                            <div
+                                class="relative w-24 h-24 sm:w-28 sm:h-28 mb-1 flex items-center justify-center animate-float traditional-hero-symbol">
+                                <img src="reception.png" alt="Grand Reception"
+                                    class="w-full h-full object-contain filter drop-shadow-[0_8px_24px_rgba(212,175,55,0.65)]">
+                            </div>
+                            <h2
+                                class="font-heading text-[#8B1E32] text-2.5xl sm:text-3xl tracking-widest uppercase font-bold">
+                                Grand Reception
+                            </h2>
+                        </div>
+
+                        <!-- Date & Time Badge -->
+                        <div class="fade-element flex flex-col items-center mb-2.5 w-full z-10"
+                            style="transition-delay: 280ms">
+                            <div
+                                class="px-4 py-1 rounded-full bg-[#4C0D18] text-[#FDFBF7] border border-[#D4AF37]/80 shadow-md">
+                                <p
+                                    class="font-heading tracking-[0.2em] text-[9px] sm:text-[10px] uppercase font-bold text-[#D4AF37]">
+                                    SATURDAY &middot; SEP 19, 2026
+                                </p>
+                            </div>
+                            <p
+                                class="font-body text-[#4C0D18] tracking-widest text-lg sm:text-xl uppercase font-bold mt-1.5">
+                                6:00 PM Onwards
+                            </p>
+                        </div>
+
+                        <!-- Event Description Card -->
+                        <div class="fade-element flex flex-col items-center w-full mb-3 z-10"
+                            style="transition-delay: 420ms">
+                            <div class="p-3.5 rounded-xl bg-[#FDFBF7]/90 border border-[#D4AF37]/50 shadow-sm w-full">
+                                <p
+                                    class="font-body text-[#4C0D18] text-base sm:text-lg italic leading-relaxed font-bold">
+                                    “Come dressed to impress, enjoy a lavish feast, and celebrate our union in grand
+                                    royal style.”
+                                </p>
+                                <div class="w-12 h-[1px] bg-[#D4AF37] mx-auto my-2 opacity-60"></div>
+                                <p class="font-body text-[#8B1E32] text-xs sm:text-sm leading-relaxed font-semibold">
+                                    An evening filled with laughter, delicious dining, music, and memories to cherish
+                                    forever.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Calendar Button -->
+                        <div class="fade-element flex flex-col items-center w-full z-10"
+                            style="transition-delay: 580ms">
+                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Jeevan+%26+Jeevitha+-+Wedding+Reception&dates=20260919T123000Z/20260919T173000Z&details=Wedding+Reception+celebration+of+Jeevan+%26+Jeevitha&location=JKR+Farms+and+Resort+Marsandra"
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full border border-[#D4AF37] bg-[#4C0D18] text-[#FFE898] font-heading text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#8B1E32] transition-all shadow-md">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="w-3.5 h-3.5">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                                <span>Add to Calendar</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ============================== PAGE 5: MUHURTHAM (USER ASSET + SACRED HAVAN AGNI ENTRANCE) ============================== -->
+                <section
+                    class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#FFFDF9]"
+                    data-page-title="Muhurtham">
+                    <div
+                        class="relative z-10 flex flex-col justify-center items-center w-full h-full max-w-[340px] sm:max-w-[360px] mx-auto text-center px-6 pt-14 pb-10">
+
+                        <!-- Sacred Vedic Agni Radiant Lotus Backdrop -->
+                        <div
+                            class="absolute inset-0 pointer-events-none flex items-center justify-center overflow-hidden z-0">
+                            <div
+                                class="w-[330px] h-[330px] rounded-full bg-[radial-gradient(circle,_rgba(239,68,68,0.24)_0%,_rgba(245,158,11,0.08)_50%,_transparent_75%)] traditional-sunbeam-bg">
+                            </div>
+                        </div>
+
+                        <!-- Top Sacred Diya Lamp Canopy -->
+                        <div class="fade-element traditional-garland-reveal absolute top-2 inset-x-12 h-7 text-[#D4AF37] pointer-events-none z-20 flex justify-center opacity-90"
+                            style="transition-delay: 80ms">
+                            <div class="w-8 h-8 flex items-center justify-center">
+                                <svg viewBox="0 0 100 100" class="w-full h-full">
+                                    <path d="M 30 65 Q 50 80 70 65 L 65 55 Q 50 62 35 55 Z" fill="#D4AF37" />
+                                    <path d="M 50 20 Q 58 40 50 55 Q 42 40 50 20 Z" fill="#F59E0B"
+                                        class="animate-flame" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- User's Uploaded Muhurtham Symbol with Traditional Hero Entrance -->
+                        <div class="fade-element flex flex-col items-center mb-2 w-full z-10"
+                            style="transition-delay: 150ms">
+                            <div
+                                class="relative w-24 h-24 sm:w-28 sm:h-28 mb-1 flex items-center justify-center animate-float traditional-hero-symbol">
+                                <img src="muhurtham.png" alt="Sacred Muhurtham"
+                                    class="w-full h-full object-contain filter drop-shadow-[0_8px_24px_rgba(239,68,68,0.65)]">
+                            </div>
+                            <h2
+                                class="font-heading text-[#8B1E32] text-2.5xl sm:text-3xl tracking-widest uppercase font-bold">
+                                Sacred Muhurtham
+                            </h2>
+                        </div>
+
+                        <!-- Timing Box -->
+                        <div class="fade-element flex flex-col items-center mb-2.5 w-full z-10"
+                            style="transition-delay: 280ms">
+                            <div
+                                class="px-4 py-1 rounded-full bg-[#8B1E32] text-[#FDFBF7] border border-[#D4AF37] shadow-md">
+                                <p
+                                    class="font-heading tracking-[0.2em] text-[9px] sm:text-[10px] uppercase font-bold text-[#FFE898]">
+                                    SUNDAY &middot; SEP 20, 2026
+                                </p>
+                            </div>
+                            <p
+                                class="font-body text-[#4C0D18] tracking-widest text-lg sm:text-xl uppercase font-bold mt-1.5">
+                                9:00 AM Onwards
+                            </p>
+                        </div>
+
+                        <!-- Muhurtham Blessing Wording -->
+                        <div class="fade-element flex flex-col items-center w-full mb-3"
+                            style="transition-delay: 450ms">
+                            <div class="p-3.5 rounded-xl bg-[#FDFBF7]/90 border border-[#D4AF37]/50 shadow-sm w-full">
+                                <p class="font-heading text-[#8B1E32] text-sm sm:text-base font-bold leading-relaxed">
+                                    Join us for the most sacred moment of our lives.
+                                </p>
+                                <div class="w-12 h-[1px] bg-[#D4AF37] mx-auto my-2 opacity-60"></div>
+                                <p class="font-body text-[#4C0D18] text-xs sm:text-sm leading-relaxed font-semibold">
+                                    As we take the sacred vows (Saptapadi) around the holy fire, your divine presence
+                                    and blessings will guide us into a lifetime of happiness.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Calendar Button -->
+                        <div class="fade-element flex flex-col items-center w-full" style="transition-delay: 650ms">
+                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Jeevan+%26+Jeevitha+-+Sacred+Muhurtham&dates=20260920T033000Z/20260920T063000Z&details=Sacred+Wedding+Muhurtham+of+Jeevan+%26+Jeevitha&location=JKR+Farms+and+Resort+Marsandra"
+                                target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full border border-[#D4AF37] bg-[#8B1E32] text-[#FFE898] font-heading text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#4C0D18] transition-all shadow-md">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    class="w-3.5 h-3.5">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                                <span>Add to Calendar</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ============================== PAGE 6: VENUE (TRADITIONAL MANDAP ARCHWAY) ============================== -->
+                <section
+                    class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#FFFDF9]"
+                    data-page-title="Venue & Map">
+                    <div
+                        class="relative z-10 flex flex-col justify-center items-center w-full h-full max-w-[340px] sm:max-w-[360px] mx-auto text-center px-6 pt-16 pb-12">
+
+                        <!-- Traditional Royal Mandap Jharokha Archway SVG replaced by Assets Image -->
+                        <div class="fade-element flex flex-col items-center mb-2.5 w-full z-10"
+                            style="transition-delay: 100ms">
+                            <div
+                                class="relative w-24 h-24 sm:w-28 sm:h-28 mb-1 flex items-center justify-center animate-float traditional-hero-symbol">
+                                <img src="venue.png" alt="Venue"
+                                    class="w-full h-full object-contain filter drop-shadow-[0_8px_24px_rgba(212,175,55,0.65)]">
+                            </div>
+                            <h2
+                                class="font-heading text-[#D4AF37] text-[10px] sm:text-xs tracking-[0.3em] uppercase font-bold">
+                                Celebration Venue
+                            </h2>
+                        </div>
+
+                        <!-- Venue Address Card -->
+                        <div class="fade-element flex flex-col items-center mb-4 w-full"
+                            style="transition-delay: 250ms">
+                            <div
+                                class="p-5 sm:p-6 rounded-2xl bg-[#FDFBF7]/90 border border-[#D4AF37]/50 shadow-[0_6px_20px_rgba(212,175,55,0.1)] w-full">
+                                <h3
+                                    class="font-heading text-[#4C0D18] text-2xl sm:text-3xl tracking-wider uppercase mb-2 font-bold leading-snug">
+                                    JKR FARMS &amp;<br />RESORT
+                                </h3>
+                                <div class="w-12 h-[1px] bg-[#D4AF37] mx-auto my-2 opacity-60"></div>
+                                <p class="font-body text-[#8B1E32] text-lg sm:text-xl leading-relaxed font-bold">
+                                    Marsandra
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Directions Button -->
+                        <div class="fade-element flex flex-col items-center w-full gap-2.5"
+                            style="transition-delay: 450ms">
+                            <a href="https://maps.google.com/?q=JKR+Farms+and+Resort+Marsandra" target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center gap-2.5 px-6 py-2.5 rounded-full border-2 border-[#D4AF37] bg-[#4C0D18] text-[#FFE898] font-heading text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold hover:bg-[#8B1E32] hover:text-[#FFFDF9] transition-all duration-300 w-full max-w-[220px] shadow-lg hover:scale-105">
+                                <span>Get Directions</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                                </svg>
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ============================== PAGE 7: COUNTDOWN ============================== -->
+                <section
+                    class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#FFFDF9]"
+                    data-page-title="Countdown">
+                    <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+                        <div
+                            class="absolute bottom-0 left-4 w-7 sm:w-9 h-14 sm:h-18 flex flex-col items-center animate-sky-lantern-1 drop-shadow-[0_0_12px_rgba(245,158,11,0.6)]">
+                            <svg viewBox="0 0 1417.3 1417.3" class="w-full h-full">
+                                <circle cx="705.5" cy="1136.6" fill="#ee2d26" r="33.4" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative z-10 flex flex-col justify-center items-center w-full h-full max-w-[340px] sm:max-w-[360px] mx-auto text-center px-6 pt-16 pb-12">
+
+                        <!-- Lotus / Namaste Icon -->
+                        <div class="fade-element flex flex-col items-center mb-3 w-full"
+                            style="transition-delay: 100ms">
+                            <div
+                                class="relative w-12 h-12 sm:w-14 sm:h-14 mb-1 flex items-center justify-center animate-float">
+                                <svg viewBox="0 0 492 492"
+                                    class="w-full h-full drop-shadow-[0_0_12px_rgba(245,158,11,0.6)] animate-om-glow">
+                                    <defs>
+                                        <linearGradient id="p7ThanksGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#FFF6D6" />
+                                            <stop offset="35%" stop-color="#FFC408" />
+                                            <stop offset="70%" stop-color="#ED7C0A" />
+                                            <stop offset="100%" stop-color="#B45309" />
+                                        </linearGradient>
+                                    </defs>
+                                    <g fill="url(#p7ThanksGrad)">
+                                        <path
+                                            d="m195.891 405.178c0 2.565-.976 5.13-2.929 7.083l-15.73 15.73c-3.641 3.641-9.564 3.641-13.205 0l-49.541-49.541c-3.641-3.641-3.641-9.567 0-13.208l15.727-15.727c1.955-1.952 4.52-2.929 7.086-2.929 2.565 0 5.13.976 7.083 2.929l48.58 48.578c1.952 1.954 2.929 4.519 2.929 7.085z" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <h2
+                                class="font-heading text-[#4C0D18] text-xl sm:text-2xl tracking-[0.15em] uppercase leading-relaxed font-bold">
+                                We can’t wait<br />to celebrate with you
+                            </h2>
+                        </div>
+
+                        <!-- Live Countdown Timer -->
+                        <div class="fade-element flex flex-col items-center w-full mb-6"
+                            style="transition-delay: 250ms">
+                            <div class="grid grid-cols-4 gap-2.5 sm:gap-3 w-full">
+                                <div
+                                    class="flex flex-col items-center p-2.5 rounded-xl bg-[#4C0D18] border border-[#D4AF37]/70 shadow-md">
+                                    <div id="cd-days" class="font-heading text-xl sm:text-2xl text-[#FFE898] font-bold">
+                                        00</div>
+                                    <div
+                                        class="font-heading text-[#D4AF37] text-[8px] sm:text-[9px] tracking-widest uppercase font-bold mt-0.5">
+                                        Days</div>
+                                </div>
+                                <div
+                                    class="flex flex-col items-center p-2.5 rounded-xl bg-[#4C0D18] border border-[#D4AF37]/70 shadow-md">
+                                    <div id="cd-hours"
+                                        class="font-heading text-xl sm:text-2xl text-[#FFE898] font-bold">00</div>
+                                    <div
+                                        class="font-heading text-[#D4AF37] text-[8px] sm:text-[9px] tracking-widest uppercase font-bold mt-0.5">
+                                        Hours</div>
+                                </div>
+                                <div
+                                    class="flex flex-col items-center p-2.5 rounded-xl bg-[#4C0D18] border border-[#D4AF37]/70 shadow-md">
+                                    <div id="cd-mins" class="font-heading text-xl sm:text-2xl text-[#FFE898] font-bold">
+                                        00</div>
+                                    <div
+                                        class="font-heading text-[#D4AF37] text-[8px] sm:text-[9px] tracking-widest uppercase font-bold mt-0.5">
+                                        Mins</div>
+                                </div>
+                                <div
+                                    class="flex flex-col items-center p-2.5 rounded-xl bg-[#4C0D18] border border-[#D4AF37]/70 shadow-md">
+                                    <div id="cd-secs" class="font-heading text-xl sm:text-2xl text-[#FFE898] font-bold">
+                                        00</div>
+                                    <div
+                                        class="font-heading text-[#D4AF37] text-[8px] sm:text-[9px] tracking-widest uppercase font-bold mt-0.5">
+                                        Secs</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="fade-element flex flex-col items-center w-full mb-4"
+                            style="transition-delay: 400ms">
+                            <div class="relative w-3/5 mx-auto h-3 text-[#D4AF37]">
+                                <svg viewBox="0 0 300 24" class="w-full h-full fill-current">
+                                    <line x1="10" y1="12" x2="115" y2="12" stroke="#D4AF37" stroke-width="1.2" />
+                                    <line x1="185" y1="12" x2="290" y2="12" stroke="#D4AF37" stroke-width="1.2" />
+                                    <circle cx="150" cy="12" r="4" fill="#8B1E32" stroke="#D4AF37" stroke-width="1" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Closing Note -->
+                        <div class="fade-element flex flex-col items-center w-full mb-5"
+                            style="transition-delay: 550ms">
+                            <p class="font-body italic text-[#4C0D18] text-base sm:text-lg font-bold">
+                                “Your presence and blessings will make our wedding day complete.”
+                            </p>
+                            <p
+                                class="font-royal text-[#8B1E32] text-xl sm:text-2xl mt-2 tracking-widest uppercase font-bold drop-shadow-sm">
+                                JEEVITHA &amp; JEEVAN
+                            </p>
+                        </div>
+
+                        <!-- Back to Beginning -->
+                        <div class="fade-element flex flex-col items-center w-full" style="transition-delay: 700ms">
+                            <button onclick="goToPage(0)"
+                                class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-[#D4AF37]/80 bg-[#4C0D18] text-[#FFE898] font-heading text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#8B1E32] transition-all shadow-md">
+                                <span>↑ Back to Beginning</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ============================== PAGE 8: SAVE THE DATE FILM ============================== -->
+                <section id="video-page"
+                    class="page-section relative w-full h-[100dvh] sm:h-full snap-start snap-always flex items-center justify-center overflow-hidden shrink-0 bg-[#21040A]"
+                    data-page-title="Save the Date Film">
+                    <div
+                        class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(139,30,50,0.55),_transparent_45%)] pointer-events-none">
+                    </div>
+                    <div
+                        class="relative z-10 flex flex-col items-center justify-center w-full h-full max-w-5xl mx-auto px-5 pt-20 pb-12 text-center">
+                        <p class="fade-element font-heading text-[#D4AF37] text-[9px] sm:text-[10px] tracking-[0.32em] uppercase font-bold mb-2"
+                            style="transition-delay: 100ms">Save the Date</p>
+                        <h2 class="fade-element font-royal text-2xl sm:text-3xl text-[#FFF6D6] leading-none mb-5 uppercase font-bold"
+                            style="transition-delay: 200ms">Jeevitha &amp; Jeevan</h2>
+                        <div class="fade-element w-full rounded-2xl overflow-hidden border border-[#D4AF37]/70 bg-black shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
+                            style="transition-delay: 350ms">
+                            <video id="invitation-video" controls playsinline webkit-playsinline x5-playsinline
+                                preload="auto"
+                                class="block w-full max-h-[62dvh] bg-black rounded-xl"
+                                aria-label="Jeevan and Jeevitha save the date video">
+                                <source src="vedio.mp4#t=0.001" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <p class="fade-element font-body italic text-[#F9E8B8] text-sm sm:text-base mt-4"
+                            style="transition-delay: 500ms">Our celebration begins with your blessings.</p>
+                        <button onclick="goToPage(0)"
+                            class="fade-element inline-flex items-center gap-1.5 mt-5 px-4 py-1.5 rounded-full border border-[#D4AF37]/80 bg-[#4C0D18] text-[#FFE898] font-heading text-[9px] sm:text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-[#8B1E32] transition-all shadow-md"
+                            style="transition-delay: 650ms"><span>↑ Back to Beginning</span></button>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Audio Track -->
+    <audio id="wedding-audio" loop preload="auto" src="music.mp3"></audio>
+
+    <script>
+        // ==========================================
+        // 1. PAGE NAVIGATION & UI CUE SYSTEM
+        // ==========================================
+        const scrollContainer = document.getElementById('scroll-container');
+        const sections = document.querySelectorAll('.page-section');
+        const navDots = document.querySelectorAll('.nav-dot');
+        const progressBar = document.getElementById('progress-bar');
+        const pageCounterBadge = document.getElementById('page-counter-badge');
+        const topFloatingBar = document.getElementById('top-floating-bar');
+        const sideNavDots = document.getElementById('side-nav-dots');
+        const bottomNavCue = document.getElementById('bottom-nav-cue');
+
+        let currentPageIndex = 0;
+        const totalPages = sections.length;
+
+        function updateNavigationUI(index) {
+            currentPageIndex = index;
+            const currentSection = sections[index];
+            const pageTitle = currentSection.getAttribute('data-page-title') || `PAGE ${index + 1}`;
+
+            // Update Progress Bar
+            const progressPercent = ((index + 1) / totalPages) * 100;
+            progressBar.style.width = `${progressPercent}%`;
+
+            // Update Badge
+            pageCounterBadge.innerText = `${index + 1} / ${totalPages} • ${pageTitle.toUpperCase()}`;
+
+            // Update Side Navigation Dots
+            navDots.forEach((dot, dIdx) => {
+                if (dIdx === index) {
+                    dot.classList.add('bg-[#FFE898]', 'h-3', 'shadow-[0_0_6px_#D4AF37]');
+                    dot.classList.remove('bg-[#D4AF37]/40', 'h-1.5');
+                } else {
+                    dot.classList.remove('bg-[#FFE898]', 'h-3', 'shadow-[0_0_6px_#D4AF37]');
+                    dot.classList.add('bg-[#D4AF37]/40', 'h-1.5');
+                }
+            });
+
+            // Update Bottom-Right Next Page Button Visibility
+            if (index >= totalPages - 1) {
+                bottomNavCue.style.opacity = '0';
+                bottomNavCue.style.pointerEvents = 'none';
+            } else {
+                bottomNavCue.style.opacity = '1';
+                bottomNavCue.style.pointerEvents = 'auto';
+            }
+
+            // Mute music if on video page
+            const isVideoPage = currentSection && currentSection.id === 'video-page';
+            if (isVideoPage) {
+                stopWeddingMusic();
+            } else if (invitationVideo && !invitationVideo.paused) {
+                invitationVideo.pause();
+            }
+
+            // Trigger Page-Specific Canvas Particle Burst Animations
+            const cardWidth = canvas.width || window.innerWidth;
+            const cardHeight = canvas.height || window.innerHeight;
+            if (index === 2) {
+                // Haldi Page (Turmeric Yellow Powder & Marigold Flowers Burst)
+                burstPetals(cardWidth / 2, cardHeight * 0.32, 45, 'haldi');
+            } else if (index === 3) {
+                // Reception Page (Golden Celebration Sparkles & Dance Stars)
+                burstPetals(cardWidth / 2, cardHeight * 0.32, 45, 'gold');
+            } else if (index === 4) {
+                // Muhurtham Page (Sacred Agni Embers & Holy Petals)
+                burstPetals(cardWidth / 2, cardHeight * 0.65, 45, 'fire');
+            } else if (index === 1) {
+                // Our Story Page (Golden Hearts & Rose Petals Burst)
+                burstPetals(cardWidth / 2, cardHeight * 0.45, 35, 'default');
+            }
+
+            // Activate section animation classes
+            sections.forEach((sec, sIdx) => {
+                if (sIdx === index) {
+                    sec.classList.add('page-active');
+                } else {
+                    sec.classList.remove('page-active');
+                }
+            });
+        }
+
+        function goToPage(index) {
+            if (index < 0 || index >= totalPages) return;
+            const targetSection = sections[index];
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+            updateNavigationUI(index);
+        }
+
+        function goToNextPage() {
+            if (currentPageIndex < totalPages - 1) {
+                goToPage(currentPageIndex + 1);
+            }
+        }
+
+        function goToPrevPage() {
+            if (currentPageIndex > 0) {
+                goToPage(currentPageIndex - 1);
+            }
+        }
+
+        // Scroll Observer
+        const pageObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const idx = Array.from(sections).indexOf(entry.target);
+                    if (idx !== -1) {
+                        updateNavigationUI(idx);
+                    }
+                }
+            });
+        }, {
+            root: scrollContainer,
+            threshold: 0.55
+        });
+
+        sections.forEach(sec => pageObserver.observe(sec));
+
+        // Keyboard Navigation
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+                e.preventDefault();
+                goToNextPage();
+            } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+                e.preventDefault();
+                goToPrevPage();
+            }
+        });
+
+        // Touch Swipe Navigation
+        let touchStartY = 0;
+        let touchEndY = 0;
+        scrollContainer.addEventListener('touchstart', (e) => {
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        scrollContainer.addEventListener('touchend', (e) => {
+            touchEndY = e.changedTouches[0].screenY;
+            const diff = touchStartY - touchEndY;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    goToNextPage();
+                } else {
+                    goToPrevPage();
+                }
+            }
+        }, { passive: true });
+
+        // ==========================================
+        // 2. ROYAL DOOR OPENING & MUSIC LOGIC
+        // ==========================================
+        let invitationOpened = false;
+
+        function openInvitation() {
+            if (invitationOpened) return;
+            invitationOpened = true;
+
+            startWeddingMusic();
+
+            document.getElementById('door-left').classList.add('door-open-left');
+            document.getElementById('door-right').classList.add('door-open-right');
+            document.getElementById('door-seal').classList.add('seal-open');
+
+            setTimeout(() => {
+                topFloatingBar.style.opacity = '1';
+                topFloatingBar.style.pointerEvents = 'auto';
+                sideNavDots.style.opacity = '1';
+                sideNavDots.style.pointerEvents = 'auto';
+                bottomNavCue.style.opacity = '1';
+                bottomNavCue.style.pointerEvents = 'auto';
+                document.getElementById('door-container').style.pointerEvents = 'none';
+
+                burstPetals(window.innerWidth / 2, window.innerHeight / 2, 20);
+            }, 800);
+
+            updateNavigationUI(0);
+        }
+
+        // ==========================================
+        // 3. ENHANCED CANVAS ANIMATION ENGINE (Rose, Marigold & Agni Sparks)
+        // ==========================================
+        const canvas = document.getElementById('wedding-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            const rect = document.getElementById('invitation-card').getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const petalSvgSources = [
+            // Rose Petal Pink (Default 0)
+            `data:image/svg+xml;utf8,` + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.943 511.943" width="512" height="512"><g><path d="m477.354 27.949c-2.076-3.232-6.21-4.448-9.703-2.856-4.688 2.134-13.406 5.161-19.123 1.442-5.719-3.719-6.486-12.916-6.434-18.066.038-3.84-2.75-7.125-6.544-7.713-29.804-4.613-62.782 12.213-82.074 41.872-17.479 26.872-15.293 54.761-12.978 84.287 1.311 16.722 2.667 34.013.526 52.188-.73 6.198 6.237 10.735 11.61 7.553 15.748-9.325 32.104-15.094 47.922-20.674 27.929-9.852 54.311-19.158 71.791-46.031 19.29-29.659 21.302-66.631 5.007-92.002z" fill="#ff8bdf"/><path d="m410.167 371.754c-4.458 1.487-12.646 3.405-17.392-.45-4.747-3.856-4.548-12.263-4.006-16.931.443-3.814-1.984-7.375-5.696-8.359-27.382-7.253-59.85 5.185-80.786 30.961-18.966 23.35-19.678 49.522-20.431 77.232-.426 15.616-.864 31.764-4.624 48.366-1.329 5.871 5.247 11.25 10.751 8.732 15.478-7.084 31.194-10.824 46.392-14.442 26.966-6.418 52.436-12.481 71.402-35.831 20.935-25.776 26.457-60.103 13.74-85.419-1.725-3.428-5.707-5.074-9.35-3.859z" fill="#ff8bdf"/></g></svg>`),
+            // Marigold Flower Petal Gold (1)
+            `data:image/svg+xml;utf8,` + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.943 511.943" width="512" height="512"><g><path d="m477.354 27.949c-2.076-3.232-6.21-4.448-9.703-2.856-4.688 2.134-13.406 5.161-19.123 1.442-5.719-3.719-6.486-12.916-6.434-18.066.038-3.84-2.75-7.125-6.544-7.713-29.804-4.613-62.782 12.213-82.074 41.872-17.479 26.872-15.293 54.761-12.978 84.287 1.311 16.722 2.667 34.013.526 52.188-.73 6.198 6.237 10.735 11.61 7.553 15.748-9.325 32.104-15.094 47.922-20.674 27.929-9.852 54.311-19.158 71.791-46.031 19.29-29.659 21.302-66.631 5.007-92.002z" fill="#FFE082"/><path d="m410.167 371.754c-4.458 1.487-12.646 3.405-17.392-.45-4.747-3.856-4.548-12.263-4.006-16.931.443-3.814-1.984-7.375-5.696-8.359-27.382-7.253-59.85 5.185-80.786 30.961-18.966 23.35-19.678 49.522-20.431 77.232-.426 15.616-.864 31.764-4.624 48.366-1.329 5.871 5.247 11.25 10.751 8.732 15.478-7.084 31.194-10.824 46.392-14.442 26.966-6.418 52.436-12.481 71.402-35.831 20.935-25.776 26.457-60.103 13.74-85.419-1.725-3.428-5.707-5.074-9.35-3.859z" fill="#FFB300"/></g></svg>`),
+            // Turmeric Powder Drop (Haldi - 2)
+            `data:image/svg+xml;utf8,` + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="35" fill="#FFD54F" filter="blur(2px)"/><circle cx="30" cy="40" r="15" fill="#FFC107" filter="blur(1px)"/><circle cx="70" cy="60" r="20" fill="#FFA000" filter="blur(1.5px)"/></svg>`),
+            // Celebration Star (Reception - 3)
+            `data:image/svg+xml;utf8,` + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><polygon points="50,5 64,35 97,40 73,63 79,96 50,80 21,96 27,63 3,40 36,35" fill="#FFDF00"/><polygon points="50,15 60,38 85,42 67,59 71,84 50,72 29,84 33,59 15,42 40,38" fill="#FFF59D"/></svg>`),
+            // Sacred Fire Drop (Muhurtham - 4)
+            `data:image/svg+xml;utf8,` + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><path d="M50 5 Q65 50 50 95 Q35 50 50 5" fill="#FF5722"/><path d="M50 20 Q60 55 50 85 Q40 55 50 20" fill="#FFC107"/></svg>`)
+        ];
+
+        const petalImages = petalSvgSources.map(src => {
+            const img = new Image();
+            img.src = src;
+            return img;
+        });
+
+        class Petal {
+            constructor(isBurst = false, burstX = 0, burstY = 0, type = 'default') {
+                this.isBurst = isBurst;
+                this.type = type;
+                this.reset(burstX, burstY);
+            }
+
+            reset(burstX = 0, burstY = 0) {
+                const w = canvas.width;
+                const h = canvas.height;
+
+                if (this.isBurst) {
+                    this.x = burstX;
+                    this.y = burstY;
+                    const angle = Math.random() * Math.PI * 2;
+                    const speed = 1.2 + Math.random() * 3.5;
+                    this.vx = Math.cos(angle) * speed;
+                    this.vy = Math.sin(angle) * speed - 1;
+                    this.life = 1;
+                    this.decay = 0.014 + Math.random() * 0.012;
+                } else {
+                    this.x = Math.random() * w;
+                    this.y = Math.random() * -h * 0.5 - 20;
+                    this.vx = -0.25 + Math.random() * 0.5;
+                    this.vy = 0.35 + Math.random() * 0.45;
+                    this.life = 1;
+                    this.decay = 0;
+                }
+
+                if (this.type === 'haldi') {
+                    this.imgIndex = Math.random() > 0.4 ? 1 : 2; // Marigold or Turmeric
+                } else if (this.type === 'gold') {
+                    this.imgIndex = 3; // Celebration Star
+                } else if (this.type === 'fire') {
+                    this.imgIndex = 4; // Sacred Fire
+                } else {
+                    this.imgIndex = 0; // Rose Petal
+                }
+                this.size = 17 + Math.random() * 15;
+                this.rotation = Math.random() * Math.PI * 2;
+                this.rotSpeed = -0.012 + Math.random() * 0.024;
+                this.flip = Math.random() * Math.PI;
+                this.flipSpeed = 0.008 + Math.random() * 0.016;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.rotation += this.rotSpeed;
+                this.flip += this.flipSpeed;
+
+                if (this.isBurst) {
+                    this.life -= this.decay;
+                    this.vy += 0.04;
+                } else {
+                    this.x += Math.sin(this.y * 0.012) * 0.35;
+                    if (this.y > canvas.height + 30) {
+                        this.reset();
+                    }
+                }
+            }
+
+            draw() {
+                if (this.life <= 0) return;
+                const img = petalImages[this.imgIndex];
+                if (!img || !img.complete) return;
+
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.rotation);
+                ctx.scale(Math.cos(this.flip), 1);
+                ctx.globalAlpha = Math.max(0, this.isBurst ? this.life * 0.9 : 0.82);
+                ctx.drawImage(img, -this.size / 2, -this.size / 2, this.size, this.size);
+                ctx.restore();
+            }
+        }
+
+        const petals = Array.from({ length: 12 }, () => new Petal(false));
+        const burstParticles = [];
+
+        function burstPetals(x, y, count = 10, type = 'default') {
+            const isMobile = window.innerWidth < 600;
+            const actualCount = isMobile ? Math.floor(count / 2) : count;
+            for (let i = 0; i < actualCount; i++) {
+                burstParticles.push(new Petal(true, x, y, type));
+            }
+        }
+
+        document.getElementById('invitation-card').addEventListener('pointerdown', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            let eventType = 'default';
+            if (currentPageIndex === 2) eventType = 'haldi';
+            else if (currentPageIndex === 3) eventType = 'gold';
+            else if (currentPageIndex === 4) eventType = 'fire';
+            burstPetals(x, y, 8, eventType);
+
+            const ripple = document.createElement('div');
+            ripple.className = 'touch-pulse';
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+            ripple.style.width = '50px';
+            ripple.style.height = '50px';
+            document.getElementById('invitation-card').appendChild(ripple);
+            setTimeout(() => ripple.remove(), 800);
+        });
+
+        function animateCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            petals.forEach(p => { p.update(); p.draw(); });
+            for (let i = burstParticles.length - 1; i >= 0; i--) {
+                const bp = burstParticles[i];
+                bp.update();
+                bp.draw();
+                if (bp.life <= 0) burstParticles.splice(i, 1);
+            }
+            requestAnimationFrame(animateCanvas);
+        }
+        animateCanvas();
+
+        // ==========================================
+        // 4. MUSIC ENGINE
+        // ==========================================
+        let isMusicPlaying = false;
+        const weddingAudio = document.getElementById('wedding-audio');
+        const invitationVideo = document.getElementById('invitation-video');
+
+        if (invitationVideo) {
+            invitationVideo.addEventListener('play', stopWeddingMusic);
+            invitationVideo.addEventListener('ended', function () {
+                try { invitationVideo.load(); } catch (e) { }
+                startWeddingMusic();
+            });
+        }
+
+        function startWeddingMusic() {
+            if (isMusicPlaying) return;
+            isMusicPlaying = true;
+
+            const iconMuted = document.getElementById('audio-icon-muted');
+            const iconPlaying = document.getElementById('audio-icon-playing');
+            const label = document.getElementById('audio-btn-label');
+
+            if (iconMuted && iconPlaying && label) {
+                iconMuted.classList.add('hidden');
+                iconPlaying.classList.remove('hidden');
+                label.innerText = 'Playing';
+            }
+
+            if (weddingAudio) {
+                weddingAudio.play().catch(err => {
+                    console.log("Audio waiting for user interaction:", err);
+                });
+            }
+        }
+
+        function stopWeddingMusic() {
+            isMusicPlaying = false;
+            const iconMuted = document.getElementById('audio-icon-muted');
+            const iconPlaying = document.getElementById('audio-icon-playing');
+            const label = document.getElementById('audio-btn-label');
+
+            if (iconMuted && iconPlaying && label) {
+                iconMuted.classList.remove('hidden');
+                iconPlaying.classList.add('hidden');
+                label.innerText = 'Music';
+            }
+
+            if (weddingAudio) {
+                weddingAudio.pause();
+            }
+        }
+
+        function toggleWeddingMusic() {
+            if (isMusicPlaying) {
+                stopWeddingMusic();
+            } else {
+                startWeddingMusic();
+            }
+        }
+
+        // ==========================================
+        // 5. LIVE COUNTDOWN TIMER
+        // Target: September 20, 2026 at 8:00 AM IST
+        // ==========================================
+        const targetDate = new Date('2026-09-20T08:00:00+05:30').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                const dEl = document.getElementById('cd-days');
+                const hEl = document.getElementById('cd-hours');
+                const mEl = document.getElementById('cd-mins');
+                const sEl = document.getElementById('cd-secs');
+
+                if (dEl) dEl.innerText = String(days).padStart(2, '0');
+                if (hEl) hEl.innerText = String(hours).padStart(2, '0');
+                if (mEl) mEl.innerText = String(minutes).padStart(2, '0');
+                if (sEl) sEl.innerText = String(seconds).padStart(2, '0');
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+
+</html>
